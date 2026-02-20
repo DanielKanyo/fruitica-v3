@@ -1,15 +1,18 @@
+import { Link } from "react-router-dom";
+
 import { ActionIcon, Button, Group, Menu, Tooltip, Paper } from "@mantine/core";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
+
 import { useLanguage } from "../../Context/LanguageContext";
 
 function Nav() {
 	const { language, setLanguage } = useLanguage();
 
 	const items = [
-		{ label: "About", link: "#about" },
-		{ label: "Products", link: "#products" },
-		{ label: "Career", link: "#career" },
-		{ label: "Contact", link: "#contact" },
+		{ label: "About", link: "about" },
+		{ label: "Products", link: "products" },
+		{ label: "Career", link: "career" },
+		{ label: "Contact", link: "contact" },
 	];
 
 	const languages = [
@@ -32,8 +35,6 @@ function Nav() {
 				radius={78}
 				p="md"
 				style={{
-					width: "60%",
-					margin: "0 auto",
 					background: "rgba(255, 255, 255, 0.1)",
 					border: "1px solid rgba(255, 255, 255, 0.2)",
 					backdropFilter: "blur(10px)",
@@ -41,28 +42,14 @@ function Nav() {
 			>
 				<Group justify="space-between">
 					{/* Logo / Icon */}
-					<ActionIcon
-						variant="transparent"
-						size="xl"
-						color="white"
-						radius="xl"
-						aria-label="Home"
-					>
+					<ActionIcon variant="transparent" size="xl" color="white" radius="xl" aria-label="Home" component={Link} to="/">
 						<IconLemon size={32} />
 					</ActionIcon>
 
 					{/* Navigation Items */}
 					<Group justify="center" gap="sm">
 						{items.map((item) => (
-							<Button
-								key={item.label}
-								component="a"
-								href={item.link}
-								c="white"
-								variant="transparent"
-								size="md"
-								radius="xl"
-							>
+							<Button key={item.label} component={Link} to={item.link} c="white" variant="transparent" size="md" radius="xl">
 								{item.label}
 							</Button>
 						))}
@@ -71,13 +58,7 @@ function Nav() {
 						<Menu shadow="md" width={110} withArrow radius="lg">
 							<Menu.Target>
 								<Tooltip label="Language" withArrow>
-									<ActionIcon
-										variant="transparent"
-										size="xl"
-										color="white"
-										radius="xl"
-										aria-label="Language"
-									>
+									<ActionIcon variant="transparent" size="xl" color="white" radius="xl" aria-label="Language">
 										<IconLanguage size={28} />
 									</ActionIcon>
 								</Tooltip>

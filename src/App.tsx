@@ -1,15 +1,24 @@
+import { HashRouter, Route, Routes } from "react-router-dom";
+
 import "@mantine/core/styles.css";
-import Home from "./Pages/Home/Home";
-import Nav from "./Components/Nav/Nav";
+
 import "./App.css";
+import Nav from "./Components/Nav/Nav";
+import About from "./Pages/About/About";
+import Home from "./Pages/Home/Home";
 
 export default function App() {
 	return (
-		<>
-			<div className="bg-img"></div>
-			<Nav />
+		<HashRouter>
+			<div className="content">
+				<div className="bg-img"></div>
+				<Nav />
 
-			<Home />
-		</>
+				<Routes>
+					<Route path="/" index element={<Home />} />
+					<Route path="/about" element={<About />} />
+				</Routes>
+			</div>
+		</HashRouter>
 	);
 }
