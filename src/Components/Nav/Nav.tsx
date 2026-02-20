@@ -1,44 +1,106 @@
-import { ActionIcon, Button, Group, Tooltip } from "@mantine/core";
+import { ActionIcon, Button, Group, Menu, Tooltip, Paper } from "@mantine/core";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
+import { useLanguage } from "../../Context/LanguageContext";
 
 function Nav() {
+	const { language, setLanguage } = useLanguage();
+
+	const items = [
+		{ label: "About", link: "#about" },
+		{ label: "Products", link: "#products" },
+		{ label: "Career", link: "#career" },
+		{ label: "Contact", link: "#contact" },
+	];
+
+	const languages = [
+		{ code: "en", name: "English" },
+		{ code: "hu", name: "Magyar" },
+		{ code: "sr", name: "Srpski" },
+	];
+
 	return (
-		<div className="navigation-wrapper" style={{
-			position: "absolute",
-			top: "2em",
-			left: "0px",
-			width: "100%",
-			zIndex: 20,
-			fontSize: 18
-		}}>
-			<div className="navigation" style={{
-				width: "60%",
-				margin: "0px auto",
-				borderRadius: 50,
-				border: "1px solid rgba(255, 255, 255, 0.2)",
-				background: "rgba(255, 255, 255, 0.1)",
-				backdropFilter: "blur(10px)",
-				paddingBlock: "1rem",
-				paddingInline: "1rem",
-			}}>
+		<div
+			style={{
+				position: "absolute",
+				top: "2em",
+				width: "100%",
+				zIndex: 20,
+				fontSize: 18,
+			}}
+		>
+			<Paper
+				radius={78}
+				p="md"
+				style={{
+					width: "60%",
+					margin: "0 auto",
+					background: "rgba(255, 255, 255, 0.1)",
+					border: "1px solid rgba(255, 255, 255, 0.2)",
+					backdropFilter: "blur(10px)",
+				}}
+			>
 				<Group justify="space-between">
-					<ActionIcon variant="transparent" size="xl" color="white" radius="xl" aria-label="Language" ml=".6rem">
+					{/* Logo / Icon */}
+					<ActionIcon
+						variant="transparent"
+						size="xl"
+						color="white"
+						radius="xl"
+						aria-label="Home"
+					>
 						<IconLemon size={32} />
 					</ActionIcon>
+
+					{/* Navigation Items */}
 					<Group justify="center" gap="sm">
-						<Button c="white" variant="transparent" size="md" radius="xl">About</Button>
-						<Button c="white" variant="transparent" size="md" radius="xl">Products</Button>
-						<Button c="white" variant="transparent" size="md" radius="xl">Career</Button>
-						<Button c="white" variant="transparent" size="md" radius="xl">Contact</Button>
-						<Tooltip label="Language" withArrow>
-							<ActionIcon variant="transparent" size="xl" color="white" radius="xl" aria-label="Language">
-								<IconLanguage />
-							</ActionIcon>
-						</Tooltip>
+						{items.map((item) => (
+							<Button
+								key={item.label}
+								component="a"
+								href={item.link}
+								c="white"
+								variant="transparent"
+								size="md"
+								radius="xl"
+							>
+								{item.label}
+							</Button>
+						))}
+
+						{/* Language Menu */}
+						<Menu shadow="md" width={110} withArrow radius="lg">
+							<Menu.Target>
+								<Tooltip label="Language" withArrow>
+									<ActionIcon
+										variant="transparent"
+										size="xl"
+										color="white"
+										radius="xl"
+										aria-label="Language"
+									>
+										<IconLanguage size={28} />
+									</ActionIcon>
+								</Tooltip>
+							</Menu.Target>
+
+							<Menu.Dropdown>
+								<Menu.Label>Language</Menu.Label>
+								{languages.map((lng) => (
+									<Menu.Item
+										key={lng.code}
+										ta="center"
+										c={language === lng.code ? "teal" : "dark"}
+										onClick={() => setLanguage(lng.code)}
+									>
+										{lng.name}
+									</Menu.Item>
+								))}
+							</Menu.Dropdown>
+						</Menu>
 					</Group>
 				</Group>
-			</div>
-		</div >
+			</Paper>
+		</div>
 	);
 }
 
