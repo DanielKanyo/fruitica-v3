@@ -1,5 +1,4 @@
 import { useMantineTheme, Stack, Title, Text, Button, Group, Center } from "@mantine/core";
-import Nav from "../../Components/Nav/Nav";
 import "./Home.css";
 
 function Home() {
@@ -7,9 +6,6 @@ function Home() {
 
 	return (
 		<div className="home">
-			<div className="bg-img"></div>
-			<Nav />
-
 			<Center style={{ height: "100vh", zIndex: 10, position: "relative" }}>
 				<Stack align="center" gap="md">
 					<Title

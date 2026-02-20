@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
 @font-face {
-	font-family: 'Blueberry';
-	src: url('./Assets/Fonts/Blueberry.ttf') format('truetype');
+	font-family: "Blueberry";
+	src: url("./Assets/Fonts/Blueberry.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -12,4 +12,18 @@ body {
 	font-optical-sizing: auto;
 	font-weight: 500;
 	color: white;
+	background: #0CA678;
+	background: radial-gradient(circle, rgba(12, 166, 120, 1) 0%, rgba(8, 127, 91, 1) 100%);
+}
+
+.bg-img {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	background-image: url("./Assets/Images/fruits-wallpaper.jpg");
+	background-size: cover;
+	opacity: 0.1;
+	pointer-events: none;
+	top: 0;
+	left: 0;
 }
