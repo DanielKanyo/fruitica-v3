@@ -1,0 +1,21 @@
+.home {
+	height: 100vh;
+	background: #0CA678;
+	background: radial-gradient(circle, rgba(12, 166, 120, 1) 0%, rgba(8, 127, 91, 1) 100%);
+}
+
+.bg-img {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	background-image: url("../../Assets//Images/fruits-wallpaper.jpg");
+	background-size: cover;
+	opacity: 0.11;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+}
+
+.page-title {
+	font-family: "Blueberry";
+}
