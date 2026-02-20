@@ -32,7 +32,7 @@ function Home() {
 					</Text>
 
 					<Group mt="md">
-						<Button size="lg" radius="xl" variant="filled" color="yellow.8">
+						<Button size="lg" radius="xl" variant="gradient" gradient={{ from: "orange.7", to: "yellow.8", deg: 90 }}>
 							Products
 						</Button>
 

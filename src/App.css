@@ -12,8 +12,8 @@ body {
 	font-optical-sizing: auto;
 	font-weight: 500;
 	color: white;
-	background: #0ca678;
-	background: radial-gradient(circle, rgba(12, 166, 120, 1) 0%, rgba(8, 127, 91, 1) 100%);
+	background: #05694b;
+	background: radial-gradient(circle, rgba(5, 105, 75, 1) 0%, rgba(12, 166, 120, 1) 100%);
 }
 
 .content {
@@ -29,7 +29,7 @@ body {
 	width: 100%;
 	background-image: url("./Assets/Images/fruits-wallpaper.jpg");
 	background-size: cover;
-	opacity: 0.1;
+	opacity: 0.18;
 	pointer-events: none;
 	top: 0;
 	left: 0;

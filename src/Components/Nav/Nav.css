@@ -1,0 +1,11 @@
+.nav-button {
+	color: #dbdbdb;
+}
+
+.nav-button:hover {
+	color: #e7e7e7;
+}
+
+.nav-active .nav-button {
+	color: white;
+}

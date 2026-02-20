@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import { ActionIcon, Button, Group, Menu, Tooltip, Paper } from "@mantine/core";
+import { ActionIcon, Button, Group, Menu, Tooltip, Paper, useMantineTheme } from "@mantine/core";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
 
 import { useLanguage } from "../../Context/LanguageContext";
+import "./Nav.css";
 
 function Nav() {
 	const { language, setLanguage } = useLanguage();
+	const theme = useMantineTheme();
 
 	const items = [
 		{ label: "About", link: "about" },
@@ -17,7 +19,6 @@ function Nav() {
 
 	const languages = [
 		{ code: "en", name: "English" },
-		{ code: "hu", name: "Magyar" },
 		{ code: "sr", name: "Srpski" },
 	];
 
@@ -42,16 +43,20 @@ function Nav() {
 			>
 				<Group justify="space-between">
 					{/* Logo / Icon */}
-					<ActionIcon variant="transparent" size="xl" color="white" radius="xl" aria-label="Home" component={Link} to="/">
-						<IconLemon size={32} />
-					</ActionIcon>
+					<NavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
+						<ActionIcon className="nav-button" variant="transparent" size="xl" color="white" radius="xl" aria-label="Home">
+							<IconLemon size={32} />
+						</ActionIcon>
+					</NavLink>
 
 					{/* Navigation Items */}
 					<Group justify="center" gap="sm">
 						{items.map((item) => (
-							<Button key={item.label} component={Link} to={item.link} c="white" variant="transparent" size="md" radius="xl">
-								{item.label}
-							</Button>
+							<NavLink key={item.label} to={item.link} className={({ isActive }) => (isActive ? "nav-active" : "")}>
+								<Button className="nav-button" variant="transparent" size="md" radius="xl">
+									{item.label}
+								</Button>
+							</NavLink>
 						))}
 
 						{/* Language Menu */}
@@ -70,7 +75,7 @@ function Nav() {
 									<Menu.Item
 										key={lng.code}
 										ta="center"
-										c={language === lng.code ? "teal" : "dark"}
+										c={language === lng.code ? theme.colors.yellow[8] : "dark"}
 										onClick={() => setLanguage(lng.code)}
 									>
 										{lng.name}
