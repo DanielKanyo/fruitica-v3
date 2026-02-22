@@ -11,7 +11,7 @@ export default function App() {
 	return (
 		<HashRouter>
 			<div className="content">
-				<div className="bg-img"></div>
+				<div className="gradient"></div>
 				<Nav />
 
 				<Routes>
