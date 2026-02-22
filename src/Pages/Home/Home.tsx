@@ -39,6 +39,7 @@ function Home() {
 							color: theme.colors.gray[1],
 							maxWidth: 500,
 							textAlign: "center",
+							position: "relative",
 						}}
 					>
 						{t("subtitle")}
