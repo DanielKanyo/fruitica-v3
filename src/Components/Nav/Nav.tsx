@@ -1,14 +1,19 @@
+import { useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
 import { ActionIcon, Button, Group, Menu, Tooltip, Paper, useMantineTheme } from "@mantine/core";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
 
 import { useLanguage } from "../../Context/LanguageContext";
+import { Languages, LanguagesKeys } from "../../i18n/Languages";
+import i18n from "../../i18n/i18n";
 import "./Nav.css";
 
 function Nav() {
 	const { language, setLanguage } = useLanguage();
 	const theme = useMantineTheme();
+	const { t } = useTranslation();
 
 	const items = [
 		{ label: "About", link: "about" },
@@ -17,10 +22,10 @@ function Nav() {
 		{ label: "Contact", link: "contact" },
 	];
 
-	const languages = [
-		{ code: "en", name: "English" },
-		{ code: "sr", name: "Srpski" },
-	];
+	const handleLanguageSelect = useCallback((key: LanguagesKeys) => {
+		i18n.changeLanguage(key);
+		setLanguage(key);
+	}, []);
 
 	return (
 		<div
@@ -70,13 +75,13 @@ function Nav() {
 							</Menu.Target>
 
 							<Menu.Dropdown>
-								<Menu.Label>Language</Menu.Label>
-								{languages.map((lng) => (
+								<Menu.Label>{t("language")}</Menu.Label>
+								{Languages.map((lng) => (
 									<Menu.Item
 										key={lng.code}
 										ta="center"
-										c={language === lng.code ? theme.colors.yellow[8] : "dark"}
-										onClick={() => setLanguage(lng.code)}
+										c={language === lng.code ? theme.colors.red[8] : "dark"}
+										onClick={() => handleLanguageSelect(lng.code)}
 									>
 										{lng.name}
 									</Menu.Item>

@@ -1,23 +1,36 @@
+import { useTranslation } from "react-i18next";
+
 import { useMantineTheme, Stack, Title, Text, Button, Group, Center } from "@mantine/core";
+
+import "./Home.css";
 
 function Home() {
 	const theme = useMantineTheme();
+	const { t } = useTranslation();
 
 	return (
 		<div style={{ height: "100vh" }}>
-			<Center style={{ height: "100vh", zIndex: 10, position: "relative" }}>
+			<Center style={{ height: "100vh", zIndex: 10 }}>
 				<Stack align="center" gap="md">
-					<Title
-						className="bluberry-title"
-						order={1}
-						style={{
-							fontSize: 120,
-							fontWeight: 900,
-							color: theme.white,
-						}}
-					>
-						FRUITICA
-					</Title>
+					<div style={{ position: "relative" }}>
+						<div className="donut-bg"></div>
+						<div className="peanut-bg"></div>
+						<div className="strawberry-bg"></div>
+						<div className="coffee-bg"></div>
+						<Title
+							className="bluberry-title"
+							order={1}
+							style={{
+								fontSize: 120,
+								fontWeight: 900,
+								color: theme.white,
+								position: "relative",
+								zIndex: 10,
+							}}
+						>
+							FRUITICA
+						</Title>
+					</div>
 
 					<Text
 						style={{
@@ -28,11 +41,11 @@ function Home() {
 							textAlign: "center",
 						}}
 					>
-						Premium ingredients for exceptional food and beverage production
+						{t("subtitle")}
 					</Text>
 
 					<Group mt="md">
-						<Button size="lg" radius="xl" variant="gradient" gradient={{ from: "orange.7", to: "yellow.8", deg: 90 }}>
+						<Button size="lg" radius="xl" variant="filled" color="red.8">
 							Products
 						</Button>
 

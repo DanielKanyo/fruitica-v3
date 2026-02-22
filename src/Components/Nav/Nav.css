@@ -1,9 +1,9 @@
 .nav-button {
-	color: #dbdbdb;
+	color: rgb(241, 243, 245);
 }
 
 .nav-button:hover {
-	color: #e7e7e7;
+	color: white;
 }
 
 .nav-active .nav-button {
