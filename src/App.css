@@ -13,7 +13,7 @@ body {
 	font-weight: 500;
 	color: white;
 	background: #05694b;
-	background: radial-gradient(circle, rgba(5, 105, 75, 1) 22%, rgba(12, 166, 120, 1) 100%);
+	background: radial-gradient(circle, #036346 22%, #0ca678 100%);
 }
 
 .content {
