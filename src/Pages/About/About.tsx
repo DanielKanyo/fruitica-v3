@@ -24,6 +24,7 @@ function About() {
 
 			<Text
 				my="xl"
+				px="lg"
 				style={{
 					fontSize: 22,
 					fontWeight: 400,
@@ -38,6 +39,7 @@ function About() {
 
 			<Text
 				my="xl"
+				px="lg"
 				style={{
 					fontSize: 22,
 					fontWeight: 400,
