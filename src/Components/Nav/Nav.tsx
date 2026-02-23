@@ -48,14 +48,12 @@ function Nav() {
 					}}
 				>
 					<Group justify="space-between">
-						{/* Logo / Icon */}
 						<NavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
 							<ActionIcon className="nav-button" variant="transparent" size="xl" color="white" radius="xl" aria-label="Home">
 								<IconLemon size={32} />
 							</ActionIcon>
 						</NavLink>
 
-						{/* Navigation Items */}
 						<Group justify="center" gap="sm">
 							{items.map((item) => (
 								<NavLink key={item.label} to={item.link} className={({ isActive }) => (isActive ? "nav-active" : "")}>
@@ -65,10 +63,9 @@ function Nav() {
 								</NavLink>
 							))}
 
-							{/* Language Menu */}
 							<Menu shadow="md" width={110} withArrow radius="lg">
 								<Menu.Target>
-									<Tooltip label="Language" withArrow>
+									<Tooltip label={t("language")} withArrow>
 										<ActionIcon variant="transparent" size="xl" color="white" radius="xl" aria-label="Language">
 											<IconLanguage size={28} />
 										</ActionIcon>

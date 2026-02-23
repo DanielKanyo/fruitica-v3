@@ -17,11 +17,14 @@ function Home() {
 						<div className="peanut-bg"></div>
 						<div className="strawberry-bg"></div>
 						<div className="coffee-bg"></div>
+						<div className="chili-bg"></div>
+						<div className="peanut-butter-bg"></div>
+
 						<Title
 							className="bluberry-title"
 							order={1}
 							style={{
-								fontSize: 120,
+								fontSize: 140,
 								fontWeight: 900,
 								color: theme.white,
 								position: "relative",
