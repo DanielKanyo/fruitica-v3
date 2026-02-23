@@ -10,10 +10,8 @@ import Home from "./Pages/Home/Home";
 export default function App() {
 	return (
 		<HashRouter>
+			<Nav />
 			<div className="content">
-				<div className="gradient"></div>
-				<Nav />
-
 				<Routes>
 					<Route path="/" index element={<Home />} />
 					<Route path="/about" element={<About />} />

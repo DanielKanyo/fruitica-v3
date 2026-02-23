@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
-import { ActionIcon, Button, Group, Menu, Tooltip, Paper, useMantineTheme } from "@mantine/core";
+import { ActionIcon, Button, Group, Menu, Tooltip, Paper, useMantineTheme, Center } from "@mantine/core";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
 
 import { useLanguage } from "../../Context/LanguageContext";
@@ -28,70 +28,72 @@ function Nav() {
 	}, []);
 
 	return (
-		<div
-			style={{
-				position: "absolute",
-				top: "2em",
-				width: "100%",
-				zIndex: 20,
-				fontSize: 18,
-			}}
-		>
-			<Paper
-				radius={78}
-				p="md"
+		<Center>
+			<div
 				style={{
-					background: "rgba(255, 255, 255, 0.1)",
-					border: "1px solid rgba(255, 255, 255, 0.2)",
-					backdropFilter: "blur(10px)",
+					position: "fixed",
+					top: "2em",
+					width: "60%",
+					zIndex: 20,
+					fontSize: 18,
 				}}
 			>
-				<Group justify="space-between">
-					{/* Logo / Icon */}
-					<NavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
-						<ActionIcon className="nav-button" variant="transparent" size="xl" color="white" radius="xl" aria-label="Home">
-							<IconLemon size={32} />
-						</ActionIcon>
-					</NavLink>
+				<Paper
+					radius={78}
+					p="md"
+					style={{
+						background: "rgba(255, 255, 255, 0.1)",
+						border: "1px solid rgba(255, 255, 255, 0.2)",
+						backdropFilter: "blur(10px)",
+					}}
+				>
+					<Group justify="space-between">
+						{/* Logo / Icon */}
+						<NavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
+							<ActionIcon className="nav-button" variant="transparent" size="xl" color="white" radius="xl" aria-label="Home">
+								<IconLemon size={32} />
+							</ActionIcon>
+						</NavLink>
 
-					{/* Navigation Items */}
-					<Group justify="center" gap="sm">
-						{items.map((item) => (
-							<NavLink key={item.label} to={item.link} className={({ isActive }) => (isActive ? "nav-active" : "")}>
-								<Button className="nav-button" variant="transparent" size="md" radius="xl">
-									{item.label}
-								</Button>
-							</NavLink>
-						))}
+						{/* Navigation Items */}
+						<Group justify="center" gap="sm">
+							{items.map((item) => (
+								<NavLink key={item.label} to={item.link} className={({ isActive }) => (isActive ? "nav-active" : "")}>
+									<Button className="nav-button" variant="transparent" size="md" radius="xl">
+										{item.label}
+									</Button>
+								</NavLink>
+							))}
 
-						{/* Language Menu */}
-						<Menu shadow="md" width={110} withArrow radius="lg">
-							<Menu.Target>
-								<Tooltip label="Language" withArrow>
-									<ActionIcon variant="transparent" size="xl" color="white" radius="xl" aria-label="Language">
-										<IconLanguage size={28} />
-									</ActionIcon>
-								</Tooltip>
-							</Menu.Target>
+							{/* Language Menu */}
+							<Menu shadow="md" width={110} withArrow radius="lg">
+								<Menu.Target>
+									<Tooltip label="Language" withArrow>
+										<ActionIcon variant="transparent" size="xl" color="white" radius="xl" aria-label="Language">
+											<IconLanguage size={28} />
+										</ActionIcon>
+									</Tooltip>
+								</Menu.Target>
 
-							<Menu.Dropdown>
-								<Menu.Label>{t("language")}</Menu.Label>
-								{Languages.map((lng) => (
-									<Menu.Item
-										key={lng.code}
-										ta="center"
-										c={language === lng.code ? theme.colors.red[8] : "dark"}
-										onClick={() => handleLanguageSelect(lng.code)}
-									>
-										{lng.name}
-									</Menu.Item>
-								))}
-							</Menu.Dropdown>
-						</Menu>
+								<Menu.Dropdown>
+									<Menu.Label>{t("language")}</Menu.Label>
+									{Languages.map((lng) => (
+										<Menu.Item
+											key={lng.code}
+											ta="center"
+											c={language === lng.code ? theme.colors.red[8] : "dark"}
+											onClick={() => handleLanguageSelect(lng.code)}
+										>
+											{lng.name}
+										</Menu.Item>
+									))}
+								</Menu.Dropdown>
+							</Menu>
+						</Group>
 					</Group>
-				</Group>
-			</Paper>
-		</div>
+				</Paper>
+			</div>
+		</Center>
 	);
 }
 
