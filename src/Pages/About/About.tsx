@@ -9,7 +9,7 @@ function About() {
 		<div className="page about">
 			<div style={{ position: "relative", width: "fit-content" }}>
 				<Title
-					className="bluberry-title"
+					className="bluberry-text"
 					order={1}
 					style={{
 						fontSize: 60,

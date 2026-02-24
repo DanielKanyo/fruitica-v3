@@ -23,6 +23,16 @@ body {
 	height: 100vh;
 }
 
-.bluberry-title {
+.bluberry-text {
 	font-family: "Blueberry";
+}
+
+.transparent-element {
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+}
+
+button.transparent-element:hover {
+	background: rgba(255, 255, 255, 0.07);
 }

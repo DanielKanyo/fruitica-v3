@@ -29,24 +29,8 @@ function Nav() {
 
 	return (
 		<Center>
-			<div
-				style={{
-					position: "fixed",
-					top: "2em",
-					width: "60%",
-					zIndex: 20,
-					fontSize: 18,
-				}}
-			>
-				<Paper
-					radius={78}
-					p="md"
-					style={{
-						background: "rgba(255, 255, 255, 0.1)",
-						border: "1px solid rgba(255, 255, 255, 0.2)",
-						backdropFilter: "blur(10px)",
-					}}
-				>
+			<div className="nav-bar-container">
+				<Paper className="transparent-element" radius={78} p="md">
 					<Group justify="space-between">
 						<NavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
 							<ActionIcon className="nav-button" variant="transparent" size="xl" color="white" radius="xl" aria-label="Home">

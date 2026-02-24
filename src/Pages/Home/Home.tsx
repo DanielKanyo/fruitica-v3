@@ -32,17 +32,7 @@ function Home() {
 							Products
 						</Button>
 
-						<Button
-							style={{
-								border: "1px solid rgba(255, 255, 255, 0.2)",
-								background: "rgba(255, 255, 255, 0.1)",
-								backdropFilter: "blur(10px)",
-							}}
-							size="lg"
-							radius="xl"
-							variant="outline"
-							color="white"
-						>
+						<Button className="transparent-element" size="lg" radius="xl" variant="outline" color="white">
 							Contact
 						</Button>
 					</Group>
