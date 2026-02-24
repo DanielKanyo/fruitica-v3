@@ -64,15 +64,28 @@
 	pointer-events: none;
 }
 
-.peanut-butter-bg {
-	background-image: url("../../Assets/Images/spoon-of-creamy-peanut-butter.png");
+.chocolate-bg {
+	background-image: url("../../Assets/Images/chocolate-splash.png");
 	background-size: cover;
 	background-position: center;
-	width: 220px;
-	height: 220px;
+	width: 160px;
+	height: 160px;
 	position: absolute;
 	top: -34px;
 	left: 0px;
 	z-index: 1;
-	transform: scaleX(-1) rotate(30deg);
+	transform: scaleX(-1);
+}
+
+.gummy-bear-bg {
+	background-image: url("../../Assets/Images/gummy-bear.png");
+	background-size: cover;
+	background-position: center;
+	width: 26px;
+	height: 56px;
+	position: absolute;
+	bottom: 22px;
+	right: calc(50% - 4px);
+	z-index: 15;
+	pointer-events: none;
 }

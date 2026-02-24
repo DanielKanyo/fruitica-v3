@@ -18,7 +18,8 @@ function Home() {
 						<div className="strawberry-bg"></div>
 						<div className="coffee-bg"></div>
 						<div className="chili-bg"></div>
-						<div className="peanut-butter-bg"></div>
+						<div className="chocolate-bg"></div>
+						<div className="gummy-bear-bg"></div>
 
 						<Title
 							className="bluberry-title"
