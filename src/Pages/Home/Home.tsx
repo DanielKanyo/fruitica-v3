@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 
-import { useMantineTheme, Stack, Title, Text, Button, Group, Center } from "@mantine/core";
+import { useMantineTheme, Stack, Text, Button, Group, Center } from "@mantine/core";
 
+import logo from "../../Assets/Images/fruitica-logo.png";
 import "./Home.css";
 
 function Home() {
@@ -12,30 +13,7 @@ function Home() {
 		<div style={{ height: "100vh" }}>
 			<Center style={{ height: "100vh", zIndex: 10 }}>
 				<Stack align="center" gap="md">
-					<div style={{ position: "relative" }}>
-						<div className="donut-bg"></div>
-						<div className="peanut-bg"></div>
-						<div className="strawberry-bg"></div>
-						<div className="coffee-bg"></div>
-						<div className="chili-bg"></div>
-						<div className="chocolate-bg"></div>
-						<div className="gummy-bear-bg"></div>
-
-						<Title
-							className="bluberry-title"
-							order={1}
-							style={{
-								fontSize: 140,
-								fontWeight: 900,
-								color: theme.white,
-								position: "relative",
-								zIndex: 10,
-							}}
-						>
-							FRUITICA
-						</Title>
-					</div>
-
+					<img src={logo} alt="Fruitica Logo" width={880} style={{ marginBottom: 18 }} />
 					<Text
 						style={{
 							fontSize: 22,
