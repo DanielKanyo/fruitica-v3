@@ -19,7 +19,7 @@ function Home() {
 							fontSize: 22,
 							fontWeight: 400,
 							color: theme.colors.gray[1],
-							maxWidth: 500,
+							maxWidth: 450,
 							textAlign: "center",
 							position: "relative",
 						}}
