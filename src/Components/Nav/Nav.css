@@ -17,3 +17,33 @@
 .nav-active .nav-button {
 	color: white;
 }
+
+.nav-bar-container .transparent-element {
+	border-radius: 78px;
+}
+
+.burger {
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	.nav-bar-container {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	.nav-bar-container .transparent-element {
+		border: 0;
+		border-radius: 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.nav-items {
+		display: none;
+	}
+
+	.burger {
+		display: block;
+	}
+}

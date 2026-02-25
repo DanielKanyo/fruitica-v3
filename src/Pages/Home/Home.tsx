@@ -1,22 +1,23 @@
 import { useTranslation } from "react-i18next";
 
 import { useMantineTheme, Stack, Text, Button, Group, Center } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 
 import logo from "../../Assets/Images/fruitica-logo.png";
-import "./Home.css";
 
 function Home() {
 	const theme = useMantineTheme();
 	const { t } = useTranslation();
+	const isMobile = useMediaQuery("(max-width: 1000px)");
 
 	return (
 		<div style={{ height: "100vh" }}>
 			<Center style={{ height: "100vh", zIndex: 10 }}>
 				<Stack align="center" gap="md">
-					<img src={logo} alt="Fruitica Logo" width={880} style={{ marginBottom: 18 }} />
+					<img src={logo} alt="Fruitica Logo" width={isMobile ? 330 : 880} style={{ marginBottom: 18 }} />
 					<Text
 						style={{
-							fontSize: 22,
+							fontSize: isMobile ? 18 : 22,
 							fontWeight: 400,
 							color: theme.colors.gray[1],
 							maxWidth: 450,
@@ -28,11 +29,11 @@ function Home() {
 					</Text>
 
 					<Group mt="md">
-						<Button size="lg" radius="xl" variant="filled" color="red.8">
+						<Button size={isMobile ? "md" : "lg"} radius="xl" variant="filled" color="red.8">
 							Products
 						</Button>
 
-						<Button className="transparent-element" size="lg" radius="xl" variant="outline" color="white">
+						<Button className="transparent-element" size={isMobile ? "md" : "lg"} radius="xl" variant="outline" color="white">
 							Contact
 						</Button>
 					</Group>
