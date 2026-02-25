@@ -38,7 +38,7 @@ function Nav() {
 		<>
 			<Transition mounted={mounted} transition="fade-down" duration={500} timingFunction="ease">
 				{(styles) => (
-					<Center style={styles}>
+					<Center style={{ ...styles, zIndex: 20, position: "relative" }}>
 						<div className="nav-bar-container">
 							<Paper className="transparent-element" p="md">
 								<Group justify="space-between">

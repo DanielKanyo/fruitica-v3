@@ -20,7 +20,7 @@ function Home() {
 		<div style={{ height: "100vh" }}>
 			<Center style={{ height: "100vh", zIndex: 10 }}>
 				<Stack align="center" gap="md">
-					<Transition mounted={mounted} transition="fade-up" duration={500} enterDelay={500} timingFunction="ease">
+					<Transition mounted={mounted} transition="fade-up" duration={500} timingFunction="ease">
 						{(styles) => (
 							<Flex direction="column" align="center" style={styles}>
 								<img src={logo} alt="Fruitica Logo" width={isMobile ? 330 : 880} style={{ marginBottom: 18 }} />
