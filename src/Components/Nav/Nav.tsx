@@ -108,9 +108,13 @@ function Nav() {
 			</Transition>
 
 			<Drawer
-				offset={8}
 				size="lg"
-				radius="lg"
+				styles={{
+					content: {
+						borderTopLeftRadius: theme.radius.lg,
+						borderTopRightRadius: theme.radius.lg,
+					},
+				}}
 				position="bottom"
 				overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
 				opened={opened}
