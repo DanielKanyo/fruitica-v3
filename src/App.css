@@ -40,12 +40,12 @@ body {
 .bg-item2 {
 	position: absolute;
 	top: -160px;
-	left: -160px;
+	left: -150px;
 	width: 500px;
 	height: 500px;
-	background-image: url("./Assets/Images/ice-cream.png");
+	background-image: url("./Assets/Images/watermelon.png");
 	background-size: 100%;
-	transform: rotate(-260deg);
+	transform: rotate(-60deg) scaleY(-1);
 }
 
 .content {
@@ -85,8 +85,8 @@ button.transparent-element:hover {
 
 	.bg-item2 {
 		position: absolute;
-		top: -200px;
-		left: -170px;
+		top: -140px;
+		left: -140px;
 		width: 400px;
 		height: 400px;
 	}

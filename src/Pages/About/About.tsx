@@ -9,20 +9,17 @@ function About() {
 
 	return (
 		<div className="page about">
-			<div style={{ position: "relative", width: "fit-content" }}>
-				<Title
-					className="bluberry-text"
-					order={1}
-					style={{
-						fontSize: isMobile ? 44 : 60,
-						fontWeight: 900,
-						color: theme.white,
-					}}
-				>
-					About Us
-				</Title>
-				<div className="fruit"></div>
-			</div>
+			<Title
+				className="bluberry-text"
+				order={1}
+				style={{
+					fontSize: isMobile ? 44 : 60,
+					fontWeight: 900,
+					color: theme.white,
+				}}
+			>
+				About Us
+			</Title>
 
 			<Text
 				my="xl"
