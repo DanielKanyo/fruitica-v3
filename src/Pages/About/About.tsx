@@ -1,9 +1,11 @@
 import { Title, useMantineTheme, Text } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 
 import "./About.css";
 
 function About() {
 	const theme = useMantineTheme();
+	const isMobile = useMediaQuery("(max-width: 1000px)");
 
 	return (
 		<div className="page about">
@@ -12,7 +14,7 @@ function About() {
 					className="bluberry-text"
 					order={1}
 					style={{
-						fontSize: 60,
+						fontSize: isMobile ? 44 : 60,
 						fontWeight: 900,
 						color: theme.white,
 					}}
@@ -24,9 +26,8 @@ function About() {
 
 			<Text
 				my="xl"
-				px="lg"
 				style={{
-					fontSize: 22,
+					fontSize: isMobile ? 18 : 22,
 					fontWeight: 400,
 					color: theme.colors.gray[2],
 				}}
@@ -39,9 +40,8 @@ function About() {
 
 			<Text
 				my="xl"
-				px="lg"
 				style={{
-					fontSize: 22,
+					fontSize: isMobile ? 18 : 22,
 					fontWeight: 400,
 					color: theme.colors.gray[2],
 				}}

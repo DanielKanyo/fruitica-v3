@@ -1,9 +1,8 @@
 .nav-bar-container {
-	position: fixed;
-	top: 2em;
 	width: 60%;
 	z-index: 20;
 	font-size: 18px;
+	padding-top: 2rem;
 }
 
 .nav-button {
@@ -28,9 +27,8 @@
 
 @media (max-width: 1000px) {
 	.nav-bar-container {
-		position: fixed;
-		top: 0;
 		width: 100%;
+		padding-top: 0;
 	}
 
 	.nav-bar-container .transparent-element {

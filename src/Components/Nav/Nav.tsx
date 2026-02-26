@@ -51,7 +51,7 @@ function LanguageMenu({ language, handleLanguageSelect }: LanguageMenuProps) {
 					<Menu.Item
 						key={lng.key}
 						ta="center"
-						c={language === lng.key ? theme.colors.red[8] : "dark"}
+						c={language === lng.key ? theme.colors.teal[8] : "dark"}
 						onClick={() => handleLanguageSelect(lng.key)}
 					>
 						{lng.name}
@@ -81,7 +81,7 @@ function Nav() {
 		<>
 			<Transition mounted={mounted} transition="fade-down" duration={500} timingFunction="ease">
 				{(styles) => (
-					<Center style={{ ...styles, zIndex: 20, position: "relative" }}>
+					<Center style={{ ...styles, zIndex: 20, position: "fixed", width: "100%" }}>
 						<div className="nav-bar-container">
 							<Paper className="transparent-element" p="md">
 								<Group justify="space-between">

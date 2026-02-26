@@ -17,7 +17,7 @@ function Home() {
 	}, []);
 
 	return (
-		<div style={{ height: "100vh" }}>
+		<>
 			<Center style={{ height: "100vh", zIndex: 10 }}>
 				<Stack align="center" gap="md">
 					<Transition mounted={mounted} transition="fade-up" duration={500} timingFunction="ease">
@@ -58,7 +58,7 @@ function Home() {
 					</Transition>
 				</Stack>
 			</Center>
-		</div>
+		</>
 	);
 }
 

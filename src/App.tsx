@@ -10,6 +10,11 @@ import Home from "./Pages/Home/Home";
 export default function App() {
 	return (
 		<HashRouter>
+			<div className="bg-items-container">
+				<div className="bg-item1"></div>
+				<div className="bg-item2"></div>
+			</div>
+
 			<Nav />
 			<div className="content">
 				<Routes>
