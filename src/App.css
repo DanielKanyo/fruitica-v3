@@ -39,13 +39,13 @@ body {
 
 .bg-item2 {
 	position: absolute;
-	top: -220px;
-	left: -220px;
+	top: -160px;
+	left: -160px;
 	width: 500px;
 	height: 500px;
-	background-image: url("./Assets/Images/tomato.png");
+	background-image: url("./Assets/Images/ice-cream.png");
 	background-size: 100%;
-	transform: rotate(-240deg);
+	transform: rotate(-260deg);
 }
 
 .content {
@@ -77,8 +77,8 @@ button.transparent-element:hover {
 
 	.bg-item1 {
 		position: absolute;
-		bottom: -200px;
-		right: -170px;
+		bottom: -150px;
+		right: -150px;
 		width: 400px;
 		height: 400px;
 	}
