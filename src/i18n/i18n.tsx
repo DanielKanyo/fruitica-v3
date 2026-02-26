@@ -2,9 +2,9 @@ import { initReactI18next } from "react-i18next";
 
 import i18next from "i18next";
 
-import { LanguagesKeys } from "./Languages";
 import translationEnglish from "./Translations/translations.en.json";
 import translationSerbian from "./Translations/translations.sr.json";
+import { LanguagesKeys } from "./languages";
 
 const resources = {
 	[LanguagesKeys.English]: {

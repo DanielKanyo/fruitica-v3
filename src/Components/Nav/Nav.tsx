@@ -2,28 +2,71 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
-import { ActionIcon, Button, Group, Menu, Tooltip, Paper, useMantineTheme, Center, Burger, Drawer, Transition } from "@mantine/core";
+import {
+	ActionIcon,
+	Button,
+	Group,
+	Menu,
+	Tooltip,
+	Paper,
+	useMantineTheme,
+	Center,
+	Burger,
+	Drawer,
+	Transition,
+	Stack,
+	Flex,
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
 
 import { useLanguage } from "../../Context/LanguageContext";
-import { Languages, LanguagesKeys } from "../../i18n/Languages";
+import { ROUTES } from "../../Routes/routes";
 import i18n from "../../i18n/i18n";
+import { LANGUAGES, LanguagesKeys } from "../../i18n/languages";
 import "./Nav.css";
+
+interface LanguageMenuProps {
+	language: string;
+	handleLanguageSelect: (languageKey: LanguagesKeys) => void;
+}
+
+function LanguageMenu({ language, handleLanguageSelect }: LanguageMenuProps) {
+	const theme = useMantineTheme();
+	const { t } = useTranslation();
+
+	return (
+		<Menu shadow="md" width={110} withArrow radius="lg">
+			<Menu.Target>
+				<Tooltip label={t("language")} withArrow>
+					<ActionIcon variant="transparent" size="xl" color="white" radius="xl" aria-label="Language">
+						<IconLanguage size={28} />
+					</ActionIcon>
+				</Tooltip>
+			</Menu.Target>
+
+			<Menu.Dropdown>
+				<Menu.Label>{t("language")}</Menu.Label>
+				{LANGUAGES.map((lng) => (
+					<Menu.Item
+						key={lng.key}
+						ta="center"
+						c={language === lng.key ? theme.colors.red[8] : "dark"}
+						onClick={() => handleLanguageSelect(lng.key)}
+					>
+						{lng.name}
+					</Menu.Item>
+				))}
+			</Menu.Dropdown>
+		</Menu>
+	);
+}
 
 function Nav() {
 	const { language, setLanguage } = useLanguage();
 	const theme = useMantineTheme();
-	const { t } = useTranslation();
 	const [opened, { open, close }] = useDisclosure(false);
 	const [mounted, setMounted] = useState(false);
-
-	const items = [
-		{ label: "About", link: "about" },
-		{ label: "Products", link: "products" },
-		{ label: "Career", link: "career" },
-		{ label: "Contact", link: "contact" },
-	];
 
 	useEffect(() => {
 		setMounted(true);
@@ -58,47 +101,15 @@ function Nav() {
 									<Burger className="burger" color="white" opened={opened} onClick={open} aria-label="Toggle drawer" />
 
 									<Group className="nav-items" justify="center" gap="sm">
-										{items.map((item) => (
-											<NavLink
-												key={item.label}
-												to={item.link}
-												className={({ isActive }) => (isActive ? "nav-active" : "")}
-											>
+										{ROUTES.map((r) => (
+											<NavLink key={r.label} to={r.link} className={({ isActive }) => (isActive ? "nav-active" : "")}>
 												<Button className="nav-button" variant="transparent" size="md" radius="xl">
-													{item.label}
+													{r.label}
 												</Button>
 											</NavLink>
 										))}
 
-										<Menu shadow="md" width={110} withArrow radius="lg">
-											<Menu.Target>
-												<Tooltip label={t("language")} withArrow>
-													<ActionIcon
-														variant="transparent"
-														size="xl"
-														color="white"
-														radius="xl"
-														aria-label="Language"
-													>
-														<IconLanguage size={28} />
-													</ActionIcon>
-												</Tooltip>
-											</Menu.Target>
-
-											<Menu.Dropdown>
-												<Menu.Label>{t("language")}</Menu.Label>
-												{Languages.map((lng) => (
-													<Menu.Item
-														key={lng.code}
-														ta="center"
-														c={language === lng.code ? theme.colors.red[8] : "dark"}
-														onClick={() => handleLanguageSelect(lng.code)}
-													>
-														{lng.name}
-													</Menu.Item>
-												))}
-											</Menu.Dropdown>
-										</Menu>
+										<LanguageMenu language={language} handleLanguageSelect={handleLanguageSelect} />
 									</Group>
 								</Group>
 							</Paper>
@@ -110,6 +121,9 @@ function Nav() {
 			<Drawer
 				size="lg"
 				styles={{
+					body: {
+						height: "calc(100% - 60px)",
+					},
 					content: {
 						borderTopLeftRadius: theme.radius.lg,
 						borderTopRightRadius: theme.radius.lg,
@@ -120,7 +134,24 @@ function Nav() {
 				opened={opened}
 				onClose={close}
 			>
-				{/* TODO: Drawer content */}
+				<Stack h="100%" align="stretch" justify="space-between" gap="md">
+					<div>{/* TODO: Top section */}</div>
+					<Flex justify="flex-end" gap="xs">
+						<Button.Group>
+							{LANGUAGES.map((lng) => (
+								<Button
+									key={lng.key}
+									variant={language === lng.key ? "filled" : "light"}
+									color={language === lng.key ? "teal" : "gray"}
+									radius="xl"
+									onClick={() => handleLanguageSelect(lng.key)}
+								>
+									{lng.name}
+								</Button>
+							))}
+						</Button.Group>
+					</Flex>
+				</Stack>
 			</Drawer>
 		</>
 	);
