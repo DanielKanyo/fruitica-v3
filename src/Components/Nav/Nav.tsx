@@ -1,22 +1,10 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
-import {
-	ActionIcon,
-	Button,
-	Group,
-	Menu,
-	Tooltip,
-	Paper,
-	useMantineTheme,
-	Center,
-	Burger,
-	Drawer,
-	Transition,
-	Stack,
-	Flex,
-} from "@mantine/core";
+import { motion } from "framer-motion";
+
+import { ActionIcon, Button, Group, Menu, Tooltip, Paper, useMantineTheme, Center, Burger, Drawer, Stack, Flex } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
 
@@ -66,11 +54,6 @@ function Nav() {
 	const { language, setLanguage } = useLanguage();
 	const theme = useMantineTheme();
 	const [opened, { open, close }] = useDisclosure(false);
-	const [mounted, setMounted] = useState(false);
-
-	useEffect(() => {
-		setMounted(true);
-	}, []);
 
 	const handleLanguageSelect = useCallback((key: LanguagesKeys) => {
 		i18n.changeLanguage(key);
@@ -79,44 +62,45 @@ function Nav() {
 
 	return (
 		<>
-			<Transition mounted={mounted} transition="fade-down" duration={500} timingFunction="ease">
-				{(styles) => (
-					<Center style={{ ...styles, zIndex: 20, position: "fixed", width: "100%" }}>
-						<div className="nav-bar-container">
-							<Paper className="transparent-element" p="md">
-								<Group justify="space-between">
-									<NavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
-										<ActionIcon
-											className="nav-button"
-											variant="transparent"
-											size="xl"
-											color="white"
-											radius="xl"
-											aria-label="Home"
-										>
-											<IconLemon size={32} />
-										</ActionIcon>
+			<Center style={{ zIndex: 20, position: "fixed", width: "100%" }}>
+				<motion.div
+					initial={{ opacity: 0, y: 0 }}
+					animate={{ opacity: 1, y: 20 }}
+					transition={{ duration: 0.5, ease: "easeOut" }}
+					className="nav-bar-container"
+				>
+					<Paper className="transparent-element" p="md">
+						<Group justify="space-between">
+							<NavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
+								<ActionIcon
+									className="nav-button"
+									variant="transparent"
+									size="xl"
+									color="white"
+									radius="xl"
+									aria-label="Home"
+								>
+									<IconLemon size={32} />
+								</ActionIcon>
+							</NavLink>
+
+							<Burger className="burger" color="white" opened={opened} onClick={open} aria-label="Toggle drawer" />
+
+							<Group className="nav-items" justify="center" gap="sm">
+								{ROUTES.map((r) => (
+									<NavLink key={r.label} to={r.link} className={({ isActive }) => (isActive ? "nav-active" : "")}>
+										<Button className="nav-button" variant="transparent" size="md" radius="xl">
+											{r.label}
+										</Button>
 									</NavLink>
+								))}
 
-									<Burger className="burger" color="white" opened={opened} onClick={open} aria-label="Toggle drawer" />
-
-									<Group className="nav-items" justify="center" gap="sm">
-										{ROUTES.map((r) => (
-											<NavLink key={r.label} to={r.link} className={({ isActive }) => (isActive ? "nav-active" : "")}>
-												<Button className="nav-button" variant="transparent" size="md" radius="xl">
-													{r.label}
-												</Button>
-											</NavLink>
-										))}
-
-										<LanguageMenu language={language} handleLanguageSelect={handleLanguageSelect} />
-									</Group>
-								</Group>
-							</Paper>
-						</div>
-					</Center>
-				)}
-			</Transition>
+								<LanguageMenu language={language} handleLanguageSelect={handleLanguageSelect} />
+							</Group>
+						</Group>
+					</Paper>
+				</motion.div>
+			</Center>
 
 			<Drawer
 				size="lg"
