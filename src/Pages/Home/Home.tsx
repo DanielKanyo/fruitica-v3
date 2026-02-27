@@ -22,14 +22,14 @@ function Home() {
 				<Transition mounted={mounted} transition="fade-up" duration={500} timingFunction="ease">
 					{(styles) => (
 						<Flex direction="column" align="center" style={styles}>
-							<img src={logo} alt="Fruitica Logo" width={isMobile ? 330 : 880} />
+							<img src={logo} alt="Fruitica Logo" width={isMobile ? "96%" : 880} />
 							<Text
 								my="xl"
 								style={{
-									fontSize: isMobile ? 18 : 22,
+									fontSize: isMobile ? 16 : 22,
 									fontWeight: 400,
 									color: theme.colors.gray[1],
-									maxWidth: 450,
+									maxWidth: isMobile ? 270 : 450,
 									textAlign: "center",
 									position: "relative",
 								}}
@@ -37,7 +37,7 @@ function Home() {
 								{t("subtitle")}
 							</Text>
 
-							<Group>
+							<Group gap="xs">
 								<Button size={isMobile ? "md" : "lg"} radius="xl" variant="filled" color="red.8">
 									Products
 								</Button>

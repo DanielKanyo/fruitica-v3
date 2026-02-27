@@ -24,7 +24,7 @@ function About() {
 			<Text
 				my="xl"
 				style={{
-					fontSize: isMobile ? 18 : 22,
+					fontSize: isMobile ? 16 : 22,
 					fontWeight: 400,
 					color: theme.colors.gray[2],
 				}}
