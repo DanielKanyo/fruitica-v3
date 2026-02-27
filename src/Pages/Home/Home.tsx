@@ -51,7 +51,7 @@ function Home() {
 						<Button size={isMobile ? "md" : "lg"} radius="xl" color="red.8">
 							Products
 						</Button>
-						<Button size={isMobile ? "md" : "lg"} radius="xl" variant="outline" color="white">
+						<Button className="transparent-element" size={isMobile ? "md" : "lg"} radius="xl" variant="outline" color="white">
 							Contact
 						</Button>
 					</Group>
