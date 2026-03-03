@@ -6,6 +6,7 @@ import "./App.css";
 import Nav from "./Components/Nav/Nav";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
+import { RoutePaths } from "./Routes/routes";
 
 export default function App() {
 	return (
@@ -16,12 +17,10 @@ export default function App() {
 			</div>
 
 			<Nav />
-			<div className="content">
-				<Routes>
-					<Route path="/" index element={<Home />} />
-					<Route path="/about" element={<About />} />
-				</Routes>
-			</div>
+			<Routes>
+				<Route path={RoutePaths.Home} index element={<Home />} />
+				<Route path={RoutePaths.AboutUs} element={<About />} />
+			</Routes>
 		</HashRouter>
 	);
 }
