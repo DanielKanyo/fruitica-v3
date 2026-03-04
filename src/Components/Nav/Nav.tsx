@@ -95,7 +95,7 @@ function Nav() {
 									pl={4}
 									fz={18}
 								>
-									Home
+									Fruitica
 								</Button>
 							</NavLink>
 
@@ -117,7 +117,7 @@ function Nav() {
 			</Center>
 
 			<Drawer
-				size="xl"
+				size={isMobile ? "xl" : "md"}
 				styles={{
 					body: {
 						padding: 0,
