@@ -1,15 +1,28 @@
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { NavLink as RouterNavLink } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
-import { ActionIcon, Button, Group, Menu, Tooltip, Paper, useMantineTheme, Center, Burger, Drawer, Stack, Flex } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import {
+	ActionIcon,
+	Group,
+	Menu,
+	Tooltip,
+	Paper,
+	useMantineTheme,
+	Center,
+	Burger,
+	Drawer,
+	NavLink as MantineNavLink,
+	Button,
+} from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
 
 import { useLanguage } from "../../Context/LanguageContext";
 import { ROUTES } from "../../Routes/routes";
+import { MOBILE_BREAKPOINT } from "../../constants";
 import i18n from "../../i18n/i18n";
 import { LANGUAGES, LanguagesKeys } from "../../i18n/languages";
 import "./Nav.css";
@@ -39,7 +52,7 @@ function LanguageMenu({ language, handleLanguageSelect }: LanguageMenuProps) {
 					<Menu.Item
 						key={lng.key}
 						ta="center"
-						c={language === lng.key ? theme.colors.teal[8] : "dark"}
+						c={language === lng.key ? theme.colors.red[8] : "dark"}
 						onClick={() => handleLanguageSelect(lng.key)}
 					>
 						{lng.name}
@@ -52,8 +65,8 @@ function LanguageMenu({ language, handleLanguageSelect }: LanguageMenuProps) {
 
 function Nav() {
 	const { language, setLanguage } = useLanguage();
-	const theme = useMantineTheme();
 	const [opened, { open, close }] = useDisclosure(false);
+	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 
 	const handleLanguageSelect = useCallback((key: LanguagesKeys) => {
 		i18n.changeLanguage(key);
@@ -62,40 +75,41 @@ function Nav() {
 
 	return (
 		<>
-			<Center style={{ zIndex: 20, position: "fixed", width: "100%" }}>
+			<Center style={{ zIndex: 30, position: "fixed", width: "100%" }}>
 				<motion.div
-					initial={{ opacity: 0, y: 0 }}
-					animate={{ opacity: 1, y: 20 }}
-					transition={{ duration: 0.5, ease: "easeOut" }}
+					initial={{ opacity: 0, y: -20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
 					className="nav-bar-container"
 				>
 					<Paper className="transparent-element" p="md">
 						<Group justify="space-between">
-							<NavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
-								<ActionIcon
-									className="nav-button"
+							<RouterNavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
+								<Button
+									leftSection={<IconLemon size={26} />}
 									variant="transparent"
-									size="xl"
 									color="white"
 									radius="xl"
-									aria-label="Home"
+									size="md"
+									h={44}
+									pl={4}
+									fz={18}
 								>
-									<IconLemon size={32} />
-								</ActionIcon>
-							</NavLink>
-
-							<Burger className="burger" color="white" opened={opened} onClick={open} aria-label="Toggle drawer" />
+									Fruitica
+								</Button>
+							</RouterNavLink>
 
 							<Group className="nav-items" justify="center" gap="sm">
-								{ROUTES.map((r) => (
-									<NavLink key={r.label} to={r.link} className={({ isActive }) => (isActive ? "nav-active" : "")}>
-										<Button className="nav-button" variant="transparent" size="md" radius="xl">
-											{r.label}
-										</Button>
-									</NavLink>
-								))}
-
 								<LanguageMenu language={language} handleLanguageSelect={handleLanguageSelect} />
+								<Burger
+									w={44}
+									h={44}
+									style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+									color="white"
+									opened={opened}
+									onClick={open}
+									aria-label="Toggle drawer"
+								/>
 							</Group>
 						</Group>
 					</Paper>
@@ -103,39 +117,36 @@ function Nav() {
 			</Center>
 
 			<Drawer
-				size="lg"
+				size={isMobile ? "xl" : "md"}
 				styles={{
 					body: {
-						height: "calc(100% - 60px)",
-					},
-					content: {
-						borderTopLeftRadius: theme.radius.lg,
-						borderTopRightRadius: theme.radius.lg,
+						padding: 0,
 					},
 				}}
-				position="bottom"
+				position={isMobile ? "bottom" : "right"}
 				overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
 				opened={opened}
 				onClose={close}
 			>
-				<Stack h="100%" align="stretch" justify="space-between" gap="md">
-					<div>{/* TODO: Top section */}</div>
-					<Flex justify="flex-end" gap="xs">
-						<Button.Group>
-							{LANGUAGES.map((lng) => (
-								<Button
-									key={lng.key}
-									variant={language === lng.key ? "filled" : "light"}
-									color={language === lng.key ? "teal" : "gray"}
-									radius="xl"
-									onClick={() => handleLanguageSelect(lng.key)}
-								>
-									{lng.name}
-								</Button>
-							))}
-						</Button.Group>
-					</Flex>
-				</Stack>
+				{ROUTES.map((r) => (
+					<MantineNavLink
+						key={r.label}
+						component={RouterNavLink}
+						to={r.link}
+						color="teal"
+						variant="filled"
+						label={r.label}
+						styles={{
+							root: {
+								padding: isMobile ? 18 : 22,
+							},
+							label: {
+								fontSize: isMobile ? 18 : 22,
+							},
+						}}
+						onClick={close}
+					/>
+				))}
 			</Drawer>
 		</>
 	);

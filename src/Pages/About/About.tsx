@@ -1,11 +1,12 @@
 import { Title, useMantineTheme, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
+import { MOBILE_BREAKPOINT } from "../../constants";
 import "./About.css";
 
 function About() {
 	const theme = useMantineTheme();
-	const isMobile = useMediaQuery("(max-width: 1000px)");
+	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 
 	return (
 		<div className="page about">

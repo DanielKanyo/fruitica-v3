@@ -11,11 +11,12 @@ body {
 	font-family: "Figtree", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 500;
-	color: white;
+	background: #024631;
+	overflow-x: hidden;
 }
 
 .bg-items-container {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -24,12 +25,14 @@ body {
 	overflow: hidden;
 	background: #05694b;
 	background: radial-gradient(circle, #036346 22%, #0ca678 100%);
+	overflow: visible;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .bg-item1 {
 	position: absolute;
-	bottom: -220px;
-	right: -220px;
+	bottom: -210px;
+	right: -210px;
 	width: 600px;
 	height: 600px;
 	background-image: url("./Assets/Images/broccoli.png");
@@ -39,20 +42,13 @@ body {
 
 .bg-item2 {
 	position: absolute;
-	top: -180px;
-	left: -130px;
+	top: -170px;
+	left: -133px;
 	width: 500px;
 	height: 500px;
 	background-image: url("./Assets/Images/watermelon.png");
 	background-size: 100%;
 	transform: rotate(-230deg);
-}
-
-.content {
-	width: 60%;
-	margin: 0 auto;
-	position: relative;
-	height: 100vh;
 }
 
 .bluberry-text {
@@ -65,14 +61,29 @@ body {
 	backdrop-filter: blur(10px);
 }
 
+.radius-30 {
+	border-radius: 30px;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
 button.transparent-element:hover {
 	background: rgba(255, 255, 255, 0.07);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
 	.content {
 		width: 100%;
 		padding: 0 1em;
+	}
+
+	.bg-items-container {
+		top: 10px;
+		left: 10px;
+		width: calc(100% - 20px);
+		height: calc(100vh - 20px);
 	}
 
 	.bg-item1 {
