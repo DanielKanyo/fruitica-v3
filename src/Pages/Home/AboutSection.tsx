@@ -10,7 +10,7 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 		<Box
 			c="white"
 			style={{
-				padding: isMobile ? "4rem 1rem" : "4rem 8rem",
+				padding: isMobile ? "5rem 1rem" : "5rem 8rem",
 				maxWidth: isMobile ? "100%" : "85%",
 				margin: isMobile ? "0 16px" : "0 auto",
 			}}

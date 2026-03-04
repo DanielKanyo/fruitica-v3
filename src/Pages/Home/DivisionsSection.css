@@ -1,0 +1,21 @@
+.division-box {
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+.division-bg {
+	position: absolute;
+	bottom: -50px;
+	right: -50px;
+	height: 240px;
+	width: 240px;
+	background-size: cover;
+}
+
+.matcha-bg {
+	background-image: url("../../Assets/Images/matcha-powder.png");
+}
+
+.rice-bg {
+	background-image: url("../../Assets/Images/rice-in-a-bag.png");
+}
