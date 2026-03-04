@@ -15,12 +15,12 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 				margin: isMobile ? "0 16px" : "0 auto",
 			}}
 		>
-			<Text fz={36} mb={isMobile ? 60 : 70} lh={1.2}>
+			<Text fz={42} mb={isMobile ? 60 : 70} lh={1.2}>
 				What is <b>Fruitica</b>?
 			</Text>
 			<Flex gap={isMobile ? "1rem" : 140} justify="space-between" align="flex-start" direction={{ base: "column", md: "row" }}>
 				<Stack w={isMobile ? "100%" : 600}>
-					<Text c="gray.4" fz={isMobile ? 16 : 18}>
+					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Fruitica d.o.o. is a Serbian food company operating in two strong and complementary business units.
 					</Text>
 					<List
@@ -33,17 +33,17 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 							</ThemeIcon>
 						}
 					>
-						<List.Item fz={isMobile ? 16 : 18} c="gray.4">
+						<List.Item fz={isMobile ? 17 : 18} c="gray.4">
 							Instant Powdered Beverage Manufacturing
 						</List.Item>
-						<List.Item fz={isMobile ? 16 : 18} c="gray.4">
+						<List.Item fz={isMobile ? 17 : 18} c="gray.4">
 							Food Ingredients Import & Distribution
 						</List.Item>
 					</List>
 				</Stack>
 
 				<Stack w={isMobile ? "100%" : 600}>
-					<Text c="gray.4" fz={isMobile ? 16 : 18}>
+					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Established in 1996, we combine nearly three decades of sourcing expertise with modern production capabilities in
 						our factory located in Čantavir, Serbia.
 						<br />

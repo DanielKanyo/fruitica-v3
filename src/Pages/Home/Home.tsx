@@ -2,6 +2,7 @@ import { useMediaQuery } from "@mantine/hooks";
 
 import { MOBILE_BREAKPOINT } from "../../constants";
 import AboutSection from "./AboutSection";
+import DivisionsSection from "./DivisionsSection";
 import HeroSection from "./HeroSection";
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
 		<>
 			<HeroSection isMobile={isMobile} />
 			<AboutSection isMobile={isMobile} />
+			<DivisionsSection isMobile={isMobile} />
 		</>
 	);
 }
