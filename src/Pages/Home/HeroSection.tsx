@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 import { Center, Stack, Group, Button, Text, useMantineTheme } from "@mantine/core";
+import { IconArrowBadgeDown } from "@tabler/icons-react";
 
 import logo from "../../Assets/Images/fruitica-logo.png";
 
@@ -15,7 +16,16 @@ function HeroSection({ isMobile }: HeroSectionProps) {
 	const { t } = useTranslation();
 
 	return (
-		<Center style={{ height: "100vh" }}>
+		<Center style={{ height: "100vh", position: "relative" }}>
+			<Center w="100%" pos="absolute" style={{ bottom: 0, pointerEvents: "none" }} p={40}>
+				<motion.div
+					animate={{ y: [0, 6, 0] }}
+					transition={{ duration: 1.2, ease: "easeInOut", repeat: Infinity }}
+					style={{ display: "inline-flex" }}
+				>
+					<IconArrowBadgeDown color={theme.colors.gray[3]} size={30} />
+				</motion.div>
+			</Center>
 			<Stack align="center" gap="xl" style={{ zIndex: 20 }}>
 				<motion.img
 					src={logo}
