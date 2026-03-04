@@ -12,7 +12,7 @@
 }
 
 .matcha-bg {
-	background-image: url("../../Assets/Images/matcha.png");
+	background-image: url("../../../Assets/Images/matcha.png");
 	height: 280px;
 	width: 280px;
 	bottom: -50px;
@@ -20,7 +20,7 @@
 }
 
 .rice-bg {
-	background-image: url("../../Assets/Images/rice.png");
+	background-image: url("../../../Assets/Images/rice.png");
 	height: 250px;
 	width: 250px;
 	bottom: -14px;

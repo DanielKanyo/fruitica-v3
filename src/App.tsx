@@ -1,5 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 
+import "@mantine/carousel/styles.css";
 import "@mantine/core/styles.css";
 
 import "./App.css";

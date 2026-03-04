@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Center, Stack, Group, Button, Text, useMantineTheme } from "@mantine/core";
 import { IconChevronDownFilled } from "@tabler/icons-react";
 
-import logo from "../../Assets/Images/fruitica-logo.png";
+import logo from "../../../Assets/Images/fruitica-logo.png";
 
 interface HeroSectionProps {
 	isMobile: boolean;

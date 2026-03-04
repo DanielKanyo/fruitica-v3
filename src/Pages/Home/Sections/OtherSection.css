@@ -1,0 +1,8 @@
+.carousel-indicator {
+	width: 24px;
+	transition: width 0.3s ease;
+}
+
+.carousel-indicator[data-active] {
+	width: 50px;
+}

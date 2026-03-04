@@ -3,7 +3,9 @@ import { NavLink as RouterNavLink } from "react-router-dom";
 import { Box, Flex, Stack, List, ThemeIcon, Text, Button } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
 
-import { RoutePaths } from "../../Routes/routes";
+import { RoutePaths } from "../../../Routes/routes";
+
+const ABOUT_LIST_ITEMS = ["Instant Powdered Beverage Manufacturing.", "Food Ingredients Import & Distribution."];
 
 interface AboutSectionProps {
 	isMobile: boolean;
@@ -43,12 +45,11 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 							</ThemeIcon>
 						}
 					>
-						<List.Item fz={isMobile ? 17 : 18} c="gray.4">
-							Instant Powdered Beverage Manufacturing
-						</List.Item>
-						<List.Item fz={isMobile ? 17 : 18} c="gray.4">
-							Food Ingredients Import & Distribution
-						</List.Item>
+						{ABOUT_LIST_ITEMS.map((item) => (
+							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
+								{item}
+							</List.Item>
+						))}
 					</List>
 				</Stack>
 

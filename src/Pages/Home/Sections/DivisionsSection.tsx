@@ -2,7 +2,7 @@ import { NavLink as RouterNavLink } from "react-router-dom";
 
 import { Text, Flex, Card, Button } from "@mantine/core";
 
-import { RoutePaths } from "../../Routes/routes";
+import { RoutePaths } from "../../../Routes/routes";
 import "./DivisionsSection.css";
 
 interface DivisionItem {
@@ -12,7 +12,7 @@ interface DivisionItem {
 	bgClass: string;
 }
 
-const divisions: DivisionItem[] = [
+const DIVISIONS: DivisionItem[] = [
 	{
 		title: "Manufacturing Division",
 		description: "Specialized in instant coffee mixes, matcha latte and functional powdered beverages.",
@@ -73,7 +73,7 @@ function DivisionsSection({ isMobile }: DivisionsSectionProps) {
 					</Text>
 				</Flex>
 
-				{divisions.map((division) => (
+				{DIVISIONS.map((division) => (
 					<DivisionCard key={division.title} {...division} isMobile={isMobile} />
 				))}
 			</Flex>
