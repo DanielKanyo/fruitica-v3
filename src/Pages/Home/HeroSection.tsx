@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 import { Center, Stack, Group, Button, Text, useMantineTheme } from "@mantine/core";
-import { IconArrowBadgeDown } from "@tabler/icons-react";
+import { IconChevronDownFilled } from "@tabler/icons-react";
 
 import logo from "../../Assets/Images/fruitica-logo.png";
 
@@ -23,7 +23,7 @@ function HeroSection({ isMobile }: HeroSectionProps) {
 					transition={{ duration: 1.2, ease: "easeInOut", repeat: Infinity }}
 					style={{ display: "inline-flex" }}
 				>
-					<IconArrowBadgeDown color={theme.colors.gray[3]} size={30} />
+					<IconChevronDownFilled color={theme.colors.gray[3]} size={30} />
 				</motion.div>
 			</Center>
 			<Stack align="center" gap="xl" style={{ zIndex: 20 }}>
@@ -60,7 +60,7 @@ function HeroSection({ isMobile }: HeroSectionProps) {
 					transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
 				>
 					<Group gap="xs">
-						<Button size={isMobile ? "md" : "lg"} radius="xl" color="red.8">
+						<Button size={isMobile ? "md" : "lg"} radius="xl" color="red.7">
 							Products
 						</Button>
 						<Button className="transparent-element" size={isMobile ? "md" : "lg"} radius="xl" variant="outline" color="white">

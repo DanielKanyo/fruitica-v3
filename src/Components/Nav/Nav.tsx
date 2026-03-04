@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink, NavLink as RouterNavLink } from "react-router-dom";
+import { NavLink as RouterNavLink } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
@@ -84,7 +84,7 @@ function Nav() {
 				>
 					<Paper className="transparent-element" p="md">
 						<Group justify="space-between">
-							<NavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
+							<RouterNavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
 								<Button
 									leftSection={<IconLemon size={26} />}
 									variant="transparent"
@@ -97,7 +97,7 @@ function Nav() {
 								>
 									Fruitica
 								</Button>
-							</NavLink>
+							</RouterNavLink>
 
 							<Group className="nav-items" justify="center" gap="sm">
 								<LanguageMenu language={language} handleLanguageSelect={handleLanguageSelect} />
@@ -123,7 +123,7 @@ function Nav() {
 						padding: 0,
 					},
 				}}
-				position={isMobile ? "bottom" : "left"}
+				position={isMobile ? "bottom" : "right"}
 				overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
 				opened={opened}
 				onClose={close}

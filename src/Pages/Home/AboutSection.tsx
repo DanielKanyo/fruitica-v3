@@ -1,5 +1,9 @@
-import { Box, Flex, Stack, List, ThemeIcon, Text } from "@mantine/core";
+import { NavLink as RouterNavLink } from "react-router-dom";
+
+import { Box, Flex, Stack, List, ThemeIcon, Text, Button } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
+
+import { RoutePaths } from "../../Routes/routes";
 
 interface AboutSectionProps {
 	isMobile: boolean;
@@ -15,9 +19,15 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 				margin: isMobile ? "0 16px" : "0 auto",
 			}}
 		>
-			<Text fz={42} mb={isMobile ? 60 : 70} lh={1.2}>
-				What is <b>Fruitica</b>?
-			</Text>
+			<Stack align="flex-start" mb={isMobile ? 60 : 70}>
+				<Text fz={42} lh={1.2}>
+					What is <b>Fruitica</b>?
+				</Text>
+				<Button component={RouterNavLink} to={RoutePaths.AboutUs} variant="filled" color="red.7" radius="xl">
+					Learn More
+				</Button>
+			</Stack>
+
 			<Flex gap={isMobile ? "1rem" : 140} justify="space-between" align="flex-start" direction={{ base: "column", md: "row" }}>
 				<Stack w={isMobile ? "100%" : 600}>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>

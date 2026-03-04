@@ -1,21 +1,29 @@
 .division-box {
-	border-radius: 30px;
 	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(10px);
 }
 
 .division-bg {
 	position: absolute;
 	bottom: -50px;
 	right: -50px;
-	height: 240px;
-	width: 240px;
 	background-size: cover;
 }
 
 .matcha-bg {
-	background-image: url("../../Assets/Images/matcha-powder.png");
+	background-image: url("../../Assets/Images/matcha.png");
+	height: 280px;
+	width: 280px;
+	bottom: -50px;
+	right: -60px;
 }
 
 .rice-bg {
-	background-image: url("../../Assets/Images/rice-in-a-bag.png");
+	background-image: url("../../Assets/Images/rice.png");
+	height: 250px;
+	width: 250px;
+	bottom: -15px;
+	right: -35px;
+	transform: scaleX(-1);
 }
