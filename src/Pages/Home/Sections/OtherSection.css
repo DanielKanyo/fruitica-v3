@@ -8,14 +8,14 @@
 	width: 50px;
 }
 
-.other-card {
-	backdrop-filter: blur(10px);
-	background: linear-gradient(90deg, rgba(68, 38, 29, 0.8) 22%, rgba(85, 48, 36, 0.8) 100%);
-}
-
-.header-card {
+.card-header {
 	padding: 2rem 2rem 4rem 2rem;
 	z-index: 8;
+}
+
+.card-body {
+	backdrop-filter: blur(10px);
+	background: linear-gradient(90deg, rgba(68, 38, 29, 0.2) 0%, rgba(85, 48, 36, 0.2) 100%);
 }
 
 .coffee-bg {
@@ -25,6 +25,17 @@
 	width: 100%;
 	height: 100%;
 	background-image: url("../../../Assets/Images/coffee.jpg");
+	background-size: cover;
+	filter: brightness(35%);
+}
+
+.chocolate-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../../../Assets/Images/chocolate.jpg");
 	background-size: cover;
 	filter: brightness(35%);
 }

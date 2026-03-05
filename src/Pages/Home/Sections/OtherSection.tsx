@@ -15,6 +15,16 @@ const COMPETITIVE_LIST_ITEMS = [
 	"Maintain long-term strategic supplier relationships.",
 ];
 
+const INDUSTRIAL_SOLUTION_LIST_ITEMS = [
+	"Concept development.",
+	"Recipe formulation.",
+	"Sample production.",
+	"Packaging design support.",
+	"Industrial manufacturing.",
+	"Quality documentation.",
+	"Export logistics coordination.",
+];
+
 interface OtherSectionProps {
 	isMobile: boolean;
 }
@@ -24,74 +34,119 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 	const autoplay = useRef(Autoplay({ delay: 1500000 }));
 
 	return (
-		<Carousel
-			withIndicators
-			bg={"#2c1913"}
-			style={{ zIndex: 0 }}
-			withControls={false}
-			emblaOptions={{ dragFree: true, align: "start" }}
-			plugins={[autoplay.current]}
-			classNames={{ indicator: "carousel-indicator" }}
+		<div
+			style={{
+				background: "linear-gradient(90deg, #3f251d 0%, #2c1913 100%)",
+			}}
 		>
-			<Carousel.Slide>
-				<Flex gap="xl" style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
-					<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
-						<div className="coffee-bg"></div>
-						<Box className="header-card">
-							<Text c="white" fz={22} maw="50%">
-								Our Competitive <b>Advantage</b>
-							</Text>
-						</Box>
+			<Carousel
+				withIndicators
+				bg="transparent"
+				style={{ zIndex: 10, marginTop: -160 }}
+				withControls={false}
+				emblaOptions={{ dragFree: true, align: "start" }}
+				plugins={[autoplay.current]}
+				classNames={{ indicator: "carousel-indicator" }}
+			>
+				<Carousel.Slide>
+					<Flex gap="xl" style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
+						<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
+							<div className="coffee-bg"></div>
+							<Box className="card-header">
+								<Text c="white" fz={22}>
+									Our Competitive <br /> <b>Advantage</b>
+								</Text>
+							</Box>
 
-						<Card
-							mt={-40}
-							style={{
-								borderTopLeftRadius: "var(--mantine-radius-xl)",
-								borderTopRightRadius: "var(--mantine-radius-xl)",
-								borderBottomLeftRadius: 0,
-								borderBottomRightRadius: 0,
-							}}
-							className="other-card"
-						>
-							<Stack w="90%" gap="xl" p="xl">
-								<Text c="gray.4" fz={isMobile ? 17 : 18}>
-									Unlike traditional traders, we:
-								</Text>
-								<List
-									spacing="md"
-									fw={400}
-									icon={
-										<ThemeIcon color="#2c1913" size={24} radius="xl">
-											<IconCheck size={16} />
-										</ThemeIcon>
-									}
-								>
-									{COMPETITIVE_LIST_ITEMS.map((item) => (
-										<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
-											{item}
-										</List.Item>
-									))}
-								</List>
-								<Text c="gray.4" fz={isMobile ? 17 : 18}>
-									Fruitica d.o.o combines commercial strength with technological understanding.
-								</Text>
-							</Stack>
+							<Card
+								mt={-40}
+								style={{
+									borderTopLeftRadius: "var(--mantine-radius-xl)",
+									borderTopRightRadius: "var(--mantine-radius-xl)",
+									borderBottomLeftRadius: 0,
+									borderBottomRightRadius: 0,
+									height: "100%",
+								}}
+								className="card-body"
+							>
+								<Stack w="90%" gap="xl" p="xl">
+									<Text c="gray.4" fz={isMobile ? 17 : 18}>
+										Unlike traditional traders, we:
+									</Text>
+									<List
+										spacing="md"
+										fw={400}
+										icon={
+											<ThemeIcon color="#523228" size={24} radius="xl">
+												<IconCheck size={16} />
+											</ThemeIcon>
+										}
+									>
+										{COMPETITIVE_LIST_ITEMS.map((item) => (
+											<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
+												{item}
+											</List.Item>
+										))}
+									</List>
+									<Text c="gray.4" fz={isMobile ? 17 : 18}>
+										Fruitica d.o.o combines commercial strength with technological understanding.
+									</Text>
+								</Stack>
+							</Card>
 						</Card>
-					</Card>
-					<Card className="other-card" p="md" w="100%" pos="relative" shadow="xs" radius="xl">
-						<Text c="white" fz={22} mb={isMobile ? 60 : 70}>
-							Private Label & Industrial Solutions
-						</Text>
-					</Card>
-					<Card className="other-card" p="md" w="100%" pos="relative" shadow="xs" radius="xl">
-						<Text c="white" fz={22} mb={isMobile ? 60 : 70}>
-							Export & Distribution
-						</Text>
-					</Card>
-				</Flex>
-			</Carousel.Slide>
-			<Carousel.Slide>2</Carousel.Slide>
-		</Carousel>
+						<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
+							<div className="chocolate-bg"></div>
+							<Box className="card-header">
+								<Text c="white" fz={22}>
+									Private Label & Industrial <br /> <b>Solutions</b>
+								</Text>
+							</Box>
+
+							<Card
+								mt={-40}
+								style={{
+									borderTopLeftRadius: "var(--mantine-radius-xl)",
+									borderTopRightRadius: "var(--mantine-radius-xl)",
+									borderBottomLeftRadius: 0,
+									borderBottomRightRadius: 0,
+									height: "100%",
+								}}
+								className="card-body"
+							>
+								<Stack w="90%" gap="xl" p="xl">
+									<Text c="gray.4" fz={isMobile ? 17 : 18}>
+										Fruitica d.o.o is a trusted private label partner for retail chains and distributions.
+										<br />
+										We provide full-service development:
+									</Text>
+									<List
+										spacing="md"
+										fw={400}
+										icon={
+											<ThemeIcon color="#523228" size={24} radius="xl">
+												<IconCheck size={16} />
+											</ThemeIcon>
+										}
+									>
+										{INDUSTRIAL_SOLUTION_LIST_ITEMS.map((item) => (
+											<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
+												{item}
+											</List.Item>
+										))}
+									</List>
+								</Stack>
+							</Card>
+						</Card>
+						<Card className="other-card" p="md" w="100%" pos="relative" shadow="xs" radius="xl">
+							<Text c="white" fz={22} mb={isMobile ? 60 : 70}>
+								Export & Distribution
+							</Text>
+						</Card>
+					</Flex>
+				</Carousel.Slide>
+				<Carousel.Slide>2</Carousel.Slide>
+			</Carousel>
+		</div>
 	);
 }
 

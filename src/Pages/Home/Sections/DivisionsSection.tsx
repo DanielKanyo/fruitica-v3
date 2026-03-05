@@ -66,7 +66,7 @@ function DivisionsSection({ isMobile }: DivisionsSectionProps) {
 				boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
 			}}
 		>
-			<Flex gap="xl" style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
+			<Flex gap="xl" style={{ padding: isMobile ? "4rem 1rem 10rem" : "4rem 6rem 10rem" }} direction={{ base: "column", lg: "row" }}>
 				<Flex w="100%" justify="flex-start" align="center">
 					<Text fz={42} lh={1.4} style={{ textAlign: isMobile ? "center" : "left" }}>
 						<b>Two</b> Business Pillars <br /> —
