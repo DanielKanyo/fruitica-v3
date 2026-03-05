@@ -25,6 +25,14 @@ const INDUSTRIAL_SOLUTION_LIST_ITEMS = [
 	"Export logistics coordination.",
 ];
 
+const EXPORT_ADVANTAGES_LIST_ITEMS = [
+	"Strategic locations near EU border.",
+	"Access to E75 logistics corridor.",
+	"Flexible Incoterms (EXW, DAP, ...).",
+	"Experience with retail chains.",
+	"Private label experties.",
+];
+
 interface OtherSectionProps {
 	isMobile: boolean;
 }
@@ -51,7 +59,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 				<Carousel.Slide>
 					<Flex gap="xl" style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
 						<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
-							<div className="coffee-bg"></div>
+							<div className="card-bg coffee-bg"></div>
 							<Box className="card-header">
 								<Text c="white" fz={22}>
 									Our Competitive <br /> <b>Advantage</b>
@@ -95,7 +103,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 							</Card>
 						</Card>
 						<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
-							<div className="chocolate-bg"></div>
+							<div className="card-bg blueberries-bg"></div>
 							<Box className="card-header">
 								<Text c="white" fz={22}>
 									Private Label & Industrial <br /> <b>Solutions</b>
@@ -123,7 +131,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 										spacing="md"
 										fw={400}
 										icon={
-											<ThemeIcon color="#523228" size={24} radius="xl">
+											<ThemeIcon color="blue.8" size={24} radius="xl">
 												<IconCheck size={16} />
 											</ThemeIcon>
 										}
@@ -137,10 +145,50 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 								</Stack>
 							</Card>
 						</Card>
-						<Card className="other-card" p="md" w="100%" pos="relative" shadow="xs" radius="xl">
-							<Text c="white" fz={22} mb={isMobile ? 60 : 70}>
-								Export & Distribution
-							</Text>
+						<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
+							<div className="card-bg rasberries-bg"></div>
+							<Box className="card-header">
+								<Text c="white" fz={22}>
+									Export & <br /> <b>Distribution</b>
+								</Text>
+							</Box>
+							<Card
+								mt={-40}
+								style={{
+									borderTopLeftRadius: "var(--mantine-radius-xl)",
+									borderTopRightRadius: "var(--mantine-radius-xl)",
+									borderBottomLeftRadius: 0,
+									borderBottomRightRadius: 0,
+									height: "100%",
+								}}
+								className="card-body"
+							>
+								<Stack w="90%" gap="xl" p="xl">
+									<Text c="gray.4" fz={isMobile ? 17 : 18}>
+										We cooperate with partners across Europe and other international markets.
+										<br />
+										Advantages:
+									</Text>
+									<List
+										spacing="md"
+										fw={400}
+										icon={
+											<ThemeIcon color="pink.9" size={24} radius="xl">
+												<IconCheck size={16} />
+											</ThemeIcon>
+										}
+									>
+										{EXPORT_ADVANTAGES_LIST_ITEMS.map((item) => (
+											<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
+												{item}
+											</List.Item>
+										))}
+									</List>
+									<Text c="gray.4" fz={isMobile ? 17 : 18}>
+										We are continuously seeking long-term distribution partnerships.
+									</Text>
+								</Stack>
+							</Card>
 						</Card>
 					</Flex>
 				</Carousel.Slide>

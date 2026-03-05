@@ -8,6 +8,16 @@
 	width: 50px;
 }
 
+.card-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	filter: brightness(35%);
+}
+
 .card-header {
 	padding: 2rem 2rem 4rem 2rem;
 	z-index: 8;
@@ -19,23 +29,15 @@
 }
 
 .coffee-bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 	background-image: url("../../../Assets/Images/coffee.jpg");
-	background-size: cover;
-	filter: brightness(35%);
+	background-position: right;
 }
 
-.chocolate-bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url("../../../Assets/Images/chocolate.jpg");
-	background-size: cover;
-	filter: brightness(35%);
+.blueberries-bg {
+	background-image: url("../../../Assets/Images/blueberries.jpeg");
+	background-position: right;
+}
+
+.rasberries-bg {
+	background-image: url("../../../Assets/Images/raspberries.jpeg");
 }
