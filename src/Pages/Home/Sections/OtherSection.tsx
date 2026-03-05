@@ -98,7 +98,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 						</Card>
 					</Card>
 					<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
-						<div className="card-bg blueberries-bg"></div>
+						<div className="card-bg olives-bg"></div>
 						<Box className="card-header">
 							<Text c="white" fz={22}>
 								Private Label & Industrial <br /> <b>Solutions</b>
@@ -126,7 +126,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 									spacing="md"
 									fw={400}
 									icon={
-										<ThemeIcon color="blue.8" size={24} radius="xl">
+										<ThemeIcon color="green.8" size={24} radius="xl">
 											<IconCheck size={16} />
 										</ThemeIcon>
 									}
@@ -141,7 +141,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 						</Card>
 					</Card>
 					<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
-						<div className="card-bg rasberries-bg"></div>
+						<div className="card-bg cherry-bg"></div>
 						<Box className="card-header">
 							<Text c="white" fz={22}>
 								Export & <br /> <b>Distribution</b>
@@ -168,7 +168,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 									spacing="md"
 									fw={400}
 									icon={
-										<ThemeIcon color="pink.9" size={24} radius="xl">
+										<ThemeIcon color="red.9" size={24} radius="xl">
 											<IconCheck size={16} />
 										</ThemeIcon>
 									}
