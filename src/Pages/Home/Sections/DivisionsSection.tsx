@@ -59,6 +59,8 @@ function DivisionsSection({ isMobile }: DivisionsSectionProps) {
 	return (
 		<div
 			style={{
+				zIndex: 2,
+				position: "relative",
 				backgroundColor: "#dedede",
 				backgroundImage: "linear-gradient(90deg,rgba(245, 245, 245, 1) 1%, rgba(222, 222, 222, 1) 100%)",
 				boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",

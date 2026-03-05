@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 
 import { Carousel } from "@mantine/carousel";
-import { Card, Flex, List, Stack, Text, ThemeIcon } from "@mantine/core";
+import { Box, Card, Flex, List, Stack, Text, ThemeIcon } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
 
 import "./OtherSection.css";
@@ -20,11 +20,14 @@ interface OtherSectionProps {
 }
 
 function OtherSection({ isMobile }: OtherSectionProps) {
-	const autoplay = useRef(Autoplay({ delay: 15000 }));
+	// TODO
+	const autoplay = useRef(Autoplay({ delay: 1500000 }));
 
 	return (
 		<Carousel
 			withIndicators
+			bg={"#2c1913"}
+			style={{ zIndex: 0 }}
 			withControls={false}
 			emblaOptions={{ dragFree: true, align: "start" }}
 			plugins={[autoplay.current]}
@@ -32,40 +35,55 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 		>
 			<Carousel.Slide>
 				<Flex gap="xl" style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
-					<Card p="3.4rem 3rem" bg="teal.9" w="100%" pos="relative" shadow="xs" radius="xl">
-						<Text c="white" fz={22} mb={isMobile ? 60 : 70}>
-							Our Competitive Advantage
-						</Text>
-						<Stack w="90%" gap="xl" px={"1.4rem"}>
-							<Text c="gray.2" fz={isMobile ? 17 : 18}>
-								Unlike traditional traders, we:
+					<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
+						<div className="coffee-bg"></div>
+						<Box className="header-card">
+							<Text c="white" fz={22} maw="50%">
+								Our Competitive <b>Advantage</b>
 							</Text>
-							<List
-								spacing="md"
-								fw={400}
-								icon={
-									<ThemeIcon color="teal" size={24} radius="xl">
-										<IconCheck size={16} />
-									</ThemeIcon>
-								}
-							>
-								{COMPETITIVE_LIST_ITEMS.map((item) => (
-									<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.2">
-										{item}
-									</List.Item>
-								))}
-							</List>
-							<Text c="gray.2" fz={isMobile ? 17 : 18}>
-								FRUITICA DOO combines commercial strength with technological understanding.
-							</Text>
-						</Stack>
+						</Box>
+
+						<Card
+							mt={-40}
+							style={{
+								borderTopLeftRadius: "var(--mantine-radius-xl)",
+								borderTopRightRadius: "var(--mantine-radius-xl)",
+								borderBottomLeftRadius: 0,
+								borderBottomRightRadius: 0,
+							}}
+							className="other-card"
+						>
+							<Stack w="90%" gap="xl" p="xl">
+								<Text c="gray.4" fz={isMobile ? 17 : 18}>
+									Unlike traditional traders, we:
+								</Text>
+								<List
+									spacing="md"
+									fw={400}
+									icon={
+										<ThemeIcon color="#2c1913" size={24} radius="xl">
+											<IconCheck size={16} />
+										</ThemeIcon>
+									}
+								>
+									{COMPETITIVE_LIST_ITEMS.map((item) => (
+										<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
+											{item}
+										</List.Item>
+									))}
+								</List>
+								<Text c="gray.4" fz={isMobile ? 17 : 18}>
+									Fruitica d.o.o combines commercial strength with technological understanding.
+								</Text>
+							</Stack>
+						</Card>
 					</Card>
-					<Card p="3.4rem 3rem" bg="teal.9" w="100%" pos="relative" shadow="xs" radius="xl">
+					<Card className="other-card" p="md" w="100%" pos="relative" shadow="xs" radius="xl">
 						<Text c="white" fz={22} mb={isMobile ? 60 : 70}>
 							Private Label & Industrial Solutions
 						</Text>
 					</Card>
-					<Card p="3.4rem 3rem" bg="teal.9" w="100%" pos="relative" shadow="xs" radius="xl">
+					<Card className="other-card" p="md" w="100%" pos="relative" shadow="xs" radius="xl">
 						<Text c="white" fz={22} mb={isMobile ? 60 : 70}>
 							Export & Distribution
 						</Text>
