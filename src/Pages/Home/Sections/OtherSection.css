@@ -1,8 +1,59 @@
 .carousel-indicator {
 	width: 24px;
 	transition: width 0.3s ease;
+	background-color: white;
 }
 
 .carousel-indicator[data-active] {
 	width: 50px;
+}
+
+.card-bg {
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	width: calc(100% + 10px);
+	height: calc(100% + 10px);
+	background-size: cover;
+	filter: brightness(70%);
+}
+
+.card-header {
+	padding: 2rem 2rem 4rem 2rem;
+	z-index: 8;
+}
+
+.card-body {
+	backdrop-filter: blur(30px);
+	background: linear-gradient(90deg, rgba(68, 38, 29, 0.2) 0%, rgba(85, 48, 36, 0.2) 100%);
+}
+
+.coffee-bg {
+	background-image: url("../../../Assets/Images/coffee.jpg");
+	background-position: right;
+}
+
+.plums-bg {
+	background-image: url("../../../Assets/Images/plums.jpg");
+	background-position: center;
+}
+
+.cherry-bg {
+	background-image: url("../../../Assets/Images/cherry.jpeg");
+	background-position: right;
+}
+
+.blueberries-bg {
+	background-image: url("../../../Assets/Images/blueberries.jpeg");
+	background-position: left;
+}
+
+.orange-bg {
+	background-image: url("../../../Assets/Images/orange.jpg");
+	background-position: left;
+}
+
+.figs-bg {
+	background-image: url("../../../Assets/Images/figs.jpg");
+	background-position: right;
 }

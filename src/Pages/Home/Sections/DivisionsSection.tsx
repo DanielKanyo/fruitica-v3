@@ -59,12 +59,14 @@ function DivisionsSection({ isMobile }: DivisionsSectionProps) {
 	return (
 		<div
 			style={{
+				zIndex: 2,
+				position: "relative",
 				backgroundColor: "#dedede",
 				backgroundImage: "linear-gradient(90deg,rgba(245, 245, 245, 1) 1%, rgba(222, 222, 222, 1) 100%)",
 				boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
 			}}
 		>
-			<Flex gap="xl" style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
+			<Flex gap="xl" style={{ padding: isMobile ? "6rem 1rem 12rem" : "6rem 6rem 12rem" }} direction={{ base: "column", lg: "row" }}>
 				<Flex w="100%" justify="flex-start" align="center">
 					<Text fz={42} lh={1.4} style={{ textAlign: isMobile ? "center" : "left" }}>
 						<b>Two</b> Business Pillars <br /> —
