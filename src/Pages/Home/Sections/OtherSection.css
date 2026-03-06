@@ -19,7 +19,7 @@
 }
 
 .card-header {
-	padding: 2rem 2rem 4rem 2rem;
+	padding: 2rem;
 	z-index: 8;
 }
 
@@ -56,4 +56,14 @@
 .figs-bg {
 	background-image: url("../../../Assets/Images/figs.jpg");
 	background-position: right;
+}
+
+@media (max-width: 992px) {
+	.carousel-indicator {
+		width: 20px;
+	}
+
+	.carousel-indicator[data-active] {
+		width: 44px;
+	}
 }

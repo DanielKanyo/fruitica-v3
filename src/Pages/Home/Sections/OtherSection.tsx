@@ -20,7 +20,7 @@ function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
 	);
 
 	return (
-		<Card bg="transparent" w="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 			<div className="card-bg coffee-bg"></div>
 			<Box className="card-header">
 				<Text c="white" fz={22}>
@@ -28,7 +28,7 @@ function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
 				</Text>
 			</Box>
 
-			<Card mt={-40} radius="xl" h="100%" className="card-body">
+			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p="xl">
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Unlike traditional traders, we:
@@ -49,7 +49,7 @@ function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
 						))}
 					</List>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
-						Fruitica d.o.o combines commercial strength with technological understanding.
+						Fruitica d.o.o. combines commercial strength with technological understanding.
 					</Text>
 				</Stack>
 			</Card>
@@ -72,7 +72,7 @@ function PrivateLabelAndIndustrialSolutionsCard({ isMobile }: { isMobile: boolea
 	);
 
 	return (
-		<Card bg="transparent" w="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 			<div className="card-bg plums-bg"></div>
 			<Box className="card-header">
 				<Text c="white" fz={22}>
@@ -80,10 +80,10 @@ function PrivateLabelAndIndustrialSolutionsCard({ isMobile }: { isMobile: boolea
 				</Text>
 			</Box>
 
-			<Card mt={-40} radius="xl" h="100%" className="card-body">
+			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p="xl">
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
-						Fruitica d.o.o is a trusted private label partner for retail chains and distributions.
+						Fruitica d.o.o. is a trusted private label partner for retail chains and distributions.
 						<br />
 						We provide full-service development:
 					</Text>
@@ -121,14 +121,14 @@ function ExportAndDistributionCard({ isMobile }: { isMobile: boolean }) {
 	);
 
 	return (
-		<Card bg="transparent" w="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 			<div className="card-bg cherry-bg"></div>
 			<Box className="card-header">
 				<Text c="white" fz={22}>
 					Export & <br /> <b>Distribution</b>
 				</Text>
 			</Box>
-			<Card mt={-40} radius="xl" h="100%" className="card-body">
+			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p="xl">
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						We cooperate with partners across Europe and other international markets. Advantages:
@@ -164,14 +164,14 @@ function QualityAndCertificationsCard({ isMobile }: { isMobile: boolean }) {
 	);
 
 	return (
-		<Card bg="transparent" w="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 			<div className="card-bg blueberries-bg"></div>
 			<Box className="card-header">
 				<Text c="white" fz={22}>
 					Quality & <br /> <b>Certifications</b>
 				</Text>
 			</Box>
-			<Card mt={-40} radius="xl" h="100%" className="card-body">
+			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p="xl">
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Food safety and compliance are fundamental to our operations. Our systems include:
@@ -204,7 +204,7 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 	const listItems = useMemo(() => ["Responsibility", "Professional development", "Team collaboration", "Continuous improvement"], []);
 
 	return (
-		<Card bg="transparent" w="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 			<div className="card-bg orange-bg"></div>
 			<Box className="card-header">
 				<Text c="white" fz={22}>
@@ -212,7 +212,7 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 					<br />
 				</Text>
 			</Box>
-			<Card mt={-40} radius="xl" h="100%" className="card-body">
+			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p="xl">
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Our strength lies in our people. <br />
@@ -245,7 +245,7 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 
 function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 	return (
-		<Card bg="transparent" w="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 			<div className="card-bg figs-bg"></div>
 			<Box className="card-header">
 				<Text c="white" fz={22}>
@@ -253,7 +253,7 @@ function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 					<b>Events</b>
 				</Text>
 			</Box>
-			<Card mt={-40} radius="xl" h="100%" className="card-body">
+			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p="xl">
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Follow our participation in international trade fairs, product launches, and company milestones.
@@ -265,7 +265,83 @@ function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 }
 
 function OtherSection({ isMobile }: { isMobile: boolean }) {
-	const autoplay = useRef(Autoplay({ delay: 15000 }));
+	const autoplay = useRef(Autoplay({ delay: 15000000 }));
+
+	if (isMobile) {
+		return (
+			<Carousel
+				withIndicators
+				bg="transparent"
+				style={{ zIndex: 10, marginTop: -160 }}
+				withControls={false}
+				emblaOptions={{ align: "start", loop: true, dragFree: false }}
+				plugins={[autoplay.current]}
+				classNames={{ indicator: "carousel-indicator" }}
+				mb="xl"
+			>
+				<Carousel.Slide>
+					<Flex
+						gap="xl"
+						h="100%"
+						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
+						direction={{ base: "column", lg: "row" }}
+					>
+						<OurCompetitiveAdvantagesCard isMobile={isMobile} />
+					</Flex>
+				</Carousel.Slide>
+				<Carousel.Slide>
+					<Flex
+						gap="xl"
+						h="100%"
+						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
+						direction={{ base: "column", lg: "row" }}
+					>
+						<PrivateLabelAndIndustrialSolutionsCard isMobile={isMobile} />
+					</Flex>
+				</Carousel.Slide>
+				<Carousel.Slide>
+					<Flex
+						gap="xl"
+						h="100%"
+						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
+						direction={{ base: "column", lg: "row" }}
+					>
+						<ExportAndDistributionCard isMobile={isMobile} />
+					</Flex>
+				</Carousel.Slide>
+				<Carousel.Slide>
+					<Flex
+						gap="xl"
+						h="100%"
+						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
+						direction={{ base: "column", lg: "row" }}
+					>
+						<QualityAndCertificationsCard isMobile={isMobile} />
+					</Flex>
+				</Carousel.Slide>
+				<Carousel.Slide>
+					<Flex
+						gap="xl"
+						h="100%"
+						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
+						direction={{ base: "column", lg: "row" }}
+					>
+						<CareersCard isMobile={isMobile} />
+					</Flex>
+				</Carousel.Slide>
+				<Carousel.Slide>
+					<Flex
+						gap="xl"
+						h="100%"
+						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
+						direction={{ base: "column", lg: "row" }}
+					>
+						<NewsAndEventsCard isMobile={isMobile} />
+					</Flex>
+				</Carousel.Slide>
+			</Carousel>
+		);
+	}
 
 	return (
 		<Carousel
@@ -273,13 +349,18 @@ function OtherSection({ isMobile }: { isMobile: boolean }) {
 			bg="transparent"
 			style={{ zIndex: 10, marginTop: -160 }}
 			withControls={false}
-			emblaOptions={{ dragFree: true, align: "start" }}
+			emblaOptions={{ align: "start", dragFree: false }}
 			plugins={[autoplay.current]}
 			classNames={{ indicator: "carousel-indicator" }}
 			mb="xl"
 		>
 			<Carousel.Slide>
-				<Flex gap="xl" h="100%" style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
+				<Flex
+					gap="xl"
+					h={isMobile ? "" : "100%"}
+					style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
+					direction={{ base: "column", lg: "row" }}
+				>
 					<OurCompetitiveAdvantagesCard isMobile={isMobile} />
 					<PrivateLabelAndIndustrialSolutionsCard isMobile={isMobile} />
 					<ExportAndDistributionCard isMobile={isMobile} />
