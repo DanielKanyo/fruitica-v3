@@ -30,7 +30,6 @@
 
 .coffee-bg {
 	background-image: url("../../../Assets/Images/coffee.jpg");
-	background-position: right;
 }
 
 .plums-bg {
@@ -50,7 +49,6 @@
 
 .orange-bg {
 	background-image: url("../../../Assets/Images/orange.jpg");
-	background-position: left;
 }
 
 .figs-bg {

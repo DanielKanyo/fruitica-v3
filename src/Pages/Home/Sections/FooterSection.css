@@ -1,0 +1,17 @@
+.chocolate-bg {
+	position: absolute;
+	right: -150px;
+	bottom: -180px;
+	width: 500px;
+	height: 500px;
+	background-image: url("../../../Assets/Images/chocolate.png");
+	background-size: cover;
+}
+
+@media (max-width: 992px) {
+	.chocolate-bg {
+		right: -330px;
+		bottom: 70px;
+		user-select: none;
+	}
+}

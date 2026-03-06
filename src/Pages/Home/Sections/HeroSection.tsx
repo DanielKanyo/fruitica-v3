@@ -6,6 +6,7 @@ import { Center, Stack, Group, Button, Text, useMantineTheme } from "@mantine/co
 import { IconChevronDownFilled } from "@tabler/icons-react";
 
 import logo from "../../../Assets/Images/fruitica-logo.png";
+import "./HeroSection.css";
 
 interface HeroSectionProps {
 	isMobile: boolean;
@@ -16,7 +17,10 @@ function HeroSection({ isMobile }: HeroSectionProps) {
 	const { t } = useTranslation();
 
 	return (
-		<Center style={{ height: "100vh", position: "relative" }}>
+		<Center style={{ height: "100vh", position: "relative", overflowX: "clip" }}>
+			<div className="bg-item1"></div>
+			<div className="bg-item2"></div>
+
 			<Center w="100%" pos="absolute" style={{ bottom: 0, pointerEvents: "none" }} p={40}>
 				<motion.div
 					animate={{ y: [0, 6, 0] }}

@@ -12,11 +12,6 @@ import { RoutePaths } from "./Routes/routes";
 export default function App() {
 	return (
 		<HashRouter>
-			<div className="bg-items-container">
-				<div className="bg-item1"></div>
-				<div className="bg-item2"></div>
-			</div>
-
 			<Nav />
 			<Routes>
 				<Route path={RoutePaths.Home} index element={<Home />} />

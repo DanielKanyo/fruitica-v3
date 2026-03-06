@@ -1,0 +1,39 @@
+.bg-item1 {
+	position: absolute;
+	bottom: -210px;
+	right: -210px;
+	width: 600px;
+	height: 600px;
+	background-image: url("../../../Assets/Images/broccoli.png");
+	background-size: 100%;
+	transform: rotate(-30deg);
+}
+
+.bg-item2 {
+	position: absolute;
+	top: -170px;
+	left: -133px;
+	width: 500px;
+	height: 500px;
+	background-image: url("../../../Assets/Images/watermelon.png");
+	background-size: 100%;
+	transform: rotate(-230deg);
+}
+
+@media (max-width: 992px) {
+	.bg-item1 {
+		position: absolute;
+		bottom: -150px;
+		right: -150px;
+		width: 400px;
+		height: 400px;
+	}
+
+	.bg-item2 {
+		position: absolute;
+		top: -140px;
+		left: -140px;
+		width: 400px;
+		height: 400px;
+	}
+}

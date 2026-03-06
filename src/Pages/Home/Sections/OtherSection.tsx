@@ -265,7 +265,7 @@ function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 }
 
 function OtherSection({ isMobile }: { isMobile: boolean }) {
-	const autoplay = useRef(Autoplay({ delay: 15000000 }));
+	const autoplay = useRef(Autoplay({ delay: 15000 }));
 
 	if (isMobile) {
 		return (
