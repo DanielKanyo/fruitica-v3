@@ -2,6 +2,7 @@ import { NavLink as RouterNavLink } from "react-router-dom";
 
 import { Text, Flex, Card, Button } from "@mantine/core";
 
+import { useScrollSections } from "../../../Context/ScrollProvider";
 import { RoutePaths } from "../../../Routes/routes";
 import "./DivisionsSection.css";
 
@@ -56,8 +57,11 @@ interface DivisionsSectionProps {
 }
 
 function DivisionsSection({ isMobile }: DivisionsSectionProps) {
+	const { setTargetRef } = useScrollSections();
+
 	return (
 		<div
+			ref={setTargetRef("divisions")}
 			style={{
 				zIndex: 2,
 				position: "relative",

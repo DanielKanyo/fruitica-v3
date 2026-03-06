@@ -20,7 +20,7 @@ import {
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
 
-import { useLanguage } from "../../Context/LanguageContext";
+import { useLanguage } from "../../Context/LanguageProvider";
 import { ROUTES } from "../../Routes/routes";
 import { MOBILE_BREAKPOINT } from "../../constants";
 import i18n from "../../i18n/i18n";

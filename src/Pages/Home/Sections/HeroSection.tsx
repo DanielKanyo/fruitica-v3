@@ -6,6 +6,7 @@ import { Center, Stack, Group, Button, Text, useMantineTheme } from "@mantine/co
 import { IconChevronDownFilled } from "@tabler/icons-react";
 
 import logo from "../../../Assets/Images/fruitica-logo.png";
+import { useScrollSections } from "../../../Context/ScrollProvider";
 import "./HeroSection.css";
 
 interface HeroSectionProps {
@@ -15,6 +16,7 @@ interface HeroSectionProps {
 function HeroSection({ isMobile }: HeroSectionProps) {
 	const theme = useMantineTheme();
 	const { t } = useTranslation();
+	const { scrollTo } = useScrollSections();
 
 	return (
 		<Center style={{ height: "100vh", position: "relative", overflowX: "clip" }}>
@@ -64,10 +66,17 @@ function HeroSection({ isMobile }: HeroSectionProps) {
 					transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
 				>
 					<Group gap="xs">
-						<Button size={isMobile ? "md" : "lg"} radius="xl" color="red.7">
-							Products
+						<Button size={isMobile ? "md" : "lg"} radius="xl" color="red.7" onClick={() => scrollTo("divisions")}>
+							Divisions
 						</Button>
-						<Button className="transparent-element" size={isMobile ? "md" : "lg"} radius="xl" variant="outline" color="white">
+						<Button
+							className="transparent-element"
+							size={isMobile ? "md" : "lg"}
+							radius="xl"
+							variant="outline"
+							color="white"
+							onClick={() => scrollTo("contact")}
+						>
 							Contact
 						</Button>
 					</Group>

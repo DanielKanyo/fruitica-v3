@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import { Box, Divider, Flex, Stack, Text, useMantineTheme } from "@mantine/core";
 
+import { useScrollSections } from "../../../Context/ScrollProvider";
 import "./FooterSection.css";
 
 interface FooterProps {
@@ -11,6 +12,7 @@ interface FooterProps {
 function Footer({ isMobile }: FooterProps) {
 	const theme = useMantineTheme();
 	const { t } = useTranslation();
+	const { setTargetRef } = useScrollSections();
 
 	return (
 		<Box
@@ -29,7 +31,7 @@ function Footer({ isMobile }: FooterProps) {
 						{t("subtitle")}
 					</Text>
 				</Stack>
-				<Stack w={isMobile ? "100%" : 600}>
+				<Stack w={isMobile ? "100%" : 600} ref={setTargetRef("contact")}>
 					<Text fz={22}>Contact</Text>
 					<Text fz={17} fw={400} maw={400} c="gray.4">
 						Fruitica d.o.o. <br />
