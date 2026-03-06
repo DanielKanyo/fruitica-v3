@@ -3,8 +3,8 @@ import { useMemo, useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 
 import { Carousel } from "@mantine/carousel";
-import { Box, Button, Card, Flex, List, Stack, Text, ThemeIcon } from "@mantine/core";
-import { IconCheck } from "@tabler/icons-react";
+import { ActionIcon, Box, Card, Flex, List, Stack, Text, ThemeIcon, Tooltip } from "@mantine/core";
+import { IconCheck, IconMessageChatbotFilled } from "@tabler/icons-react";
 
 import { useScrollSections } from "../../../Context/ScrollProvider";
 import "./OtherSection.css";
@@ -213,9 +213,18 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 					<b>Careers</b> <br />
 					<br />
 				</Text>
-				<Button color="orange" radius="xl" w="fit-content" onClick={() => scrollTo("contact")}>
-					Contact Us
-				</Button>
+				<Tooltip label="Contact Us" withArrow>
+					<ActionIcon
+						variant="filled"
+						size="xl"
+						radius="xl"
+						aria-label="Contact"
+						color="orange"
+						onClick={() => scrollTo("contact")}
+					>
+						<IconMessageChatbotFilled />
+					</ActionIcon>
+				</Tooltip>
 			</Flex>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p="xl">
