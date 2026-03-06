@@ -9,6 +9,7 @@ import Nav from "./Components/Nav/Nav";
 import ScrollToTop from "./Components/ScrollToTop";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
+import ManufacturingDivision from "./Pages/ManufacturingDivision/ManufacturingDivision";
 import { RoutePaths } from "./Routes/routes";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
 			<Routes>
 				<Route path={RoutePaths.Home} index element={<Home />} />
 				<Route path={RoutePaths.AboutUs} element={<About />} />
+				<Route path={RoutePaths.ManufacturingDivision} element={<ManufacturingDivision />} />
 			</Routes>
 
 			<Footer />

@@ -34,7 +34,7 @@ interface DivisionCardProps extends DivisionItem {
 
 function DivisionCard({ title, description, route, bgClass, isMobile }: DivisionCardProps) {
 	return (
-		<Card p="xl" className="division-box" w="100%" pos="relative" shadow="xs" radius="xl">
+		<Card p="xl" className="division-card" w="100%" pos="relative" shadow="xs" radius="xl">
 			<div className={`division-bg ${bgClass}`} />
 
 			<Text fz={22} mb={isMobile ? 60 : 70}>

@@ -11,9 +11,15 @@ function About() {
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 
 	return (
-		<div className="page about">
+		<div className="page">
 			<div className="ice-cream-bg"></div>
-			<Box w={isMobile ? "100%" : "60%"} m="0 auto">
+			<Box
+				style={{
+					padding: isMobile ? "8rem 1rem" : "14rem 0",
+					maxWidth: isMobile ? "100%" : "60%",
+					margin: isMobile ? "0 16px" : "0 auto",
+				}}
+			>
 				<Stack gap="xl">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}

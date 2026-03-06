@@ -6,12 +6,12 @@
 	height: 500px;
 	background-image: url("../../Assets/Images/chocolate.png");
 	background-size: cover;
+	pointer-events: none;
 }
 
 @media (max-width: 992px) {
 	.chocolate-bg {
 		right: -330px;
 		bottom: 100px;
-		user-select: none;
 	}
 }
