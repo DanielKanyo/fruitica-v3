@@ -42,3 +42,18 @@
 	background-image: url("../../../Assets/Images/cherry.jpeg");
 	background-position: right;
 }
+
+.blueberries-bg {
+	background-image: url("../../../Assets/Images/blueberries.jpeg");
+	background-position: left;
+}
+
+.orange-bg {
+	background-image: url("../../../Assets/Images/orange.jpg");
+	background-position: left;
+}
+
+.figs-bg {
+	background-image: url("../../../Assets/Images/figs.jpg");
+	background-position: right;
+}
