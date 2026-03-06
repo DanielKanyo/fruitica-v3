@@ -9,28 +9,28 @@ import { IconCheck } from "@tabler/icons-react";
 import "./OtherSection.css";
 
 const COMPETITIVE_LIST_ITEMS = [
-	"Understand real production conditions and formulation challenges.",
-	"Provide technical insight and application support.",
-	"Offer flexible supply solutions.",
-	"Maintain long-term strategic supplier relationships.",
+	"Understand real production conditions and formulation challenges",
+	"Provide technical insight and application support",
+	"Offer flexible supply solutions",
+	"Maintain long-term strategic supplier relationships",
 ];
 
 const INDUSTRIAL_SOLUTION_LIST_ITEMS = [
-	"Concept development.",
-	"Recipe formulation.",
-	"Sample production.",
-	"Packaging design support.",
-	"Industrial manufacturing.",
-	"Quality documentation.",
-	"Export logistics coordination.",
+	"Concept development",
+	"Recipe formulation",
+	"Sample production",
+	"Packaging design support",
+	"Industrial manufacturing",
+	"Quality documentation",
+	"Export logistics coordination",
 ];
 
 const EXPORT_ADVANTAGES_LIST_ITEMS = [
-	"Strategic locations near EU border.",
-	"Access to E75 logistics corridor.",
-	"Flexible Incoterms (EXW, DAP, ...).",
-	"Experience with retail chains.",
-	"Private label experties.",
+	"Strategic locations near EU border",
+	"Access to E75 logistics corridor",
+	"Flexible Incoterms (EXW, DAP, ...)",
+	"Experience with retail chains",
+	"Private label experties",
 ];
 
 interface OtherSectionProps {
@@ -72,7 +72,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 							}}
 							className="card-body"
 						>
-							<Stack w="90%" gap="xl" p="xl">
+							<Stack gap="xl" p="xl">
 								<Text c="gray.4" fz={isMobile ? 17 : 18}>
 									Unlike traditional traders, we:
 								</Text>
@@ -116,7 +116,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 							}}
 							className="card-body"
 						>
-							<Stack w="90%" gap="xl" p="xl">
+							<Stack gap="xl" p="xl">
 								<Text c="gray.4" fz={isMobile ? 17 : 18}>
 									Fruitica d.o.o is a trusted private label partner for retail chains and distributions.
 									<br />
@@ -158,7 +158,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 							}}
 							className="card-body"
 						>
-							<Stack w="90%" gap="xl" p="xl">
+							<Stack gap="xl" p="xl">
 								<Text c="gray.4" fz={isMobile ? 17 : 18}>
 									We cooperate with partners across Europe and other international markets.
 									<br />
