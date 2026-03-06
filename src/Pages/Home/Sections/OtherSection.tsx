@@ -3,9 +3,10 @@ import { useMemo, useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 
 import { Carousel } from "@mantine/carousel";
-import { Box, Card, Flex, List, Stack, Text, ThemeIcon } from "@mantine/core";
+import { Box, Button, Card, Flex, List, Stack, Text, ThemeIcon } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
 
+import { useScrollSections } from "../../../Context/ScrollProvider";
 import "./OtherSection.css";
 
 function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
@@ -202,16 +203,20 @@ function QualityAndCertificationsCard({ isMobile }: { isMobile: boolean }) {
 
 function CareersCard({ isMobile }: { isMobile: boolean }) {
 	const listItems = useMemo(() => ["Responsibility", "Professional development", "Team collaboration", "Continuous improvement"], []);
+	const { scrollTo } = useScrollSections();
 
 	return (
 		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 			<div className="card-bg orange-bg"></div>
-			<Box className="card-header">
+			<Flex className="card-header" justify="space-between">
 				<Text c="white" fz={22}>
 					<b>Careers</b> <br />
 					<br />
 				</Text>
-			</Box>
+				<Button color="orange" radius="xl" w="fit-content" onClick={() => scrollTo("contact")}>
+					Contact Us
+				</Button>
+			</Flex>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p="xl">
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
