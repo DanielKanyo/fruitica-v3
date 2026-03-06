@@ -31,13 +31,13 @@ function Footer({ isMobile }: FooterProps) {
 						{t("subtitle")}
 					</Text>
 					<Group gap="xs">
-						<Badge color="teal">Established in 1996</Badge>
-						<Badge color="teal">Instant beverage production since 2012</Badge>
-						<Badge color="teal">35+ employees</Badge>
-						<Badge color="teal">ISO certified production</Badge>
-						<Badge color="teal">95% retail-oriented operations</Badge>
-						<Badge color="teal">Strong regional distribution network</Badge>
-						<Badge color="teal">Export-focused business</Badge>
+						<Badge color="teal.8">Established in 1996</Badge>
+						<Badge color="teal.8">Instant beverage production since 2012</Badge>
+						<Badge color="teal.8">35+ employees</Badge>
+						<Badge color="teal.8">ISO certified production</Badge>
+						<Badge color="teal.8">95% retail-oriented operations</Badge>
+						<Badge color="teal.8">Strong regional distribution network</Badge>
+						<Badge color="teal.8">Export-focused business</Badge>
 					</Group>
 				</Stack>
 				<Stack w={isMobile ? "100%" : 600} ref={setTargetRef("contact")} gap="xl">
