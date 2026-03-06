@@ -3,7 +3,6 @@ import { useMediaQuery } from "@mantine/hooks";
 import { MOBILE_BREAKPOINT } from "../../constants";
 import AboutSection from "./Sections/AboutSection";
 import DivisionsSection from "./Sections/DivisionsSection";
-import Footer from "./Sections/FooterSection";
 import HeroSection from "./Sections/HeroSection";
 import OtherSection from "./Sections/OtherSection";
 
@@ -16,7 +15,6 @@ function Home() {
 			<AboutSection isMobile={isMobile} />
 			<DivisionsSection isMobile={isMobile} />
 			<OtherSection isMobile={isMobile} />
-			<Footer isMobile={isMobile} />
 		</>
 	);
 }

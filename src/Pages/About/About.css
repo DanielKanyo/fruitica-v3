@@ -1,18 +1,10 @@
 .page {
-	padding: 14rem 4rem 4rem 4rem;
+	padding: 14rem 4rem 7rem 4rem;
 	position: relative;
 }
 
 @media (max-width: 992px) {
 	.page {
-		padding: 10rem 1rem 1rem 1rem;
-		position: relative;
-	}
-
-	.fruit {
-		right: -54px;
-		width: 80px;
-		height: 80px;
-		top: -2px;
+		padding: 8rem 2rem 8rem 2rem;
 	}
 }
