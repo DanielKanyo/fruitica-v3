@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { Box, Divider, Flex, Stack, Text, useMantineTheme } from "@mantine/core";
+import { Badge, Box, Divider, Flex, Group, Stack, Text, useMantineTheme } from "@mantine/core";
 
 import { useScrollSections } from "../../../Context/ScrollProvider";
 import "./FooterSection.css";
@@ -25,13 +25,22 @@ function Footer({ isMobile }: FooterProps) {
 			pos="relative"
 		>
 			<Flex gap={isMobile ? "3rem" : 140} justify="space-between" align="flex-start" direction={{ base: "column", md: "row" }}>
-				<Stack w={isMobile ? "100%" : 600}>
+				<Stack w={isMobile ? "100%" : 600} gap="xl">
 					<Text fz={22}>Fruitica d.o.o.</Text>
 					<Text fz={17} fw={400} maw={400} c="gray.4">
 						{t("subtitle")}
 					</Text>
+					<Group gap="xs">
+						<Badge color="teal">Established in 1996</Badge>
+						<Badge color="teal">Instant beverage production since 2012</Badge>
+						<Badge color="teal">35+ employees</Badge>
+						<Badge color="teal">ISO certified production</Badge>
+						<Badge color="teal">95% retail-oriented operations</Badge>
+						<Badge color="teal">Strong regional distribution network</Badge>
+						<Badge color="teal">Export-focused business</Badge>
+					</Group>
 				</Stack>
-				<Stack w={isMobile ? "100%" : 600} ref={setTargetRef("contact")}>
+				<Stack w={isMobile ? "100%" : 600} ref={setTargetRef("contact")} gap="xl">
 					<Text fz={22}>Contact</Text>
 					<Text fz={17} fw={400} maw={400} c="gray.4">
 						Fruitica d.o.o. <br />
