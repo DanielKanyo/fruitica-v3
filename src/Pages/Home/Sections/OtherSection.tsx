@@ -53,7 +53,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 		>
 			<Carousel.Slide>
 				<Flex gap="xl" style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
-					<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
+					<Card bg="transparent" w="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 						<div className="card-bg coffee-bg"></div>
 						<Box className="card-header">
 							<Text c="white" fz={22}>
@@ -64,8 +64,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 						<Card
 							mt={-40}
 							style={{
-								borderTopLeftRadius: "var(--mantine-radius-xl)",
-								borderTopRightRadius: "var(--mantine-radius-xl)",
+								borderRadius: "var(--mantine-radius-xl)",
 								borderBottomLeftRadius: 0,
 								borderBottomRightRadius: 0,
 								height: "100%",
@@ -97,8 +96,8 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 							</Stack>
 						</Card>
 					</Card>
-					<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
-						<div className="card-bg olives-bg"></div>
+					<Card bg="transparent" w="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+						<div className="card-bg plums-bg"></div>
 						<Box className="card-header">
 							<Text c="white" fz={22}>
 								Private Label & Industrial <br /> <b>Solutions</b>
@@ -108,8 +107,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 						<Card
 							mt={-40}
 							style={{
-								borderTopLeftRadius: "var(--mantine-radius-xl)",
-								borderTopRightRadius: "var(--mantine-radius-xl)",
+								borderRadius: "var(--mantine-radius-xl)",
 								borderBottomLeftRadius: 0,
 								borderBottomRightRadius: 0,
 								height: "100%",
@@ -140,7 +138,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 							</Stack>
 						</Card>
 					</Card>
-					<Card bg="transparent" p={0} w="100%" pos="relative" shadow="xs" radius="xl">
+					<Card bg="transparent" w="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 						<div className="card-bg cherry-bg"></div>
 						<Box className="card-header">
 							<Text c="white" fz={22}>
@@ -150,8 +148,7 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 						<Card
 							mt={-40}
 							style={{
-								borderTopLeftRadius: "var(--mantine-radius-xl)",
-								borderTopRightRadius: "var(--mantine-radius-xl)",
+								borderRadius: "var(--mantine-radius-xl)",
 								borderBottomLeftRadius: 0,
 								borderBottomRightRadius: 0,
 								height: "100%",
@@ -161,7 +158,6 @@ function OtherSection({ isMobile }: OtherSectionProps) {
 							<Stack gap="xl" p="xl">
 								<Text c="gray.4" fz={isMobile ? 17 : 18}>
 									We cooperate with partners across Europe and other international markets.
-									<br />
 									Advantages:
 								</Text>
 								<List

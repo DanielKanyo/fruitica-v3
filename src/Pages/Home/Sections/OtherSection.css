@@ -15,7 +15,7 @@
 	width: calc(100% + 10px);
 	height: calc(100% + 10px);
 	background-size: cover;
-	filter: brightness(50%);
+	filter: brightness(70%);
 }
 
 .card-header {
@@ -24,7 +24,7 @@
 }
 
 .card-body {
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(30px);
 	background: linear-gradient(90deg, rgba(68, 38, 29, 0.2) 0%, rgba(85, 48, 36, 0.2) 100%);
 }
 
@@ -33,9 +33,9 @@
 	background-position: right;
 }
 
-.olives-bg {
-	background-image: url("../../../Assets/Images/olives.jpeg");
-	background-position: left;
+.plums-bg {
+	background-image: url("../../../Assets/Images/plums.jpg");
+	background-position: center;
 }
 
 .cherry-bg {
