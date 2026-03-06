@@ -15,7 +15,7 @@
 	width: calc(100% + 10px);
 	height: calc(100% + 10px);
 	background-size: cover;
-	filter: brightness(70%);
+	filter: brightness(80%);
 }
 
 .card-header {
@@ -32,9 +32,8 @@
 	background-image: url("../../../Assets/Images/coffee.jpg");
 }
 
-.plums-bg {
-	background-image: url("../../../Assets/Images/plums.jpg");
-	background-position: center;
+.apples-bg {
+	background-image: url("../../../Assets/Images/apples.jpg");
 }
 
 .cherry-bg {
@@ -44,7 +43,7 @@
 
 .blueberries-bg {
 	background-image: url("../../../Assets/Images/blueberries.jpeg");
-	background-position: left;
+	background-position: right;
 }
 
 .orange-bg {

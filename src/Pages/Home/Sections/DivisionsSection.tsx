@@ -68,6 +68,7 @@ function DivisionsSection({ isMobile }: DivisionsSectionProps) {
 				backgroundColor: "#dedede",
 				backgroundImage: "linear-gradient(90deg,rgba(245, 245, 245, 1) 1%, rgba(222, 222, 222, 1) 100%)",
 				boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+				borderRadius: "var(--mantine-radius-xl)",
 			}}
 		>
 			<Flex gap="xl" style={{ padding: isMobile ? "6rem 1rem 12rem" : "6rem 6rem 12rem" }} direction={{ base: "column", lg: "row" }}>

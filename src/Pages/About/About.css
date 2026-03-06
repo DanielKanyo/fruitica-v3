@@ -1,10 +1,36 @@
 .page {
 	padding: 14rem 4rem 7rem 4rem;
 	position: relative;
+	overflow-x: clip;
+}
+
+.ice-cream-bg {
+	position: absolute;
+	top: 0;
+	right: -260px;
+	width: 700px;
+	height: 700px;
+	background-image: url("../../Assets/Images/ice-cream.png");
+	background-size: cover;
+	background-position: center;
+	pointer-events: none;
+	transform: rotate(-24deg);
 }
 
 @media (max-width: 992px) {
 	.page {
 		padding: 8rem 2rem 8rem 2rem;
+	}
+
+	.ice-cream-bg {
+		top: 0;
+		right: -160px;
+		width: 400px;
+		height: 400px;
+		background-image: url("../../Assets/Images/ice-cream.png");
+		background-size: cover;
+		background-position: center;
+		pointer-events: none;
+		transform: rotate(-24deg);
 	}
 }

@@ -1,22 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
-@font-face {
-	font-family: "Blueberry";
-	src: url("./Assets/Fonts/Blueberry.ttf") format("truetype");
-	font-weight: normal;
-	font-style: normal;
-}
-
 body {
 	font-family: "Figtree", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 500;
 	background: #024631;
 	background: linear-gradient(90deg, rgba(2, 70, 49, 1) 1%, rgba(13, 102, 72, 1) 50%, rgba(2, 70, 49, 1) 100%);
-}
-
-.bluberry-text {
-	font-family: "Blueberry";
 }
 
 .transparent-element {

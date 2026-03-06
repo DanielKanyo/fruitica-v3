@@ -20,14 +20,20 @@ function Footer() {
 				padding: isMobile ? "5rem 2rem" : "5rem 17rem",
 				maxWidth: "100%",
 				overflow: "hidden",
+				backgroundColor: "#dedede",
+				backgroundImage: "linear-gradient(90deg,rgba(245, 245, 245, 1) 1%, rgba(222, 222, 222, 1) 100%)",
+				borderTopLeftRadius: "var(--mantine-radius-xl)",
+				borderTopRightRadius: "var(--mantine-radius-xl)",
+				boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
 			}}
-			bg={theme.colors.dark[8]}
 			pos="relative"
 		>
 			<Flex gap={isMobile ? "3rem" : 140} justify="space-between" align="flex-start" direction={{ base: "column", md: "row" }}>
 				<Stack w={isMobile ? "100%" : 600} gap="xl">
-					<Text fz={22}>Fruitica d.o.o.</Text>
-					<Text fz={17} fw={400} maw={400} c="gray.5">
+					<Text fz={22} c="black">
+						Fruitica d.o.o.
+					</Text>
+					<Text fz={17} fw={400} maw={400} c="gray.7">
 						{t("subtitle")}
 					</Text>
 					<Group gap="xs">
@@ -41,20 +47,22 @@ function Footer() {
 					</Group>
 				</Stack>
 				<Stack w={isMobile ? "100%" : 600} ref={setTargetRef("contact")} gap="xl">
-					<Text fz={22}>Contact</Text>
-					<Text fz={17} fw={400} maw={400} c="gray.5">
+					<Text fz={22} c="black">
+						Contact
+					</Text>
+					<Text fz={17} fw={400} maw={400} c="gray.7">
 						Fruitica d.o.o. <br />
 						Čantavir, Serbia <br />
 						Near Subotica
 					</Text>
-					<Text fz={17} fw={400} maw={400} c="gray.5">
+					<Text fz={17} fw={400} maw={400} c="gray.7">
 						office@fruitica.rs <br />
 						+381 (24) 782 600
 					</Text>
 				</Stack>
 			</Flex>
-			<Divider my={60} style={{ borderTop: `1px solid ${theme.colors.gray[7]}` }} />
-			<Text fz={17} fw={400} c="gray.5">
+			<Divider my={60} style={{ borderTop: `1px solid ${theme.colors.gray[6]}` }} />
+			<Text fz={17} fw={400} c="gray.7">
 				© 2026 Fruitica d.o.o. All rights reserved.
 			</Text>
 			<div className="chocolate-bg"></div>

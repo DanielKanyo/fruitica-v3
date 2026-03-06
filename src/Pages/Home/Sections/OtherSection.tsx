@@ -74,7 +74,7 @@ function PrivateLabelAndIndustrialSolutionsCard({ isMobile }: { isMobile: boolea
 
 	return (
 		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
-			<div className="card-bg plums-bg"></div>
+			<div className="card-bg apples-bg"></div>
 			<Box className="card-header">
 				<Text c="white" fz={22}>
 					Private Label & Industrial <br /> <b>Solutions</b>
