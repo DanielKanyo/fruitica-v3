@@ -88,7 +88,7 @@ function ManufacturingDivision() {
 						>
 							<Text
 								style={{
-									fontSize: isMobile ? 44 : 60,
+									fontSize: isMobile ? 30 : 60,
 									color: theme.white,
 								}}
 							>
@@ -103,7 +103,7 @@ function ManufacturingDivision() {
 						>
 							<Text
 								style={{
-									fontSize: isMobile ? 34 : 40,
+									fontSize: isMobile ? 22 : 40,
 									color: theme.colors.gray[1],
 								}}
 							>
@@ -160,7 +160,7 @@ function ManufacturingDivision() {
 						>
 							<Text
 								style={{
-									fontSize: isMobile ? 34 : 40,
+									fontSize: isMobile ? 22 : 40,
 									color: theme.colors.gray[1],
 								}}
 							>
@@ -206,7 +206,7 @@ function ManufacturingDivision() {
 						>
 							<Text
 								style={{
-									fontSize: isMobile ? 34 : 40,
+									fontSize: isMobile ? 22 : 40,
 									color: theme.colors.gray[1],
 								}}
 							>
