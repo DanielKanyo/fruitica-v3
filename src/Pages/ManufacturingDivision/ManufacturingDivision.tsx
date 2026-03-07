@@ -1,9 +1,8 @@
-import { motion } from "framer-motion";
-
 import { Box, Card, Flex, List, Stack, Text, ThemeIcon, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconCheck } from "@tabler/icons-react";
 
+import MotionDiv from "../../Components/MotionDiv";
 import { MOBILE_BREAKPOINT } from "../../constants";
 import "./ManufacturingDivision.css";
 
@@ -81,11 +80,7 @@ function ManufacturingDivision() {
 					}}
 				>
 					<Stack gap="xl">
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-						>
+						<MotionDiv delay={0.1}>
 							<Text
 								style={{
 									fontSize: isMobile ? 30 : 60,
@@ -94,13 +89,9 @@ function ManufacturingDivision() {
 							>
 								Manufacturing <b>Division</b>
 							</Text>
-						</motion.div>
+						</MotionDiv>
 
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-						>
+						<MotionDiv delay={0.2}>
 							<Text
 								style={{
 									fontSize: isMobile ? 22 : 40,
@@ -109,12 +100,8 @@ function ManufacturingDivision() {
 							>
 								Instant Powdered <b>Beverages</b>
 							</Text>
-						</motion.div>
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-						>
+						</MotionDiv>
+						<MotionDiv delay={0.3}>
 							<Text
 								style={{
 									fontSize: isMobile ? 17 : 18,
@@ -125,15 +112,11 @@ function ManufacturingDivision() {
 								Our production facility in Čantavir operates under strict food safety standards and modern technological
 								processes.
 							</Text>
-						</motion.div>
+						</MotionDiv>
 					</Stack>
 				</Box>
 
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-				>
+				<MotionDiv delay={0.4}>
 					<Flex
 						gap="xl"
 						style={{ padding: isMobile ? "3rem 0 3rem 0" : "4rem 6rem 4rem 6rem" }}
@@ -143,7 +126,7 @@ function ManufacturingDivision() {
 							<ProductCard key={index} {...product} isMobile={isMobile} />
 						))}
 					</Flex>
-				</motion.div>
+				</MotionDiv>
 
 				<Box
 					style={{
@@ -153,11 +136,7 @@ function ManufacturingDivision() {
 					}}
 				>
 					<Stack gap="xl">
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-						>
+						<MotionDiv delay={0.5}>
 							<Text
 								style={{
 									fontSize: isMobile ? 22 : 40,
@@ -166,12 +145,8 @@ function ManufacturingDivision() {
 							>
 								Production <b>Capabilities</b>
 							</Text>
-						</motion.div>
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-						>
+						</MotionDiv>
+						<MotionDiv delay={0.6}>
 							<List
 								spacing="sm"
 								px="xl"
@@ -198,12 +173,8 @@ function ManufacturingDivision() {
 									Custom batch production
 								</List.Item>
 							</List>
-						</motion.div>
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
-						>
+						</MotionDiv>
+						<MotionDiv delay={0.7}>
 							<Text
 								style={{
 									fontSize: isMobile ? 22 : 40,
@@ -212,12 +183,8 @@ function ManufacturingDivision() {
 							>
 								Quality & <b>Safety</b>
 							</Text>
-						</motion.div>
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
-						>
+						</MotionDiv>
+						<MotionDiv delay={0.8}>
 							<List
 								spacing="sm"
 								px="xl"
@@ -241,12 +208,8 @@ function ManufacturingDivision() {
 									Controlled supplier network
 								</List.Item>
 							</List>
-						</motion.div>
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "easeOut", delay: 0.9 }}
-						>
+						</MotionDiv>
+						<MotionDiv delay={0.9}>
 							<Text
 								style={{
 									fontSize: isMobile ? 17 : 18,
@@ -256,7 +219,7 @@ function ManufacturingDivision() {
 							>
 								Each batch is monitored to ensure consistent quality and safety.
 							</Text>
-						</motion.div>
+						</MotionDiv>
 					</Stack>
 				</Box>
 			</Box>

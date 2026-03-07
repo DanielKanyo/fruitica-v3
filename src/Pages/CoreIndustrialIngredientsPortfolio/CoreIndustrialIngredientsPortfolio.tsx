@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
-
 import { Box, Stack, useMantineTheme, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
+import MotionDiv from "../../Components/MotionDiv";
 import { MOBILE_BREAKPOINT } from "../../constants";
 
 function CoreIndustrialIngredientsPortfolio() {
@@ -19,11 +18,7 @@ function CoreIndustrialIngredientsPortfolio() {
 				}}
 			>
 				<Stack gap="xl">
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-					>
+					<MotionDiv delay={0.1}>
 						<Text
 							style={{
 								fontSize: isMobile ? 30 : 60,
@@ -32,10 +27,9 @@ function CoreIndustrialIngredientsPortfolio() {
 						>
 							Core Industrial Ingredients <b>Portfolio</b>
 						</Text>
-					</motion.div>
+					</MotionDiv>
 				</Stack>
 			</Box>
-			CoreIndustrialIngredientsPortfolio
 		</div>
 	);
 }

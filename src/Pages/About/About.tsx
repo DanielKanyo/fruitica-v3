@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
-
 import { useMantineTheme, Text, Box, Stack } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
+import MotionDiv from "../../Components/MotionDiv";
 import { MOBILE_BREAKPOINT } from "../../constants";
 import "./About.css";
 
@@ -21,11 +20,7 @@ function About() {
 				}}
 			>
 				<Stack gap="xl">
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-					>
+					<MotionDiv delay={0.1}>
 						<Text
 							style={{
 								fontSize: isMobile ? 30 : 60,
@@ -34,13 +29,9 @@ function About() {
 						>
 							About <b>Us</b>
 						</Text>
-					</motion.div>
+					</MotionDiv>
 
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-					>
+					<MotionDiv delay={0.2}>
 						<Text
 							style={{
 								fontSize: isMobile ? 22 : 40,
@@ -49,13 +40,9 @@ function About() {
 						>
 							Our <b>Story</b>
 						</Text>
-					</motion.div>
+					</MotionDiv>
 
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-					>
+					<MotionDiv delay={0.3}>
 						<Text
 							style={{
 								fontSize: isMobile ? 17 : 18,
@@ -75,13 +62,9 @@ function About() {
 							Today, we operate as an integrated food solutions company, combining sourcing expertise with industrial
 							production.
 						</Text>
-					</motion.div>
+					</MotionDiv>
 
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-					>
+					<MotionDiv delay={0.4}>
 						<Text
 							style={{
 								fontSize: isMobile ? 22 : 40,
@@ -90,13 +73,9 @@ function About() {
 						>
 							Our <b>Mission</b>
 						</Text>
-					</motion.div>
+					</MotionDiv>
 
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-					>
+					<MotionDiv delay={0.5}>
 						<Text
 							style={{
 								fontSize: isMobile ? 17 : 18,
@@ -107,13 +86,9 @@ function About() {
 							To deliver reliable, high-quality food solutions - whether through finished beverage products or functional raw
 							materials - while building long-term partnerships based on trust and performance.
 						</Text>
-					</motion.div>
+					</MotionDiv>
 
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-					>
+					<MotionDiv delay={0.6}>
 						<Text
 							style={{
 								fontSize: isMobile ? 22 : 40,
@@ -122,13 +97,9 @@ function About() {
 						>
 							Our <b>Vision</b>
 						</Text>
-					</motion.div>
+					</MotionDiv>
 
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
-					>
+					<MotionDiv delay={0.7}>
 						<Text
 							style={{
 								fontSize: isMobile ? 17 : 18,
@@ -138,7 +109,7 @@ function About() {
 						>
 							To become a recognized leader in both instant beverage manufacturing and professional ingredient distribution.
 						</Text>
-					</motion.div>
+					</MotionDiv>
 				</Stack>
 			</Box>
 		</div>

@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
-
 import { Box, Stack, Text, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
+import MotionDiv from "../../Components/MotionDiv";
 import { MOBILE_BREAKPOINT } from "../../constants";
 import "./FoodIngredientsTradingDivision.css";
 
@@ -21,11 +20,7 @@ function FoodIngredientsTradingDivision() {
 				}}
 			>
 				<Stack gap="xl">
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-					>
+					<MotionDiv delay={0.1}>
 						<Text
 							style={{
 								fontSize: isMobile ? 30 : 60,
@@ -34,12 +29,8 @@ function FoodIngredientsTradingDivision() {
 						>
 							Food Ingredients Trading <b>Division</b>
 						</Text>
-					</motion.div>
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-					>
+					</MotionDiv>
+					<MotionDiv delay={0.2}>
 						<Text
 							style={{
 								fontSize: isMobile ? 22 : 40,
@@ -48,12 +39,8 @@ function FoodIngredientsTradingDivision() {
 						>
 							Import, Distribution & Advanced Beverage Ingredient <b>Solutions</b>
 						</Text>
-					</motion.div>
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-					>
+					</MotionDiv>
+					<MotionDiv delay={0.3}>
 						<Text
 							style={{
 								fontSize: isMobile ? 17 : 18,
@@ -64,12 +51,8 @@ function FoodIngredientsTradingDivision() {
 							With nearly 30 years of sourcing experience, Fruitica d.o.o. supplies food manufacturers and beverage producers
 							with reliable, functional and innovative ingredient solutions.
 						</Text>
-					</motion.div>
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
-					>
+					</MotionDiv>
+					<MotionDiv delay={0.4}>
 						<Text
 							style={{
 								fontSize: isMobile ? 17 : 18,
@@ -79,12 +62,8 @@ function FoodIngredientsTradingDivision() {
 						>
 							Our portfolio includes both core industrial raw materials and advanced beverage development platforms.
 						</Text>
-					</motion.div>
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
-					>
+					</MotionDiv>
+					<MotionDiv delay={0.5}>
 						<Text
 							style={{
 								fontSize: isMobile ? 17 : 18,
@@ -95,7 +74,7 @@ function FoodIngredientsTradingDivision() {
 							We manage the complete import process, regulatory documentation, customs procedures, warehousing and
 							distribution.
 						</Text>
-					</motion.div>
+					</MotionDiv>
 				</Stack>
 			</Box>
 		</div>
