@@ -8,6 +8,11 @@ function BeverageSolutionsPlatform() {
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 	const theme = useMantineTheme();
 
+	const textTitleStyle = {
+		fontSize: isMobile ? 30 : 60,
+		color: theme.white,
+	};
+
 	return (
 		<div className="page">
 			<Box
@@ -19,12 +24,7 @@ function BeverageSolutionsPlatform() {
 			>
 				<Stack gap="xl">
 					<MotionDiv delay={0.1}>
-						<Text
-							style={{
-								fontSize: isMobile ? 30 : 60,
-								color: theme.white,
-							}}
-						>
+						<Text style={textTitleStyle}>
 							Beverage Solutions <b>Platform</b>
 						</Text>
 					</MotionDiv>

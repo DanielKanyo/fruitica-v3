@@ -9,6 +9,21 @@ function FoodIngredientsTradingDivision() {
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 	const theme = useMantineTheme();
 
+	const textStyle = {
+		fontSize: isMobile ? 17 : 18,
+		color: theme.colors.gray[2],
+	};
+
+	const textSubTitleStyle = {
+		fontSize: isMobile ? 22 : 40,
+		color: theme.colors.gray[1],
+	};
+
+	const textTitleStyle = {
+		fontSize: isMobile ? 30 : 60,
+		color: theme.white,
+	};
+
 	return (
 		<div className="page">
 			<div className="word-map-bg"></div>
@@ -21,56 +36,28 @@ function FoodIngredientsTradingDivision() {
 			>
 				<Stack gap="xl">
 					<MotionDiv delay={0.1}>
-						<Text
-							style={{
-								fontSize: isMobile ? 30 : 60,
-								color: theme.white,
-							}}
-						>
+						<Text style={textTitleStyle}>
 							Food Ingredients Trading <b>Division</b>
 						</Text>
 					</MotionDiv>
 					<MotionDiv delay={0.2}>
-						<Text
-							style={{
-								fontSize: isMobile ? 22 : 40,
-								color: theme.colors.gray[1],
-							}}
-						>
+						<Text style={textSubTitleStyle}>
 							Import, Distribution & Advanced Beverage Ingredient <b>Solutions</b>
 						</Text>
 					</MotionDiv>
 					<MotionDiv delay={0.3}>
-						<Text
-							style={{
-								fontSize: isMobile ? 17 : 18,
-								fontWeight: 400,
-								color: theme.colors.gray[2],
-							}}
-						>
+						<Text style={textStyle}>
 							With nearly 30 years of sourcing experience, Fruitica d.o.o. supplies food manufacturers and beverage producers
 							with reliable, functional and innovative ingredient solutions.
 						</Text>
 					</MotionDiv>
 					<MotionDiv delay={0.4}>
-						<Text
-							style={{
-								fontSize: isMobile ? 17 : 18,
-								fontWeight: 400,
-								color: theme.colors.gray[2],
-							}}
-						>
+						<Text style={textStyle}>
 							Our portfolio includes both core industrial raw materials and advanced beverage development platforms.
 						</Text>
 					</MotionDiv>
 					<MotionDiv delay={0.5}>
-						<Text
-							style={{
-								fontSize: isMobile ? 17 : 18,
-								fontWeight: 400,
-								color: theme.colors.gray[2],
-							}}
-						>
+						<Text style={textStyle}>
 							We manage the complete import process, regulatory documentation, customs procedures, warehousing and
 							distribution.
 						</Text>

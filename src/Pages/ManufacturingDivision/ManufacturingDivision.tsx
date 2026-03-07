@@ -65,6 +65,21 @@ function ManufacturingDivision() {
 	const theme = useMantineTheme();
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 
+	const textStyle = {
+		fontSize: isMobile ? 17 : 18,
+		color: theme.colors.gray[2],
+	};
+
+	const textSubTitleStyle = {
+		fontSize: isMobile ? 22 : 40,
+		color: theme.colors.gray[1],
+	};
+
+	const textTitleStyle = {
+		fontSize: isMobile ? 30 : 60,
+		color: theme.white,
+	};
+
 	return (
 		<div className="page">
 			<Box
@@ -81,34 +96,18 @@ function ManufacturingDivision() {
 				>
 					<Stack gap="xl">
 						<MotionDiv delay={0.1}>
-							<Text
-								style={{
-									fontSize: isMobile ? 30 : 60,
-									color: theme.white,
-								}}
-							>
+							<Text style={textTitleStyle}>
 								Manufacturing <b>Division</b>
 							</Text>
 						</MotionDiv>
 
 						<MotionDiv delay={0.2}>
-							<Text
-								style={{
-									fontSize: isMobile ? 22 : 40,
-									color: theme.colors.gray[1],
-								}}
-							>
+							<Text style={textSubTitleStyle}>
 								Instant Powdered <b>Beverages</b>
 							</Text>
 						</MotionDiv>
 						<MotionDiv delay={0.3}>
-							<Text
-								style={{
-									fontSize: isMobile ? 17 : 18,
-									fontWeight: 400,
-									color: theme.colors.gray[2],
-								}}
-							>
+							<Text style={textStyle}>
 								Our production facility in Čantavir operates under strict food safety standards and modern technological
 								processes.
 							</Text>
@@ -137,12 +136,7 @@ function ManufacturingDivision() {
 				>
 					<Stack gap="xl">
 						<MotionDiv delay={0.5}>
-							<Text
-								style={{
-									fontSize: isMobile ? 22 : 40,
-									color: theme.colors.gray[1],
-								}}
-							>
+							<Text style={textSubTitleStyle}>
 								Production <b>Capabilities</b>
 							</Text>
 						</MotionDiv>
@@ -157,30 +151,15 @@ function ManufacturingDivision() {
 									</ThemeIcon>
 								}
 							>
-								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
-									Mixing systems
-								</List.Item>
-								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
-									Sachet packaging lines
-								</List.Item>
-								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
-									Multipack retail boxes
-								</List.Item>
-								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
-									Display & promotional packaging
-								</List.Item>
-								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
-									Custom batch production
-								</List.Item>
+								<List.Item style={textStyle}>Mixing systems</List.Item>
+								<List.Item style={textStyle}>Sachet packaging lines</List.Item>
+								<List.Item style={textStyle}>Multipack retail boxes</List.Item>
+								<List.Item style={textStyle}>Display & promotional packaging</List.Item>
+								<List.Item style={textStyle}>Custom batch production</List.Item>
 							</List>
 						</MotionDiv>
 						<MotionDiv delay={0.7}>
-							<Text
-								style={{
-									fontSize: isMobile ? 22 : 40,
-									color: theme.colors.gray[1],
-								}}
-							>
+							<Text style={textSubTitleStyle}>
 								Quality & <b>Safety</b>
 							</Text>
 						</MotionDiv>
@@ -195,30 +174,14 @@ function ManufacturingDivision() {
 									</ThemeIcon>
 								}
 							>
-								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
-									ISO compliant
-								</List.Item>
-								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
-									HACCP implemented
-								</List.Item>
-								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
-									Full traceability system
-								</List.Item>
-								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
-									Controlled supplier network
-								</List.Item>
+								<List.Item style={textStyle}>ISO compliant</List.Item>
+								<List.Item style={textStyle}>HACCP implemented</List.Item>
+								<List.Item style={textStyle}>Full traceability system</List.Item>
+								<List.Item style={textStyle}>Controlled supplier network</List.Item>
 							</List>
 						</MotionDiv>
 						<MotionDiv delay={0.9}>
-							<Text
-								style={{
-									fontSize: isMobile ? 17 : 18,
-									fontWeight: 400,
-									color: theme.colors.gray[2],
-								}}
-							>
-								Each batch is monitored to ensure consistent quality and safety.
-							</Text>
+							<Text style={textStyle}>Each batch is monitored to ensure consistent quality and safety.</Text>
 						</MotionDiv>
 					</Stack>
 				</Box>
