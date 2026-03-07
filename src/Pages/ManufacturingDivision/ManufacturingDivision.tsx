@@ -1,7 +1,7 @@
-import { Box, Card, Flex, List, Stack, Text, ThemeIcon, useMantineTheme } from "@mantine/core";
+import { Box, Card, Flex, List, Stack, Text, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import { IconCheck } from "@tabler/icons-react";
 
+import ListIcon from "../../Components/ListIcon";
 import MotionDiv from "../../Components/MotionDiv";
 import { MOBILE_BREAKPOINT } from "../../constants";
 import "./ManufacturingDivision.css";
@@ -42,15 +42,7 @@ function ProductCard({ title, listItems, bgClass, isMobile }: ProductCardProps) 
 				{title}
 			</Text>
 
-			<List
-				spacing="sm"
-				fw={400}
-				icon={
-					<ThemeIcon color="dark.4" size={24} radius="xl">
-						<IconCheck size={16} />
-					</ThemeIcon>
-				}
-			>
+			<List spacing="sm" fw={400} icon={<ListIcon color="dark.4" />}>
 				{listItems.map((item) => (
 					<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.7">
 						{item}
@@ -141,16 +133,7 @@ function ManufacturingDivision() {
 							</Text>
 						</MotionDiv>
 						<MotionDiv delay={0.6}>
-							<List
-								spacing="sm"
-								px="xl"
-								fw={400}
-								icon={
-									<ThemeIcon color="teal.8" size={24} radius="xl">
-										<IconCheck size={16} />
-									</ThemeIcon>
-								}
-							>
+							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>Mixing systems</List.Item>
 								<List.Item style={textStyle}>Sachet packaging lines</List.Item>
 								<List.Item style={textStyle}>Multipack retail boxes</List.Item>
@@ -164,16 +147,7 @@ function ManufacturingDivision() {
 							</Text>
 						</MotionDiv>
 						<MotionDiv delay={0.8}>
-							<List
-								spacing="sm"
-								px="xl"
-								fw={400}
-								icon={
-									<ThemeIcon color="teal.8" size={24} radius="xl">
-										<IconCheck size={16} />
-									</ThemeIcon>
-								}
-							>
+							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>ISO compliant</List.Item>
 								<List.Item style={textStyle}>HACCP implemented</List.Item>
 								<List.Item style={textStyle}>Full traceability system</List.Item>

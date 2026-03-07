@@ -3,9 +3,10 @@ import { useMemo, useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 
 import { Carousel } from "@mantine/carousel";
-import { ActionIcon, Box, Card, Flex, List, Stack, Text, ThemeIcon, Tooltip } from "@mantine/core";
-import { IconCheck, IconMessageChatbotFilled } from "@tabler/icons-react";
+import { ActionIcon, Box, Card, Flex, List, Stack, Text, Tooltip } from "@mantine/core";
+import { IconMessageChatbotFilled } from "@tabler/icons-react";
 
+import ListIcon from "../../../Components/ListIcon";
 import { useScrollSections } from "../../../Context/ScrollProvider";
 import "./OtherSection.css";
 
@@ -34,15 +35,7 @@ function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Unlike traditional traders, we:
 					</Text>
-					<List
-						spacing="md"
-						fw={400}
-						icon={
-							<ThemeIcon color="#523228" size={24} radius="xl">
-								<IconCheck size={16} />
-							</ThemeIcon>
-						}
-					>
+					<List spacing="md" fw={400} icon={<ListIcon color="#523228" />}>
 						{listItems.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}
@@ -88,15 +81,7 @@ function PrivateLabelAndIndustrialSolutionsCard({ isMobile }: { isMobile: boolea
 						<br />
 						We provide full-service development:
 					</Text>
-					<List
-						spacing="md"
-						fw={400}
-						icon={
-							<ThemeIcon color="green.8" size={24} radius="xl">
-								<IconCheck size={16} />
-							</ThemeIcon>
-						}
-					>
+					<List spacing="md" fw={400} icon={<ListIcon color="green.8" />}>
 						{listItems.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}
@@ -134,15 +119,7 @@ function ExportAndDistributionCard({ isMobile }: { isMobile: boolean }) {
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						We cooperate with partners across Europe and other international markets. Advantages:
 					</Text>
-					<List
-						spacing="md"
-						fw={400}
-						icon={
-							<ThemeIcon color="red.9" size={24} radius="xl">
-								<IconCheck size={16} />
-							</ThemeIcon>
-						}
-					>
+					<List spacing="md" fw={400} icon={<ListIcon color="red.9" />}>
 						{listItems.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}
@@ -177,15 +154,7 @@ function QualityAndCertificationsCard({ isMobile }: { isMobile: boolean }) {
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Food safety and compliance are fundamental to our operations. Our systems include:
 					</Text>
-					<List
-						spacing="md"
-						fw={400}
-						icon={
-							<ThemeIcon color="blue" size={24} radius="xl">
-								<IconCheck size={16} />
-							</ThemeIcon>
-						}
-					>
+					<List spacing="md" fw={400} icon={<ListIcon color="blue" />}>
 						{listItems.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}
@@ -233,15 +202,7 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 						<br />
 						We value:
 					</Text>
-					<List
-						spacing="md"
-						fw={400}
-						icon={
-							<ThemeIcon color="orange" size={24} radius="xl">
-								<IconCheck size={16} />
-							</ThemeIcon>
-						}
-					>
+					<List spacing="md" fw={400} icon={<ListIcon color="orange" />}>
 						{listItems.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}

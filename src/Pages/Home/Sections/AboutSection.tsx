@@ -1,8 +1,8 @@
 import { NavLink as RouterNavLink } from "react-router-dom";
 
-import { Box, Flex, Stack, List, ThemeIcon, Text, Button } from "@mantine/core";
-import { IconCheck } from "@tabler/icons-react";
+import { Box, Flex, Stack, List, Text, Button } from "@mantine/core";
 
+import ListIcon from "../../../Components/ListIcon";
 import { RoutePaths } from "../../../Routes/routes";
 
 const ABOUT_LIST_ITEMS = ["Instant Powdered Beverage Manufacturing.", "Food Ingredients Import & Distribution."];
@@ -35,16 +35,7 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Fruitica d.o.o. is a Serbian food company operating in two strong and complementary business units.
 					</Text>
-					<List
-						c="gray.4"
-						spacing="md"
-						fw={400}
-						icon={
-							<ThemeIcon color="teal" size={24} radius="xl">
-								<IconCheck size={16} />
-							</ThemeIcon>
-						}
-					>
+					<List c="gray.4" spacing="md" fw={400} icon={<ListIcon color="teal" />}>
 						{ABOUT_LIST_ITEMS.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}
