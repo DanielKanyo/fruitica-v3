@@ -278,7 +278,7 @@ function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 	);
 }
 
-function OtherSection({ isMobile }: { isMobile: boolean }) {
+function OtherSection({ isMobile, isTablet }: { isMobile: boolean; isTablet: boolean }) {
 	const autoplay = useRef(Autoplay({ delay: 15000 }));
 
 	if (isMobile) {
@@ -294,63 +294,33 @@ function OtherSection({ isMobile }: { isMobile: boolean }) {
 				mb="xl"
 			>
 				<Carousel.Slide>
-					<Flex
-						gap="xl"
-						h="100%"
-						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
-						direction={{ base: "column", lg: "row" }}
-					>
-						<OurCompetitiveAdvantagesCard isMobile={isMobile} />
+					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
+						<OurCompetitiveAdvantagesCard isMobile={true} />
 					</Flex>
 				</Carousel.Slide>
 				<Carousel.Slide>
-					<Flex
-						gap="xl"
-						h="100%"
-						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
-						direction={{ base: "column", lg: "row" }}
-					>
-						<PrivateLabelAndIndustrialSolutionsCard isMobile={isMobile} />
+					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
+						<PrivateLabelAndIndustrialSolutionsCard isMobile={true} />
 					</Flex>
 				</Carousel.Slide>
 				<Carousel.Slide>
-					<Flex
-						gap="xl"
-						h="100%"
-						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
-						direction={{ base: "column", lg: "row" }}
-					>
-						<ExportAndDistributionCard isMobile={isMobile} />
+					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
+						<ExportAndDistributionCard isMobile={true} />
 					</Flex>
 				</Carousel.Slide>
 				<Carousel.Slide>
-					<Flex
-						gap="xl"
-						h="100%"
-						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
-						direction={{ base: "column", lg: "row" }}
-					>
-						<QualityAndCertificationsCard isMobile={isMobile} />
+					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
+						<QualityAndCertificationsCard isMobile={true} />
 					</Flex>
 				</Carousel.Slide>
 				<Carousel.Slide>
-					<Flex
-						gap="xl"
-						h="100%"
-						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
-						direction={{ base: "column", lg: "row" }}
-					>
-						<CareersCard isMobile={isMobile} />
+					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
+						<CareersCard isMobile={true} />
 					</Flex>
 				</Carousel.Slide>
 				<Carousel.Slide>
-					<Flex
-						gap="xl"
-						h="100%"
-						style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
-						direction={{ base: "column", lg: "row" }}
-					>
-						<NewsAndEventsCard isMobile={isMobile} />
+					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
+						<NewsAndEventsCard isMobile={true} />
 					</Flex>
 				</Carousel.Slide>
 			</Carousel>
@@ -369,22 +339,17 @@ function OtherSection({ isMobile }: { isMobile: boolean }) {
 			mb="xl"
 		>
 			<Carousel.Slide>
-				<Flex
-					gap="xl"
-					h={isMobile ? "" : "100%"}
-					style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }}
-					direction={{ base: "column", lg: "row" }}
-				>
-					<OurCompetitiveAdvantagesCard isMobile={isMobile} />
-					<PrivateLabelAndIndustrialSolutionsCard isMobile={isMobile} />
-					<ExportAndDistributionCard isMobile={isMobile} />
+				<Flex gap="xl" h="100%" style={{ padding: isTablet ? "4rem 2rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
+					<OurCompetitiveAdvantagesCard isMobile={false} />
+					<PrivateLabelAndIndustrialSolutionsCard isMobile={false} />
+					<ExportAndDistributionCard isMobile={false} />
 				</Flex>
 			</Carousel.Slide>
 			<Carousel.Slide>
-				<Flex gap="xl" h="100%" style={{ padding: isMobile ? "4rem 1rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
-					<QualityAndCertificationsCard isMobile={isMobile} />
-					<CareersCard isMobile={isMobile} />
-					<NewsAndEventsCard isMobile={isMobile} />
+				<Flex gap="xl" h="100%" style={{ padding: isTablet ? "4rem 2rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
+					<QualityAndCertificationsCard isMobile={false} />
+					<CareersCard isMobile={false} />
+					<NewsAndEventsCard isMobile={false} />
 				</Flex>
 			</Carousel.Slide>
 		</Carousel>

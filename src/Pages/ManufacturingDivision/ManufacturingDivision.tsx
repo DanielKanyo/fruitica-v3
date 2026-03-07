@@ -137,13 +137,128 @@ function ManufacturingDivision() {
 					<Flex
 						gap="xl"
 						style={{ padding: isMobile ? "3rem 0 3rem 0" : "4rem 6rem 4rem 6rem" }}
-						direction={{ base: "column", lg: "row" }}
+						direction={{ base: "column", xl: "row" }}
 					>
 						{PRODUCTS.map((product, index) => (
 							<ProductCard key={index} {...product} isMobile={isMobile} />
 						))}
 					</Flex>
 				</motion.div>
+
+				<Box
+					style={{
+						margin: "0 auto",
+						maxWidth: isMobile ? "100%" : "60%",
+						padding: isMobile ? "0 1rem 4rem 1rem" : "0 0 7rem 0",
+					}}
+				>
+					<Stack gap="xl">
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+						>
+							<Text
+								style={{
+									fontSize: isMobile ? 34 : 40,
+									color: theme.colors.gray[1],
+								}}
+							>
+								Production <b>Capabilities</b>
+							</Text>
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+						>
+							<List
+								spacing="sm"
+								px="xl"
+								fw={400}
+								icon={
+									<ThemeIcon color="teal.8" size={24} radius="xl">
+										<IconCheck size={16} />
+									</ThemeIcon>
+								}
+							>
+								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
+									Mixing systems
+								</List.Item>
+								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
+									Sachet packaging lines
+								</List.Item>
+								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
+									Multipack retail boxes
+								</List.Item>
+								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
+									Display & promotional packaging
+								</List.Item>
+								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
+									Custom batch production
+								</List.Item>
+							</List>
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
+						>
+							<Text
+								style={{
+									fontSize: isMobile ? 34 : 40,
+									color: theme.colors.gray[1],
+								}}
+							>
+								Quality & <b>Safety</b>
+							</Text>
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+						>
+							<List
+								spacing="sm"
+								px="xl"
+								fw={400}
+								icon={
+									<ThemeIcon color="teal.8" size={24} radius="xl">
+										<IconCheck size={16} />
+									</ThemeIcon>
+								}
+							>
+								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
+									ISO compliant
+								</List.Item>
+								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
+									HACCP implemented
+								</List.Item>
+								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
+									Full traceability system
+								</List.Item>
+								<List.Item fz={isMobile ? 17 : 18} c="gray.2">
+									Controlled supplier network
+								</List.Item>
+							</List>
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, ease: "easeOut", delay: 0.9 }}
+						>
+							<Text
+								style={{
+									fontSize: isMobile ? 17 : 18,
+									fontWeight: 400,
+									color: theme.colors.gray[2],
+								}}
+							>
+								Each batch is monitored to ensure consistent quality and safety.
+							</Text>
+						</motion.div>
+					</Stack>
+				</Box>
 			</Box>
 		</div>
 	);

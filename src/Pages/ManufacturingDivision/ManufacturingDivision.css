@@ -16,8 +16,8 @@
 	background-image: url("../../Assets/Images/coffee-beans.png");
 	height: 280px;
 	width: 280px;
-	top: -80px;
-	right: -60px;
+	top: -60px;
+	right: -80px;
 	pointer-events: none;
 	z-index: -1;
 }

@@ -15,7 +15,7 @@ function About() {
 			<div className="ice-cream-bg"></div>
 			<Box
 				style={{
-					padding: isMobile ? "8rem 1rem" : "14rem 0",
+					padding: isMobile ? "8rem 1rem 4rem 1rem" : "14rem 0 7rem 0",
 					maxWidth: isMobile ? "100%" : "60%",
 					margin: isMobile ? "0 16px" : "0 auto",
 				}}
