@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 import { useMantineTheme, Text, Box, Stack } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
@@ -9,20 +11,29 @@ function About() {
 	const theme = useMantineTheme();
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 
-	const textStyle = {
-		fontSize: isMobile ? 17 : 18,
-		color: theme.colors.gray[2],
-	};
+	const textTitleStyle = useMemo(
+		() => ({
+			fontSize: isMobile ? 30 : 60,
+			color: theme.white,
+		}),
+		[isMobile, theme]
+	);
 
-	const textSubTitleStyle = {
-		fontSize: isMobile ? 22 : 40,
-		color: theme.colors.gray[1],
-	};
+	const textSubTitleStyle = useMemo(
+		() => ({
+			fontSize: isMobile ? 22 : 40,
+			color: theme.colors.gray[1],
+		}),
+		[isMobile, theme]
+	);
 
-	const textTitleStyle = {
-		fontSize: isMobile ? 30 : 60,
-		color: theme.white,
-	};
+	const textStyle = useMemo(
+		() => ({
+			fontSize: isMobile ? 17 : 18,
+			color: theme.colors.gray[2],
+		}),
+		[isMobile, theme]
+	);
 
 	return (
 		<div className="page">

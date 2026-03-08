@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 import { Box, Stack, useMantineTheme, Text, List, Divider } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
@@ -9,20 +11,29 @@ function BeverageSolutionsPlatform() {
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 	const theme = useMantineTheme();
 
-	const textStyle = {
-		fontSize: isMobile ? 17 : 18,
-		color: theme.colors.gray[2],
-	};
+	const textTitleStyle = useMemo(
+		() => ({
+			fontSize: isMobile ? 30 : 60,
+			color: theme.white,
+		}),
+		[isMobile, theme]
+	);
 
-	const textTitleStyle = {
-		fontSize: isMobile ? 30 : 60,
-		color: theme.white,
-	};
+	const textSubTitleStyle = useMemo(
+		() => ({
+			fontSize: isMobile ? 22 : 40,
+			color: theme.colors.gray[1],
+		}),
+		[isMobile, theme]
+	);
 
-	const textSubTitleStyle = {
-		fontSize: isMobile ? 22 : 40,
-		color: theme.colors.gray[1],
-	};
+	const textStyle = useMemo(
+		() => ({
+			fontSize: isMobile ? 17 : 18,
+			color: theme.colors.gray[2],
+		}),
+		[isMobile, theme]
+	);
 
 	return (
 		<div className="page">
@@ -51,10 +62,8 @@ function BeverageSolutionsPlatform() {
 							<Text style={textStyle}>
 								We offer complete "turnkey" flavor systems - integrated solutions that combine multiple components into one
 								easy-to-dose system.
-								<br />
-								<br />
-								These systems may include:
 							</Text>
+							<Text style={textStyle}>These systems may include:</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>Flavor</List.Item>
 								<List.Item style={textStyle}>Color</List.Item>

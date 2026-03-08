@@ -1,0 +1,21 @@
+.coconut-bg {
+	position: absolute;
+	top: 400px;
+	right: -100px;
+	width: 500px;
+	height: 500px;
+	background-image: url("../../Assets/Images/coconut.png");
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	pointer-events: none;
+}
+
+@media (max-width: 992px) {
+	.coconut-bg {
+		top: 440px;
+		right: -140px;
+		width: 280px;
+		height: 280px;
+	}
+}

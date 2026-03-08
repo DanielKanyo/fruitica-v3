@@ -12,8 +12,9 @@
 
 @media (max-width: 992px) {
 	.ice-cream-bg {
-		right: -160px;
+		right: -180px;
 		width: 400px;
 		height: 400px;
+		transform: rotate(-20deg);
 	}
 }
