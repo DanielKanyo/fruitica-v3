@@ -8,16 +8,6 @@ body {
 	background: linear-gradient(90deg, rgba(2, 70, 49, 1) 1%, rgba(13, 102, 72, 1) 50%, rgba(2, 70, 49, 1) 100%);
 }
 
-.transparent-element {
-	background: rgba(255, 255, 255, 0.1);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(10px);
-}
-
-button.transparent-element:hover {
-	background: rgba(255, 255, 255, 0.07);
-}
-
 .page {
 	position: relative;
 	overflow-x: clip;

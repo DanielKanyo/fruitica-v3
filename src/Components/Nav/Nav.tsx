@@ -9,13 +9,13 @@ import {
 	Group,
 	Menu,
 	Tooltip,
-	Paper,
 	useMantineTheme,
 	Center,
 	Burger,
 	Drawer,
 	NavLink as MantineNavLink,
 	Button,
+	Paper,
 } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
@@ -82,7 +82,7 @@ function Nav() {
 					transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
 					className="nav-bar-container"
 				>
-					<Paper className="transparent-element" p="md">
+					<Paper className="paper-element" p="md">
 						<Group justify="space-between">
 							<RouterNavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
 								<Button
@@ -95,7 +95,7 @@ function Nav() {
 									pl={4}
 									fz={18}
 								>
-									Fruitica
+									Fruitica d.o.o.
 								</Button>
 							</RouterNavLink>
 
@@ -119,6 +119,9 @@ function Nav() {
 			<Drawer
 				size={isMobile ? "xl" : "md"}
 				styles={{
+					content: {
+						overflow: "hidden",
+					},
 					body: {
 						padding: 0,
 					},
@@ -128,6 +131,7 @@ function Nav() {
 				opened={opened}
 				onClose={close}
 			>
+				<div className="orange-2-bg"></div>
 				{ROUTES.map((r) => (
 					<MantineNavLink
 						key={r.label}

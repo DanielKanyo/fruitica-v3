@@ -69,14 +69,7 @@ function HeroSection({ isMobile }: HeroSectionProps) {
 						<Button size={isMobile ? "md" : "lg"} radius="xl" color="red.7" onClick={() => scrollTo("divisions")}>
 							Divisions
 						</Button>
-						<Button
-							className="transparent-element"
-							size={isMobile ? "md" : "lg"}
-							radius="xl"
-							variant="outline"
-							color="white"
-							onClick={() => scrollTo("contact")}
-						>
+						<Button size={isMobile ? "md" : "lg"} radius="xl" variant="light" color="white" onClick={() => scrollTo("contact")}>
 							Contact
 						</Button>
 					</Group>
