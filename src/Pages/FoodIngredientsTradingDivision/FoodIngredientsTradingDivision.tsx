@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 import { Box, Stack, Text, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
@@ -10,6 +11,7 @@ import "./FoodIngredientsTradingDivision.css";
 function FoodIngredientsTradingDivision() {
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 	const theme = useMantineTheme();
+	const { t } = useTranslation();
 
 	const textTitleStyle = useMemo(
 		() => ({
@@ -47,9 +49,7 @@ function FoodIngredientsTradingDivision() {
 			>
 				<Stack gap="xl">
 					<MotionDiv delay={0.1}>
-						<Text style={textTitleStyle}>
-							Food Ingredients Trading <b>Division</b>
-						</Text>
+						<Text style={textTitleStyle}>{t("foodIngredientsTradingDivision")}</Text>
 					</MotionDiv>
 					<MotionDiv delay={0.2}>
 						<Text style={textSubTitleStyle}>

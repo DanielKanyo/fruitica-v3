@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 import { useMantineTheme, Text, Box, Stack } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
@@ -10,6 +11,7 @@ import "./About.css";
 function About() {
 	const theme = useMantineTheme();
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
+	const { t } = useTranslation();
 
 	const textTitleStyle = useMemo(
 		() => ({
@@ -47,9 +49,7 @@ function About() {
 			>
 				<Stack gap="xl">
 					<MotionDiv delay={0.1}>
-						<Text style={textTitleStyle}>
-							About <b>Us</b>
-						</Text>
+						<Text style={textTitleStyle}>{t("aboutUs")}</Text>
 					</MotionDiv>
 
 					<MotionDiv delay={0.2}>

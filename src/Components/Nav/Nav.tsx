@@ -70,6 +70,7 @@ function Nav() {
 	const { language, setLanguage } = useLanguage();
 	const [opened, { open, close }] = useDisclosure(false);
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
+	const { t } = useTranslation();
 
 	const handleLanguageSelect = useCallback((key: LanguagesKeys) => {
 		i18n.changeLanguage(key);
@@ -120,7 +121,7 @@ function Nav() {
 			</Center>
 
 			<Drawer
-				size={isMobile ? "95%" : "md"}
+				size={isMobile ? "95%" : "lg"}
 				styles={{
 					content: {
 						overflow: "hidden",
@@ -139,15 +140,15 @@ function Nav() {
 					<ScrollArea h="100%">
 						{ROUTES.map((r) => (
 							<MantineNavLink
-								key={r.label}
+								key={r.translationKey}
 								component={RouterNavLink}
 								to={r.link}
 								color="teal"
 								variant="filled"
-								label={r.label}
+								label={t(r.translationKey)}
 								styles={{
 									root: {
-										padding: isMobile ? 18 : 22,
+										padding: isMobile ? 18 : "22px 32px",
 									},
 									label: {
 										fontSize: isMobile ? 18 : 22,

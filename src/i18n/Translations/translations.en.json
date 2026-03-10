@@ -1,4 +1,11 @@
 {
 	"language": "Language",
-	"subtitle": "Your Reliable Partner in Food Manufacturing & Ingredient Distribution"
+	"subtitle": "Your Reliable Partner in Food Manufacturing & Ingredient Distribution",
+	"home": "Home",
+	"aboutUs": "About Us",
+	"manufacturingDivision": "Manufacturing Division",
+	"foodIngredientsTradingDivision": "Food Ingredients Trading Division",
+	"beverageSolutionsPlatform": "Beverage Solutions Platform",
+	"coreIndustrialIngredientsPortfolio": "Core Industrial Ingredients Portfolio",
+	"qualityAndProductSafetyPolicy": "Quality and Product Safety Policy"
 }

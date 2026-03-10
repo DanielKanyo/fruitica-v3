@@ -64,15 +64,15 @@
 	transform: scaleY(-1);
 }
 
-.fresh-juice-splashing-bg {
+.grapes-splashing-bg {
 	position: absolute;
-	top: 100px;
-	left: 0;
-	width: 320px;
-	height: calc(100% + 60px);
-	background-image: url("../../../Assets/Images/fresh-juice-splashing.png");
+	top: -10px;
+	right: 0;
+	width: 360px;
+	height: 700px;
+	background-image: url("../../../Assets/Images/grapes-splashing.png");
 	background-size: cover;
-	transform: scaleX(-1);
+	background-repeat: no-repeat;
 }
 
 .card-bg {

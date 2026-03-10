@@ -221,7 +221,7 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 	return (
 		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
-			<div className="fresh-juice-splashing-bg"></div>
+			<div className="grapes-splashing-bg"></div>
 			<Box className="card-header">
 				<Text fz={22}>
 					News & <br />
