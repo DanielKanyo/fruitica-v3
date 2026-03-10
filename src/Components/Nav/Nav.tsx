@@ -159,7 +159,7 @@ function Nav() {
 					</ScrollArea>
 
 					<Box style={{ position: "relative", pointerEvents: "none" }} h={150}>
-						<div className="orange-2-bg"></div>
+						<div className="peanut-butter-bg"></div>
 					</Box>
 				</Flex>
 			</Drawer>
