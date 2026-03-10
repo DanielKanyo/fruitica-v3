@@ -22,27 +22,27 @@ function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
 	);
 
 	return (
-		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
-			<div className="card-bg coffee-bg"></div>
+		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+			<div className="coffee-beans2-bg"></div>
 			<Box className="card-header">
-				<Text c="white" fz={22}>
+				<Text fz={22}>
 					Our Competitive <br /> <b>Advantage</b>
 				</Text>
 			</Box>
 
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isMobile ? 17 : 18}>
 						Unlike traditional traders, we:
 					</Text>
-					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="#523228" />}>
+					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="#663f33" />}>
 						{listItems.map((item) => (
-							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
+							<List.Item key={item} fz={isMobile ? 17 : 18} c="dark.4">
 								{item}
 							</List.Item>
 						))}
 					</List>
-					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isMobile ? 17 : 18}>
 						Fruitica d.o.o. combines commercial strength with technological understanding.
 					</Text>
 				</Stack>
@@ -66,24 +66,24 @@ function PrivateLabelAndIndustrialSolutionsCard({ isMobile }: { isMobile: boolea
 	);
 
 	return (
-		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
-			<div className="card-bg olives-bg"></div>
+		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+			<div className="cadies2-bg"></div>
 			<Box className="card-header">
-				<Text c="white" fz={22}>
+				<Text fz={22}>
 					Private Label & Industrial <br /> <b>Solutions</b>
 				</Text>
 			</Box>
 
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isMobile ? 17 : 18}>
 						Fruitica d.o.o. is a trusted private label partner for retail chains and distributions.
 						<br />
 						We provide full-service development:
 					</Text>
-					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="green.8" />}>
+					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="pink" />}>
 						{listItems.map((item) => (
-							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
+							<List.Item key={item} fz={isMobile ? 17 : 18} c="dark.4">
 								{item}
 							</List.Item>
 						))}
@@ -107,26 +107,26 @@ function ExportAndDistributionCard({ isMobile }: { isMobile: boolean }) {
 	);
 
 	return (
-		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
-			<div className="card-bg cherry-bg"></div>
+		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+			<div className="fruits-bg"></div>
 			<Box className="card-header">
-				<Text c="white" fz={22}>
+				<Text fz={22}>
 					Export & <br /> <b>Distribution</b>
 				</Text>
 			</Box>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isMobile ? 17 : 18}>
 						We cooperate with partners across Europe and other international markets. Advantages:
 					</Text>
-					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="red.9" />}>
+					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="orange" />}>
 						{listItems.map((item) => (
-							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
+							<List.Item key={item} fz={isMobile ? 17 : 18} c="dark.4">
 								{item}
 							</List.Item>
 						))}
 					</List>
-					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isMobile ? 17 : 18}>
 						We are continuously seeking long-term distribution partnerships.
 					</Text>
 				</Stack>
@@ -142,26 +142,26 @@ function QualityAndCertificationsCard({ isMobile }: { isMobile: boolean }) {
 	);
 
 	return (
-		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
-			<div className="card-bg blueberries-bg"></div>
+		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+			<div className="vegetables-bg"></div>
 			<Box className="card-header">
-				<Text c="white" fz={22}>
+				<Text fz={22}>
 					Quality & <br /> <b>Certifications</b>
 				</Text>
 			</Box>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isMobile ? 17 : 18}>
 						Food safety and compliance are fundamental to our operations. Our systems include:
 					</Text>
-					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="blue" />}>
+					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="red.7" />}>
 						{listItems.map((item) => (
-							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
+							<List.Item key={item} fz={isMobile ? 17 : 18} c="dark.4">
 								{item}
 							</List.Item>
 						))}
 					</List>
-					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isMobile ? 17 : 18}>
 						We are committed to maintaining the highest standards of product integrity.
 					</Text>
 				</Stack>
@@ -175,10 +175,10 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 	const { scrollTo } = useScrollSections();
 
 	return (
-		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
-			<div className="card-bg orange-bg"></div>
+		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+			<div className="lime-slices-bg"></div>
 			<Flex className="card-header" justify="space-between">
-				<Text c="white" fz={22}>
+				<Text fz={22}>
 					<b>Careers</b> <br />
 					<br />
 				</Text>
@@ -188,7 +188,7 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 						size="xl"
 						radius="xl"
 						aria-label="Contact"
-						color="orange"
+						color="green"
 						onClick={() => scrollTo("contact")}
 					>
 						<IconMessageChatbotFilled />
@@ -197,19 +197,19 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 			</Flex>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isMobile ? 17 : 18}>
 						Our strength lies in our people. <br />
 						<br />
 						We value:
 					</Text>
-					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="orange" />}>
+					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="green" />}>
 						{listItems.map((item) => (
-							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
+							<List.Item key={item} fz={isMobile ? 17 : 18} c="dark.4">
 								{item}
 							</List.Item>
 						))}
 					</List>
-					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isMobile ? 17 : 18}>
 						If you would like to join our team, please contant us.
 					</Text>
 				</Stack>
@@ -220,17 +220,17 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 
 function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 	return (
-		<Card bg="transparent" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
-			<div className="card-bg figs-bg"></div>
+		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
+			<div className="fresh-juice-splashing-bg"></div>
 			<Box className="card-header">
-				<Text c="white" fz={22}>
+				<Text fz={22}>
 					News & <br />
 					<b>Events</b>
 				</Text>
 			</Box>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
 				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isMobile ? 17 : 18}>
 						Follow our participation in international trade fairs, product launches, and company milestones.
 					</Text>
 				</Stack>

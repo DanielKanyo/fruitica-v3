@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import { Box, Stack, useMantineTheme, Text, List, Divider } from "@mantine/core";
+import { Box, Stack, useMantineTheme, Text, List } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 import ListIcon from "../../Components/ListIcon";
@@ -52,12 +52,13 @@ function BeverageSolutionsPlatform() {
 							<Text style={textTitleStyle}>
 								Beverage Solutions <b>Platform</b>
 							</Text>
-							<Divider style={{ borderTop: `1px solid ${theme.colors.gray[3]}` }} />
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.2}>
 						<Stack gap="xl">
-							<Text style={textSubTitleStyle}>Turnkey Beverage Flavor Systems</Text>
+							<Text style={textSubTitleStyle}>
+								Turnkey Beverage Flavor <b>Systems</b>
+							</Text>
 							<Text style={textStyle}>
 								<b>Complete Beverage Bases</b>
 							</Text>
@@ -85,12 +86,13 @@ function BeverageSolutionsPlatform() {
 								Turnkey systems enable faster product development, simplified formulation and optimized production
 								processes.
 							</Text>
-							<Divider style={{ borderTop: `1px solid ${theme.colors.gray[3]}` }} />
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.3}>
 						<Stack gap="xl">
-							<Text style={textSubTitleStyle}>Flavors: Natural Flavors, Extracts, Distillates & Concentrates</Text>
+							<Text style={textSubTitleStyle}>
+								Flavors: Natural Flavors, Extracts, Distillates & <b>Concentrates</b>
+							</Text>
 							<Text style={textStyle}>We provide a broad flavor portfolio suitable for beverage applications:</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>Natural flavors</List.Item>
@@ -111,12 +113,13 @@ function BeverageSolutionsPlatform() {
 								<List.Item style={textStyle}>Syrups</List.Item>
 								<List.Item style={textStyle}>Functional beverages</List.Item>
 							</List>
-							<Divider style={{ borderTop: `1px solid ${theme.colors.gray[3]}` }} />
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.4}>
 						<Stack gap="xl">
-							<Text style={textSubTitleStyle}>Citrus Platform</Text>
+							<Text style={textSubTitleStyle}>
+								Citrus <b>Platform</b>
+							</Text>
 							<Text style={textStyle}>
 								<b>Advanced Citrus Solutions for Beverages</b>
 							</Text>
@@ -136,12 +139,13 @@ function BeverageSolutionsPlatform() {
 								</List.Item>
 							</List>
 							<Text style={textStyle}>Ideal for developing premium and refreshing citrus profiles.</Text>
-							<Divider style={{ borderTop: `1px solid ${theme.colors.gray[3]}` }} />
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.5}>
 						<Stack gap="xl">
-							<Text style={textSubTitleStyle}>Mint Oils & Mint Flavors</Text>
+							<Text style={textSubTitleStyle}>
+								Mint Oils & Mint <b>Flavors</b>
+							</Text>
 							<Text style={textStyle}>Our portfolio includes:</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>Mint oils</List.Item>
@@ -154,12 +158,13 @@ function BeverageSolutionsPlatform() {
 								<List.Item style={textStyle}>Iced tea refreshers</List.Item>
 								<List.Item style={textStyle}>Functional beverages with fresh sensory profiles</List.Item>
 							</List>
-							<Divider style={{ borderTop: `1px solid ${theme.colors.gray[3]}` }} />
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.6}>
 						<Stack gap="xl">
-							<Text style={textSubTitleStyle}>Fruit Juice Concentrates & Blends</Text>
+							<Text style={textSubTitleStyle}>
+								Fruit Juice Concentrates & <b>Blends</b>
+							</Text>
 							<Text style={textStyle}>Fruit juice concentrates and blends provide:</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>Authentic fruit character</List.Item>
@@ -173,12 +178,13 @@ function BeverageSolutionsPlatform() {
 								<List.Item style={textStyle}>Vitamin drinks</List.Item>
 								<List.Item style={textStyle}>Functional drink concepts</List.Item>
 							</List>
-							<Divider style={{ borderTop: `1px solid ${theme.colors.gray[3]}` }} />
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.7}>
 						<Stack gap="xl">
-							<Text style={textSubTitleStyle}>Natural Colors for Beverages</Text>
+							<Text style={textSubTitleStyle}>
+								Natural Colors for <b>Beverages</b>
+							</Text>
 							<Text style={textStyle}>Naturally derived color solutions available in multiple formats:</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>Liquid</List.Item>
@@ -194,12 +200,13 @@ function BeverageSolutionsPlatform() {
 								<List.Item style={textStyle}>Required stability</List.Item>
 							</List>
 							<Text style={textStyle}>Designed to meet clean-label and modern consumer expectations.</Text>
-							<Divider style={{ borderTop: `1px solid ${theme.colors.gray[3]}` }} />
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.8}>
 						<Stack gap="xl">
-							<Text style={textSubTitleStyle}>Sweetening Systems & Sugar Reduction Support</Text>
+							<Text style={textSubTitleStyle}>
+								Sweetening Systems & Sugar Reduction <b>Support</b>
+							</Text>
 							<Text style={textStyle}>Advanced solutions for:</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>Sugar reduction</List.Item>
@@ -214,12 +221,13 @@ function BeverageSolutionsPlatform() {
 								<List.Item style={textStyle}>Reduced-calorie formulations</List.Item>
 							</List>
 							<Text style={textStyle}>We support balanced sensory profiles without compromising consumer acceptance.</Text>
-							<Divider style={{ borderTop: `1px solid ${theme.colors.gray[3]}` }} />
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.9}>
 						<Stack gap="xl">
-							<Text style={textSubTitleStyle}>Specialty Functional Ingredients</Text>
+							<Text style={textSubTitleStyle}>
+								Specialty Functional <b>Ingredients</b>
+							</Text>
 							<Text style={textStyle}>As part of complete beverage solutions, systems may incorporate:</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>Proteins</List.Item>
@@ -229,12 +237,13 @@ function BeverageSolutionsPlatform() {
 								<List.Item style={textStyle}>Functional beverage components</List.Item>
 							</List>
 							<Text style={textStyle}>Tailored for modern RTD and functional beverage concepts.</Text>
-							<Divider style={{ borderTop: `1px solid ${theme.colors.gray[3]}` }} />
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={1}>
 						<Stack gap="xl">
-							<Text style={textSubTitleStyle}>Fermentation Technologies</Text>
+							<Text style={textSubTitleStyle}>
+								Fermentation <b>Technologies</b>
+							</Text>
 							<Text style={textStyle}>Advanced fermentation-based ingredient platforms including:</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>Bio-based components</List.Item>

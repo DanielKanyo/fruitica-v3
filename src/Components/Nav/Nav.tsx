@@ -85,7 +85,7 @@ function Nav() {
 					transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
 					className="nav-bar-container"
 				>
-					<Paper className="paper-element" p="md">
+					<Paper className="paper-element" p="md" px={26}>
 						<Group justify="space-between">
 							<RouterNavLink to="/" style={{ height: 44 }} className={({ isActive }) => (isActive ? "nav-active" : "")}>
 								<Button

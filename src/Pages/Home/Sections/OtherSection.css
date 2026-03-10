@@ -8,6 +8,73 @@
 	width: 50px;
 }
 
+.other-card {
+	background-color: rgba(255, 255, 255, 0.3);
+	background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(194, 194, 194, 1) 100%);
+}
+
+.coffee-beans2-bg {
+	position: absolute;
+	top: -5px;
+	right: 0;
+	width: 380px;
+	height: calc(100% + 10px);
+	background-image: url("../../../Assets/Images/coffee-beans2.png");
+	background-size: cover;
+}
+
+.cadies2-bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 320px;
+	height: calc(100% + 60px);
+	background-image: url("../../../Assets/Images/candies2.png");
+	background-size: cover;
+}
+
+.fruits-bg {
+	position: absolute;
+	top: -290px;
+	right: 0;
+	width: 320px;
+	height: calc(100% + 60px);
+	background-image: url("../../../Assets/Images/fruits.png");
+	background-size: cover;
+}
+
+.vegetables-bg {
+	position: absolute;
+	top: -180px;
+	right: 0;
+	width: 320px;
+	height: calc(100% + 60px);
+	background-image: url("../../../Assets/Images/vegetables.png");
+	background-size: cover;
+}
+
+.lime-slices-bg {
+	position: absolute;
+	top: -100px;
+	right: 0;
+	width: 420px;
+	height: calc(100% + 60px);
+	background-image: url("../../../Assets/Images/lime-slices.png");
+	background-size: cover;
+	transform: scaleY(-1);
+}
+
+.fresh-juice-splashing-bg {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 320px;
+	height: calc(100% + 60px);
+	background-image: url("../../../Assets/Images/fresh-juice-splashing.png");
+	background-size: cover;
+	transform: scaleX(-1);
+}
+
 .card-bg {
 	position: absolute;
 	top: -5px;
@@ -24,8 +91,8 @@
 }
 
 .card-body {
+	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(30px);
-	background: linear-gradient(90deg, rgba(68, 38, 29, 0.2) 0%, rgba(85, 48, 36, 0.2) 100%);
 }
 
 .coffee-bg {
