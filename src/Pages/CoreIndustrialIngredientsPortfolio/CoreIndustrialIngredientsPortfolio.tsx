@@ -20,14 +20,6 @@ function CoreIndustrialIngredientsPortfolio() {
 		[isMobile, theme]
 	);
 
-	const textSubTitleStyle = useMemo(
-		() => ({
-			fontSize: isMobile ? 22 : 40,
-			color: theme.colors.gray[1],
-		}),
-		[isMobile, theme]
-	);
-
 	const textStyle = useMemo(
 		() => ({
 			fontSize: isMobile ? 17 : 18,
@@ -99,8 +91,8 @@ function CoreIndustrialIngredientsPortfolio() {
 					</MotionDiv>
 					<MotionDiv delay={0.3}>
 						<Stack gap="xl">
-							<Text style={textSubTitleStyle}>
-								Nut <b>Ingredients</b>
+							<Text style={textStyle}>
+								<b>Nut Ingredients</b>
 							</Text>
 							<Text style={textStyle}>
 								We supply high-quality peanut-based ingredients suitable for industrial food production:
@@ -110,9 +102,7 @@ function CoreIndustrialIngredientsPortfolio() {
 								<List.Item style={textStyle}>Peanut paste (smooth or customized texture)</List.Item>
 								<List.Item style={textStyle}>Pistachio paste</List.Item>
 							</List>
-							<Text style={textStyle}>
-								<b>Applications include:</b>
-							</Text>
+							<Text style={textStyle}>Applications include:</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>Confectionery production</List.Item>
 								<List.Item style={textStyle}>Bakery fillings</List.Item>
