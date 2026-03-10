@@ -2,10 +2,16 @@
 	"language": "Jezik",
 	"subtitle": "Vaš Pouzdan Partner u Proizvodnji Hrane i Distribuciji Prehrambenih Sirovina",
 	"home": "Početna",
-	"aboutUs": "O Nama",
-	"manufacturingDivision": "Proizvodna Divizija",
-	"foodIngredientsTradingDivision": "Trgovinska Divizija",
-	"beverageSolutionsPlatform": "Platforme Za Razvoj Napitaka",
-	"coreIndustrialIngredientsPortfolio": "Industrijski Portfolio Sirovina",
-	"qualityAndProductSafetyPolicy": "Politika Kvaliteta I Bezbednosti Proizvoda"
+	"aboutUs": "O <bold>Nama</bold>",
+	"manufacturingDivision": "Proizvodna <bold>Divizija</bold>",
+	"foodIngredientsTradingDivision": "Trgovinska <bold>Divizija</bold>",
+	"beverageSolutionsPlatform": "Platforme Za Razvoj <bold>Napitaka</bold>",
+	"coreIndustrialIngredientsPortfolio": "Industrijski Portfolio <bold>Sirovina</bold>",
+	"qualityAndProductSafetyPolicy": "Politika Kvaliteta I Bezbednosti <bold>Proizvoda</bold>",
+	"ourStory": "Naša <bold>Priča</bold>",
+	"storyText": "Fruitica d.o.o. započela je poslovanje 1996. godine kao kompanija za trgovinu prehrambenim sirovinama. Kroz dugogodišnje iskustvo i blisku saradnju sa međunarodnim dobavljačima, izgradili smo snažnu distributivnu mrežu u Srbiji i regionu. <br /><br /> Godine 2012. proširili smo poslovanje pokretanjem proizvodnje instant napitaka u prahu u Čantaviru, nadomak Subotice, strateški pozicioniranoj blizu autoputa E75. <br /><br /> Danas poslujemo kao integrisana kompanija koja objedinjuje stručnost u nabavci i industrijsku proizvodnju.",
+	"ourMission": "Naša <bold>Misija</bold>",
+	"missionText": "Da isporučujemo pouzdana i visokokvalitetna rešenja za prehrambenu industriju - bilo kroz gotove proizvode ili funkcionalne sirovine - uz izgradnju dugoročnih partnerstava zasnovanih na poverenju i rezultatima.",
+	"ourVision": "Naša <bold>Vizija</bold>",
+	"visionText": "Da postanemo prepoznat regionalni lider u proizvodnji instant napitaka i profesionalnoj distribuciji prehrambenih sirovina."
 }

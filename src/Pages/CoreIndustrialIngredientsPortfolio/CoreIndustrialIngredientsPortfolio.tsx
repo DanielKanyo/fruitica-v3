@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { Box, Stack, useMantineTheme, Text, List } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
@@ -12,7 +12,8 @@ import "./CoreIndustrialIngredientsPortfolio.css";
 function CoreIndustrialIngredientsPortfolio() {
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 	const theme = useMantineTheme();
-	const { t } = useTranslation();
+
+	useTranslation();
 
 	const textTitleStyle = useMemo(
 		() => ({
@@ -43,7 +44,9 @@ function CoreIndustrialIngredientsPortfolio() {
 				<Stack gap="xl">
 					<MotionDiv delay={0.1}>
 						<Stack gap="xl">
-							<Text style={textTitleStyle}>{t("coreIndustrialIngredientsPortfolio")}</Text>
+							<Text style={textTitleStyle}>
+								<Trans i18nKey="coreIndustrialIngredientsPortfolio" components={{ bold: <b /> }} />
+							</Text>
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.2}>

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { useMantineTheme, Text, Box, Stack } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
@@ -49,54 +49,41 @@ function About() {
 			>
 				<Stack gap="xl">
 					<MotionDiv delay={0.1}>
-						<Text style={textTitleStyle}>{t("aboutUs")}</Text>
+						<Text style={textTitleStyle}>
+							<Trans i18nKey="aboutUs" components={{ bold: <b /> }} />
+						</Text>
 					</MotionDiv>
 
 					<MotionDiv delay={0.2}>
 						<Text style={textSubTitleStyle}>
-							Our <b>Story</b>
+							<Trans i18nKey="ourStory" components={{ bold: <b /> }} />
 						</Text>
 					</MotionDiv>
 
 					<MotionDiv delay={0.3}>
 						<Text style={textStyle}>
-							Fruitica d.o.o. began its journey in 1996 as a food ingredients trading company. Through years of market
-							experience and close cooperation with international suppliers, we build a strong distribution network in Serbia
-							and surrounding markets.
-							<br />
-							<br />
-							In 2012, we expanded into a manufacturing by launching our instant powdered beverage production in Čantavir,
-							near Subotica, strategically located close to the E75 highway.
-							<br />
-							<br />
-							Today, we operate as an integrated food solutions company, combining sourcing expertise with industrial
-							production.
+							<Trans i18nKey="storyText" components={{ br: <br /> }} />
 						</Text>
 					</MotionDiv>
 
 					<MotionDiv delay={0.4}>
 						<Text style={textSubTitleStyle}>
-							Our <b>Mission</b>
+							<Trans i18nKey="ourMission" components={{ bold: <b /> }} />
 						</Text>
 					</MotionDiv>
 
 					<MotionDiv delay={0.5}>
-						<Text style={textStyle}>
-							To deliver reliable, high-quality food solutions - whether through finished beverage products or functional raw
-							materials - while building long-term partnerships based on trust and performance.
-						</Text>
+						<Text style={textStyle}>{t("missionText")}</Text>
 					</MotionDiv>
 
 					<MotionDiv delay={0.6}>
 						<Text style={textSubTitleStyle}>
-							Our <b>Vision</b>
+							<Trans i18nKey="ourVision" components={{ bold: <b /> }} />
 						</Text>
 					</MotionDiv>
 
 					<MotionDiv delay={0.7}>
-						<Text style={textStyle}>
-							To become a recognized leader in both instant beverage manufacturing and professional ingredient distribution.
-						</Text>
+						<Text style={textStyle}>{t("visionText")}</Text>
 					</MotionDiv>
 				</Stack>
 			</Box>

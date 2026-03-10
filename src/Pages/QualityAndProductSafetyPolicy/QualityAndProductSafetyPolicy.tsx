@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { Box, List, Stack, Text, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
@@ -12,7 +12,8 @@ import "./QualityAndProductSafetyPolicy.css";
 function QualityAndProductSafetyPolicy() {
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 	const theme = useMantineTheme();
-	const { t } = useTranslation();
+
+	useTranslation();
 
 	const textTitleStyle = useMemo(
 		() => ({
@@ -43,7 +44,9 @@ function QualityAndProductSafetyPolicy() {
 				<Stack gap="xl">
 					<MotionDiv delay={0.1}>
 						<Stack gap="xl">
-							<Text style={textTitleStyle}>{t("qualityAndProductSafetyPolicy")}</Text>
+							<Text style={textTitleStyle}>
+								<Trans i18nKey="qualityAndProductSafetyPolicy" components={{ bold: <b /> }} />
+							</Text>
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.2}>

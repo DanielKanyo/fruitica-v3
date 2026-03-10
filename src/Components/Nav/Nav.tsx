@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { NavLink as RouterNavLink } from "react-router-dom";
 
 import { motion } from "framer-motion";
@@ -70,7 +70,6 @@ function Nav() {
 	const { language, setLanguage } = useLanguage();
 	const [opened, { open, close }] = useDisclosure(false);
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
-	const { t } = useTranslation();
 
 	const handleLanguageSelect = useCallback((key: LanguagesKeys) => {
 		i18n.changeLanguage(key);
@@ -145,7 +144,7 @@ function Nav() {
 								to={r.link}
 								color="teal"
 								variant="filled"
-								label={t(r.translationKey)}
+								label={<Trans i18nKey={r.translationKey} components={{ bold: <span /> }} />}
 								styles={{
 									root: {
 										padding: isMobile ? 18 : "22px 32px",

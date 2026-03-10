@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { Box, Card, Flex, List, Stack, Text, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
@@ -59,7 +59,8 @@ function ProductCard({ title, listItems, bgClass, isMobile }: ProductCardProps) 
 function ManufacturingDivision() {
 	const theme = useMantineTheme();
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
-	const { t } = useTranslation();
+
+	useTranslation();
 
 	const textTitleStyle = useMemo(
 		() => ({
@@ -101,7 +102,9 @@ function ManufacturingDivision() {
 				>
 					<Stack gap="xl">
 						<MotionDiv delay={0.1}>
-							<Text style={textTitleStyle}>{t("manufacturingDivision")}</Text>
+							<Text style={textTitleStyle}>
+								<Trans i18nKey="manufacturingDivision" components={{ bold: <b /> }} />
+							</Text>
 						</MotionDiv>
 
 						<MotionDiv delay={0.2}>
