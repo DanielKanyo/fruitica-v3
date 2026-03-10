@@ -5,6 +5,7 @@ export enum RoutePaths {
 	FoodIngredientsTradingDivision = "/foodIngredientsTradingDivision",
 	BeverageSolutionsPlatform = "/beverageSolutionsPlatform",
 	CoreIndustrialIngredientsPortfolio = "/coreIndustrialIngredientsPortfolio",
+	QualityAndProductSafetyPolicy = "/qualityAndProductSafetyPolicy",
 }
 
 export const ROUTES = [
@@ -14,4 +15,5 @@ export const ROUTES = [
 	{ label: "Food Ingredients Trading Division", link: RoutePaths.FoodIngredientsTradingDivision },
 	{ label: "Beverage Solutions Platform", link: RoutePaths.BeverageSolutionsPlatform },
 	{ label: "Core Industrial Ingredients Portfolio", link: RoutePaths.CoreIndustrialIngredientsPortfolio },
+	{ label: "Quality and Product Safety Policy", link: RoutePaths.QualityAndProductSafetyPolicy },
 ];

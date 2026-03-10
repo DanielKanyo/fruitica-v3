@@ -1,0 +1,22 @@
+.candy-bg {
+	position: absolute;
+	top: -130px;
+	right: -120px;
+	width: 700px;
+	height: 700px;
+	background-image: url("../../Assets/Images/candies.png");
+	background-size: contain;
+	background-position: center;
+	z-index: -1;
+	pointer-events: none;
+	background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+	.candy-bg {
+		top: 630px;
+		right: -140px;
+		width: 300px;
+		height: 300px;
+	}
+}

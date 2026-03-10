@@ -13,6 +13,7 @@ import CoreIndustrialIngredientsPortfolio from "./Pages/CoreIndustrialIngredient
 import FoodIngredientsTradingDivision from "./Pages/FoodIngredientsTradingDivision/FoodIngredientsTradingDivision";
 import Home from "./Pages/Home/Home";
 import ManufacturingDivision from "./Pages/ManufacturingDivision/ManufacturingDivision";
+import QualityAndProductSafetyPolicy from "./Pages/QualityAndProductSafetyPolicy/QualityAndProductSafetyPolicy";
 import { RoutePaths } from "./Routes/routes";
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
 				<Route path={RoutePaths.FoodIngredientsTradingDivision} element={<FoodIngredientsTradingDivision />} />
 				<Route path={RoutePaths.BeverageSolutionsPlatform} element={<BeverageSolutionsPlatform />} />
 				<Route path={RoutePaths.CoreIndustrialIngredientsPortfolio} element={<CoreIndustrialIngredientsPortfolio />} />
+				<Route path={RoutePaths.QualityAndProductSafetyPolicy} element={<QualityAndProductSafetyPolicy />} />
 			</Routes>
 
 			<Footer />

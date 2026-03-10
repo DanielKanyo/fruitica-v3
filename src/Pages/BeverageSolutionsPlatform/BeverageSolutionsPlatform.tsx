@@ -6,6 +6,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import ListIcon from "../../Components/ListIcon";
 import MotionDiv from "../../Components/MotionDiv";
 import { MOBILE_BREAKPOINT } from "../../constants";
+import "./BeverageSolutionsPlatform.css";
 
 function BeverageSolutionsPlatform() {
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
@@ -37,6 +38,7 @@ function BeverageSolutionsPlatform() {
 
 	return (
 		<div className="page">
+			<div className="candy-bg"></div>
 			<Box
 				style={{
 					padding: isMobile ? "8rem 1rem 4rem 1rem" : "14rem 0 7rem 0",

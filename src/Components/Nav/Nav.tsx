@@ -120,7 +120,7 @@ function Nav() {
 			</Center>
 
 			<Drawer
-				size={isMobile ? "xl" : "md"}
+				size={isMobile ? "95%" : "md"}
 				styles={{
 					content: {
 						overflow: "hidden",
