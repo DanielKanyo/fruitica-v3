@@ -21,7 +21,7 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 				margin: isMobile ? "0 16px" : "0 auto",
 			}}
 		>
-			<Stack align="flex-start" mb={isMobile ? 60 : 70}>
+			<Stack gap="lg" align="flex-start" mb={isMobile ? 60 : 70}>
 				<Text fz={42} lh={1.2}>
 					What is <b>Fruitica</b>?
 				</Text>

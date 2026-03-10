@@ -58,7 +58,7 @@
 
 @media (max-width: 992px) {
 	.carousel-indicator {
-		width: 20px;
+		width: 16px;
 	}
 
 	.carousel-indicator[data-active] {

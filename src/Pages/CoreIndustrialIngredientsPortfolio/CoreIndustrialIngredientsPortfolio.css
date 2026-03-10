@@ -1,6 +1,6 @@
 .coconut-bg {
 	position: absolute;
-	top: 400px;
+	top: 350px;
 	right: -100px;
 	width: 500px;
 	height: 500px;
@@ -14,7 +14,7 @@
 @media (max-width: 992px) {
 	.coconut-bg {
 		top: 440px;
-		right: -140px;
+		right: -160px;
 		width: 280px;
 		height: 280px;
 	}
