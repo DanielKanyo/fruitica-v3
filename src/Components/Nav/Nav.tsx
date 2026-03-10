@@ -16,6 +16,9 @@ import {
 	NavLink as MantineNavLink,
 	Button,
 	Paper,
+	Flex,
+	ScrollArea,
+	Box,
 } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconLanguage, IconLemon } from "@tabler/icons-react";
@@ -124,6 +127,7 @@ function Nav() {
 					},
 					body: {
 						padding: 0,
+						height: "calc(100% - 60px)",
 					},
 				}}
 				position={isMobile ? "bottom" : "right"}
@@ -131,26 +135,33 @@ function Nav() {
 				opened={opened}
 				onClose={close}
 			>
-				<div className="orange-2-bg"></div>
-				{ROUTES.map((r) => (
-					<MantineNavLink
-						key={r.label}
-						component={RouterNavLink}
-						to={r.link}
-						color="teal"
-						variant="filled"
-						label={r.label}
-						styles={{
-							root: {
-								padding: isMobile ? 18 : 22,
-							},
-							label: {
-								fontSize: isMobile ? 18 : 22,
-							},
-						}}
-						onClick={close}
-					/>
-				))}
+				<Flex h="100%" direction="column" justify="space-between">
+					<ScrollArea h="100%">
+						{ROUTES.map((r) => (
+							<MantineNavLink
+								key={r.label}
+								component={RouterNavLink}
+								to={r.link}
+								color="teal"
+								variant="filled"
+								label={r.label}
+								styles={{
+									root: {
+										padding: isMobile ? 18 : 22,
+									},
+									label: {
+										fontSize: isMobile ? 18 : 22,
+									},
+								}}
+								onClick={close}
+							/>
+						))}
+					</ScrollArea>
+
+					<Box style={{ position: "relative", pointerEvents: "none" }} h={150}>
+						<div className="orange-2-bg"></div>
+					</Box>
+				</Flex>
 			</Drawer>
 		</>
 	);

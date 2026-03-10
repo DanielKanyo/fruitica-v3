@@ -31,11 +31,11 @@ function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
 			</Box>
 
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p="xl">
+				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Unlike traditional traders, we:
 					</Text>
-					<List spacing="md" fw={400} icon={<ListIcon color="#523228" />}>
+					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="#523228" />}>
 						{listItems.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}
@@ -75,13 +75,13 @@ function PrivateLabelAndIndustrialSolutionsCard({ isMobile }: { isMobile: boolea
 			</Box>
 
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p="xl">
+				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Fruitica d.o.o. is a trusted private label partner for retail chains and distributions.
 						<br />
 						We provide full-service development:
 					</Text>
-					<List spacing="md" fw={400} icon={<ListIcon color="green.8" />}>
+					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="green.8" />}>
 						{listItems.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}
@@ -115,11 +115,11 @@ function ExportAndDistributionCard({ isMobile }: { isMobile: boolean }) {
 				</Text>
 			</Box>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p="xl">
+				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						We cooperate with partners across Europe and other international markets. Advantages:
 					</Text>
-					<List spacing="md" fw={400} icon={<ListIcon color="red.9" />}>
+					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="red.9" />}>
 						{listItems.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}
@@ -150,11 +150,11 @@ function QualityAndCertificationsCard({ isMobile }: { isMobile: boolean }) {
 				</Text>
 			</Box>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p="xl">
+				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Food safety and compliance are fundamental to our operations. Our systems include:
 					</Text>
-					<List spacing="md" fw={400} icon={<ListIcon color="blue" />}>
+					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="blue" />}>
 						{listItems.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}
@@ -196,13 +196,13 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 				</Tooltip>
 			</Flex>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p="xl">
+				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Our strength lies in our people. <br />
 						<br />
 						We value:
 					</Text>
-					<List spacing="md" fw={400} icon={<ListIcon color="orange" />}>
+					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="orange" />}>
 						{listItems.map((item) => (
 							<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.4">
 								{item}
@@ -229,7 +229,7 @@ function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 				</Text>
 			</Box>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p="xl">
+				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						Follow our participation in international trade fairs, product launches, and company milestones.
 					</Text>

@@ -57,6 +57,10 @@
 }
 
 @media (max-width: 992px) {
+	.card-header {
+		padding: 1.6rem 1rem;
+	}
+
 	.carousel-indicator {
 		width: 16px;
 	}
