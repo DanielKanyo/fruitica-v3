@@ -13,7 +13,7 @@ function CoreIndustrialIngredientsPortfolio() {
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 	const theme = useMantineTheme();
 
-	useTranslation();
+	const { t } = useTranslation();
 
 	const textTitleStyle = useMemo(
 		() => ({
@@ -51,69 +51,65 @@ function CoreIndustrialIngredientsPortfolio() {
 					</MotionDiv>
 					<MotionDiv delay={0.2}>
 						<Stack gap="xl">
+							<Text style={textStyle}>{t("ciip_intro")}</Text>
 							<Text style={textStyle}>
-								In addition to advanced beverage systems, we supply essential industrial raw materials:
-							</Text>
-							<Text style={textStyle}>
-								<b>Dairy & Creamer Components</b>
+								<Trans i18nKey="ciip_dairy_title" components={{ bold: <b /> }} />
 							</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
-								<List.Item style={textStyle}>Palm-based fat powders</List.Item>
-								<List.Item style={textStyle}>Coconut fat powders</List.Item>
-								<List.Item style={textStyle}>Non-dairy creamers</List.Item>
-								<List.Item style={textStyle}>Topping bases</List.Item>
-								<List.Item style={textStyle}>Foaming agents</List.Item>
+								<List.Item style={textStyle}>{t("ciip_dairy_palmbased")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_dairy_coconut")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_dairy_nondairy")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_dairy_topping")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_dairy_foaming")}</List.Item>
 							</List>
 							<Text style={textStyle}>
-								<b>Hot Beverage Ingredients</b>
+								<Trans i18nKey="ciip_hot_title" components={{ bold: <b /> }} />
 							</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
-								<List.Item style={textStyle}>Instant coffee</List.Item>
-								<List.Item style={textStyle}>Matcha green tea powder</List.Item>
-								<List.Item style={textStyle}>Black tea powder</List.Item>
+								<List.Item style={textStyle}>{t("ciip_hot_coffee")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_hot_matcha")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_hot_tea")}</List.Item>
 							</List>
 							<Text style={textStyle}>
-								<b>Sweeteners & Cocoa</b>
+								<Trans i18nKey="ciip_sweet_title" components={{ bold: <b /> }} />
 							</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
-								<List.Item style={textStyle}>Sugar</List.Item>
-								<List.Item style={textStyle}>Glucose powder</List.Item>
-								<List.Item style={textStyle}>Maltodextrine</List.Item>
-								<List.Item style={textStyle}>Dextrose</List.Item>
-								<List.Item style={textStyle}>Cocoa powder</List.Item>
+								<List.Item style={textStyle}>{t("ciip_sweet_sugar")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_sweet_glucose")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_sweet_maltodextrine")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_sweet_dextrose")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_sweet_cocoa")}</List.Item>
 							</List>
 							<Text style={textStyle}>
-								<b>Functional Ingredients</b>
+								<Trans i18nKey="ciip_functional_title" components={{ bold: <b /> }} />
 							</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
-								<List.Item style={textStyle}>Collagen</List.Item>
-								<List.Item style={textStyle}>Protein ingredients</List.Item>
-								<List.Item style={textStyle}>Specialty industrial components</List.Item>
+								<List.Item style={textStyle}>{t("ciip_functional_collagen")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_functional_protein")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_functional_specialty")}</List.Item>
 							</List>
 						</Stack>
 					</MotionDiv>
 					<MotionDiv delay={0.3}>
 						<Stack gap="xl">
 							<Text style={textStyle}>
-								<b>Nut Ingredients</b>
+								<Trans i18nKey="ciip_nut_title" components={{ bold: <b /> }} />
 							</Text>
-							<Text style={textStyle}>
-								We supply high-quality peanut-based ingredients suitable for industrial food production:
-							</Text>
+							<Text style={textStyle}>{t("ciip_nut_intro")}</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
-								<List.Item style={textStyle}>Peanut kernels (various grades and specifications)</List.Item>
-								<List.Item style={textStyle}>Peanut paste (smooth or customized texture)</List.Item>
-								<List.Item style={textStyle}>Pistachio paste</List.Item>
+								<List.Item style={textStyle}>{t("ciip_nut_kernels")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_nut_paste")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_nut_pistachio")}</List.Item>
 							</List>
-							<Text style={textStyle}>Applications include:</Text>
+							<Text style={textStyle}>{t("ciip_app_title")}</Text>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
-								<List.Item style={textStyle}>Confectionery production</List.Item>
-								<List.Item style={textStyle}>Bakery fillings</List.Item>
-								<List.Item style={textStyle}>Creams and spreads</List.Item>
-								<List.Item style={textStyle}>Protein and snack products</List.Item>
-								<List.Item style={textStyle}>Industrial peanut-based formulations</List.Item>
+								<List.Item style={textStyle}>{t("ciip_app_confectionery")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_app_bakery")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_app_creams")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_app_protein")}</List.Item>
+								<List.Item style={textStyle}>{t("ciip_app_formulations")}</List.Item>
 							</List>
-							<Text style={textStyle}>Available according to agreed specifications and quality requirements.</Text>
+							<Text style={textStyle}>{t("ciip_nut_note")}</Text>
 						</Stack>
 					</MotionDiv>
 				</Stack>
