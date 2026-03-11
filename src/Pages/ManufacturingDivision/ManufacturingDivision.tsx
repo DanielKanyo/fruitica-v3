@@ -10,25 +10,41 @@ import { MOBILE_BREAKPOINT } from "../../constants";
 import "./ManufacturingDivision.css";
 
 interface ProductItem {
-	title: string;
-	listItems: string[];
+	titleKey: string;
+	listItems: { key: string }[];
 	bgClass: string;
 }
 
 const PRODUCTS: ProductItem[] = [
 	{
-		title: "Instant Coffee Mixes",
-		listItems: ["3 in 1", "2 in 1", "Sugar-free options", "Custom formulations"],
+		titleKey: "manufacturingDivision_product_coffeeMixes",
+		listItems: [
+			{ key: "manufacturingDivision_coffee_3in1" },
+			{ key: "manufacturingDivision_coffee_2in1" },
+			{ key: "manufacturingDivision_coffee_sugarFree" },
+			{ key: "manufacturingDivision_coffee_custom" },
+		],
 		bgClass: "product-coffee-beans-bg",
 	},
 	{
-		title: "Matcha Latte Range",
-		listItems: ["Classic", "Collagen", "Probiotic", "Vegan options", "Light (No Added Sugar, Stevia)"],
+		titleKey: "manufacturingDivision_product_matchaLatte",
+		listItems: [
+			{ key: "manufacturingDivision_matcha_classic" },
+			{ key: "manufacturingDivision_matcha_collagen" },
+			{ key: "manufacturingDivision_matcha_probiotic" },
+			{ key: "manufacturingDivision_matcha_vegan" },
+			{ key: "manufacturingDivision_matcha_light" },
+		],
 		bgClass: "product-matcha-bg",
 	},
 	{
-		title: "Other Instant Beverages",
-		listItems: ["Cappuccino", "Chai Latte", "Hot Chocolate", "Functional powdered drinks"],
+		titleKey: "manufacturingDivision_product_otherBeverages",
+		listItems: [
+			{ key: "manufacturingDivision_other_cappuccino" },
+			{ key: "manufacturingDivision_other_chaiLatte" },
+			{ key: "manufacturingDivision_other_hotChocolate" },
+			{ key: "manufacturingDivision_other_functional" },
+		],
 		bgClass: "product-hot-chocolate-bg",
 	},
 ];
@@ -37,18 +53,20 @@ interface ProductCardProps extends ProductItem {
 	isMobile: boolean;
 }
 
-function ProductCard({ title, listItems, bgClass, isMobile }: ProductCardProps) {
+function ProductCard({ titleKey, listItems, bgClass, isMobile }: ProductCardProps) {
+	const { t } = useTranslation();
+
 	return (
 		<Card p="xl" className="product-card" w="100%" pos="relative" shadow="xs" radius="xl">
 			<div className={`product-bg ${bgClass}`} />
 			<Text fz={22} mb={50}>
-				{title}
+				{t(titleKey)}
 			</Text>
 
 			<List spacing="sm" fw={400} icon={<ListIcon color="dark.4" />}>
 				{listItems.map((item) => (
-					<List.Item key={item} fz={isMobile ? 17 : 18} c="gray.7">
-						{item}
+					<List.Item key={item.key} fz={isMobile ? 17 : 18} c="gray.7">
+						{t(item.key)}
 					</List.Item>
 				))}
 			</List>
@@ -59,8 +77,7 @@ function ProductCard({ title, listItems, bgClass, isMobile }: ProductCardProps) 
 function ManufacturingDivision() {
 	const theme = useMantineTheme();
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
-
-	useTranslation();
+	const { t } = useTranslation();
 
 	const textTitleStyle = useMemo(
 		() => ({
@@ -109,14 +126,11 @@ function ManufacturingDivision() {
 
 						<MotionDiv delay={0.2}>
 							<Text style={textSubTitleStyle}>
-								Instant Powdered <b>Beverages</b>
+								<Trans i18nKey="manufacturingDivision_subtitle" components={{ bold: <b /> }} />
 							</Text>
 						</MotionDiv>
 						<MotionDiv delay={0.3}>
-							<Text style={textStyle}>
-								Our production facility in Čantavir operates under strict food safety standards and modern technological
-								processes.
-							</Text>
+							<Text style={textStyle}>{t("manufacturingDivision_description")}</Text>
 						</MotionDiv>
 					</Stack>
 				</Box>
@@ -143,33 +157,33 @@ function ManufacturingDivision() {
 					<Stack gap="xl">
 						<MotionDiv delay={0.5}>
 							<Text style={textSubTitleStyle}>
-								Production <b>Capabilities</b>
+								<Trans i18nKey="manufacturingDivision_productionCapabilities" components={{ bold: <b /> }} />
 							</Text>
 						</MotionDiv>
 						<MotionDiv delay={0.6}>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
-								<List.Item style={textStyle}>Mixing systems</List.Item>
-								<List.Item style={textStyle}>Sachet packaging lines</List.Item>
-								<List.Item style={textStyle}>Multipack retail boxes</List.Item>
-								<List.Item style={textStyle}>Display & promotional packaging</List.Item>
-								<List.Item style={textStyle}>Custom batch production</List.Item>
+								<List.Item style={textStyle}>{t("manufacturingDivision_capability_mixing")}</List.Item>
+								<List.Item style={textStyle}>{t("manufacturingDivision_capability_sachet")}</List.Item>
+								<List.Item style={textStyle}>{t("manufacturingDivision_capability_multipack")}</List.Item>
+								<List.Item style={textStyle}>{t("manufacturingDivision_capability_display")}</List.Item>
+								<List.Item style={textStyle}>{t("manufacturingDivision_capability_batch")}</List.Item>
 							</List>
 						</MotionDiv>
 						<MotionDiv delay={0.7}>
 							<Text style={textSubTitleStyle}>
-								Quality & <b>Safety</b>
+								<Trans i18nKey="manufacturingDivision_qualitySafety" components={{ bold: <b /> }} />
 							</Text>
 						</MotionDiv>
 						<MotionDiv delay={0.8}>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
-								<List.Item style={textStyle}>ISO compliant</List.Item>
-								<List.Item style={textStyle}>HACCP implemented</List.Item>
-								<List.Item style={textStyle}>Full traceability system</List.Item>
-								<List.Item style={textStyle}>Controlled supplier network</List.Item>
+								<List.Item style={textStyle}>{t("manufacturingDivision_quality_iso")}</List.Item>
+								<List.Item style={textStyle}>{t("manufacturingDivision_quality_haccp")}</List.Item>
+								<List.Item style={textStyle}>{t("manufacturingDivision_quality_traceability")}</List.Item>
+								<List.Item style={textStyle}>{t("manufacturingDivision_quality_supplier")}</List.Item>
 							</List>
 						</MotionDiv>
 						<MotionDiv delay={0.9}>
-							<Text style={textStyle}>Each batch is monitored to ensure consistent quality and safety.</Text>
+							<Text style={textStyle}>{t("manufacturingDivision_quality_note")}</Text>
 						</MotionDiv>
 					</Stack>
 				</Box>
