@@ -64,25 +64,16 @@
 	transform: scaleY(-1);
 }
 
-.grapes-splashing-bg {
+.figs-bg {
 	position: absolute;
-	top: -10px;
+	top: -160px;
 	right: 0;
 	width: 360px;
 	height: 700px;
-	background-image: url("../../../Assets/Images/grapes-splashing.png");
+	background-image: url("../../../Assets/Images/figs.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-}
-
-.card-bg {
-	position: absolute;
-	top: -5px;
-	left: -5px;
-	width: calc(100% + 10px);
-	height: calc(100% + 10px);
-	background-size: cover;
-	filter: brightness(80%);
+	background-position: center;
 }
 
 .card-header {
@@ -93,34 +84,6 @@
 .card-body {
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(30px);
-}
-
-.coffee-bg {
-	background-image: url("../../../Assets/Images/coffee.jpg");
-}
-
-.olives-bg {
-	background-image: url("../../../Assets/Images/olives.jpg");
-	background-position: 40%;
-}
-
-.cherry-bg {
-	background-image: url("../../../Assets/Images/cherry.jpeg");
-	background-position: right;
-}
-
-.blueberries-bg {
-	background-image: url("../../../Assets/Images/blueberries.jpeg");
-	background-position: right;
-}
-
-.orange-bg {
-	background-image: url("../../../Assets/Images/orange.jpg");
-}
-
-.figs-bg {
-	background-image: url("../../../Assets/Images/figs.jpg");
-	background-position: right;
 }
 
 @media (max-width: 992px) {
