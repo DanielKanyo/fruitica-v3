@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { NavLink as RouterNavLink } from "react-router-dom";
 
@@ -71,9 +71,18 @@ function Nav() {
 	const [opened, { open, close }] = useDisclosure(false);
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 
+	useEffect(() => {
+		const savedLanguage = localStorage.getItem("language");
+		if (savedLanguage && (savedLanguage === "en" || savedLanguage === "sr")) {
+			i18n.changeLanguage(savedLanguage);
+			setLanguage(savedLanguage as LanguagesKeys);
+		}
+	}, [setLanguage]);
+
 	const handleLanguageSelect = useCallback((key: LanguagesKeys) => {
 		i18n.changeLanguage(key);
 		setLanguage(key);
+		localStorage.setItem("language", key);
 	}, []);
 
 	return (
