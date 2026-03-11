@@ -188,5 +188,7 @@
 	"division_manufacturing_title": "Manufacturing Division",
 	"division_manufacturing_desc": "Specialized in instant coffee mixes, matcha latte and functional powdered beverages.",
 	"division_trading_title": "Food Ingredients Trading Division",
-	"division_trading_desc": "Import and distribution of high-quality food raw materials for the food industry."
+	"division_trading_desc": "Import and distribution of high-quality food raw materials for the food industry.",
+	"divisions": "Divisions",
+	"contact": "Contact"
 }

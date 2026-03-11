@@ -188,5 +188,7 @@
 	"division_manufacturing_title": "Proizvodna Divizija",
 	"division_manufacturing_desc": "Specijalizovana za instant kafe mikseve, matcha latte i funkcionalne napitke u prahu.",
 	"division_trading_title": "Trgovinska Divizija Prehrambenih Sirovina",
-	"division_trading_desc": "Uvoz i distribucija visokokvalitetnih prehrambenih sirovina za industriju hrane."
+	"division_trading_desc": "Uvoz i distribucija visokokvalitetnih prehrambenih sirovina za industriju hrane.",
+	"divisions": "Divizije",
+	"contact": "Kontakt"
 }

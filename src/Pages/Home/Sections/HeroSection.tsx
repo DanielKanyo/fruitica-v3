@@ -67,10 +67,10 @@ function HeroSection({ isMobile }: HeroSectionProps) {
 				>
 					<Group gap="xs">
 						<Button size={isMobile ? "md" : "lg"} radius="xl" color="red.7" onClick={() => scrollTo("divisions")}>
-							Divisions
+							{t("divisions")}
 						</Button>
 						<Button size={isMobile ? "md" : "lg"} radius="xl" variant="light" color="white" onClick={() => scrollTo("contact")}>
-							Contact
+							{t("contact")}
 						</Button>
 					</Group>
 				</motion.div>
