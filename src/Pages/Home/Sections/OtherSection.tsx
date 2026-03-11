@@ -212,6 +212,7 @@ function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 	return (
 		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 			<div className="figs-bg"></div>
+			<div className="figs2-bg"></div>
 			<Box className="card-header">
 				<Text fz={22}>
 					News & <br />

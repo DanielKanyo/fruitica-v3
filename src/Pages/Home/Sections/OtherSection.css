@@ -76,6 +76,18 @@
 	background-position: center;
 }
 
+.figs2-bg {
+	position: absolute;
+	bottom: -260px;
+	left: -200px;
+	width: 360px;
+	height: 700px;
+	background-image: url("../../../Assets/Images/figs.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .card-header {
 	padding: 2rem;
 	z-index: 8;
