@@ -12,7 +12,7 @@ function FoodIngredientsTradingDivision() {
 	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
 	const theme = useMantineTheme();
 
-	useTranslation();
+	const { t } = useTranslation();
 
 	const textTitleStyle = useMemo(
 		() => ({
@@ -56,25 +56,17 @@ function FoodIngredientsTradingDivision() {
 					</MotionDiv>
 					<MotionDiv delay={0.2}>
 						<Text style={textSubTitleStyle}>
-							Import, Distribution & Advanced Beverage Ingredient <b>Solutions</b>
+							<Trans i18nKey="fitd_subtitle" components={{ bold: <b /> }} />
 						</Text>
 					</MotionDiv>
 					<MotionDiv delay={0.3}>
-						<Text style={textStyle}>
-							With nearly 30 years of sourcing experience, Fruitica d.o.o. supplies food manufacturers and beverage producers
-							with reliable, functional and innovative ingredient solutions.
-						</Text>
+						<Text style={textStyle}>{t("fitd_text1")}</Text>
 					</MotionDiv>
 					<MotionDiv delay={0.4}>
-						<Text style={textStyle}>
-							Our portfolio includes both core industrial raw materials and advanced beverage development platforms.
-						</Text>
+						<Text style={textStyle}>{t("fitd_text2")}</Text>
 					</MotionDiv>
 					<MotionDiv delay={0.5}>
-						<Text style={textStyle}>
-							We manage the complete import process, regulatory documentation, customs procedures, warehousing and
-							distribution.
-						</Text>
+						<Text style={textStyle}>{t("fitd_text3")}</Text>
 					</MotionDiv>
 				</Stack>
 			</Box>
