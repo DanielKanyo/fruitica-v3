@@ -37,33 +37,36 @@ function Footer() {
 						{t("subtitle")}
 					</Text>
 					<Group gap="xs">
-						<Badge color="teal.8">Established in 1996</Badge>
-						<Badge color="teal.8">Instant beverage production since 2012</Badge>
-						<Badge color="teal.8">35+ employees</Badge>
-						<Badge color="teal.8">ISO certified production</Badge>
-						<Badge color="teal.8">95% retail-oriented operations</Badge>
-						<Badge color="teal.8">Strong regional distribution network</Badge>
-						<Badge color="teal.8">Export-focused business</Badge>
+						<Badge color="teal.8">{t("key_fact1")}</Badge>
+						<Badge color="teal.8">{t("key_fact2")}</Badge>
+						<Badge color="teal.8">{t("key_fact3")}</Badge>
+						<Badge color="teal.8">{t("key_fact4")}</Badge>
+						<Badge color="teal.8">{t("key_fact5")}</Badge>
+						<Badge color="teal.8">{t("key_fact6")}</Badge>
+						<Badge color="teal.8">{t("key_fact7")}</Badge>
 					</Group>
 				</Stack>
 				<Stack w={isMobile ? "100%" : 600} ref={setTargetRef("contact")} gap="xl">
 					<Text fz={22} c="black">
-						Contact
+						{t("contact")}
 					</Text>
 					<Text fz={17} fw={400} maw={400} c="gray.7">
 						Fruitica d.o.o. <br />
-						Čantavir, Serbia <br />
-						Near Subotica
+						{t("address")} <br />
+						{t("near_subotica")} <br />
 					</Text>
 					<Text fz={17} fw={400} maw={400} c="gray.7">
 						office@fruitica.rs <br />
 						+381 (24) 782 600
 					</Text>
+					<Text fz={17} fw={400} maw={400} c="gray.7">
+						{t("contact_sales_team")}
+					</Text>
 				</Stack>
 			</Flex>
 			<Divider my={60} style={{ borderTop: `1px solid ${theme.colors.gray[6]}` }} />
 			<Text fz={17} fw={400} c="gray.7">
-				© 2026 Fruitica d.o.o. All rights reserved.
+				{t("all_rights_reserved")}
 			</Text>
 			<div className="chocolate-bg"></div>
 		</Box>
