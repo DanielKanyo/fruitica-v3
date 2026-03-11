@@ -178,5 +178,10 @@
 	"manufacturingDivision_quality_haccp": "HACCP implemented",
 	"manufacturingDivision_quality_traceability": "Full traceability system",
 	"manufacturingDivision_quality_supplier": "Controlled supplier network",
-	"manufacturingDivision_quality_note": "Each batch is monitored to ensure consistent quality and safety."
+	"manufacturingDivision_quality_note": "Each batch is monitored to ensure consistent quality and safety.",
+	"aboutSection_title": "What is <bold>Fruitica</bold>?",
+	"aboutSection_description1": "Fruitica d.o.o. is a Serbian food company operating in two strong and complementary business units.",
+	"aboutSection_listItem_manufacturing": "Instant Powdered Beverage Manufacturing.",
+	"aboutSection_listItem_trading": "Food Ingredients Import & Distribution.",
+	"aboutSection_description2": "Established in 1996, we combine nearly three decades of sourcing expertise with modern production capabilities in our factory located in Čantavir, Serbia.<br /><br />We serve retail chains, distributors, and food manufacturers across regional and international markets."
 }

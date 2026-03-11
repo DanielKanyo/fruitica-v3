@@ -178,5 +178,10 @@
 	"manufacturingDivision_quality_haccp": "Implementiran HACCP sistem",
 	"manufacturingDivision_quality_traceability": "Potpuna sledljivost",
 	"manufacturingDivision_quality_supplier": "Kontrolisana mreža dobavljača",
-	"manufacturingDivision_quality_note": "Svaka serija proizvoda se prati radi obezbeđenja doslednog kvaliteta i bezbednosti."
+	"manufacturingDivision_quality_note": "Svaka serija proizvoda se prati radi obezbeđenja doslednog kvaliteta i bezbednosti.",
+	"aboutSection_title": "Šta je <bold>Fruitica</bold>?",
+	"aboutSection_description1": "Fruitica d.o.o. je srpska prehrambena kompanija koja posluje kroz dve snažne i komplementarne poslovne jedinice:",
+	"aboutSection_listItem_manufacturing": "Proizvodnja instant napitaka u prahu",
+	"aboutSection_listItem_trading": "Uvoz i distribucija prehrambenih sirovina",
+	"aboutSection_description2": "Osnovani 1996. godine, objedinjujemo gotovo tri decenije iskustva u nabavci sa savremenim proizvodnim kapacitetima u našoj fabrici u Čantaviru, Srbija.<br /><br />Saradjujemo sa maloprodajnim lancima, distributerima i proizvođačima hrane na regionalnim i međunarodnim tržištima."
 }
