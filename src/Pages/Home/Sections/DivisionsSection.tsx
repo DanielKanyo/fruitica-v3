@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { NavLink as RouterNavLink } from "react-router-dom";
 
 import { Text, Flex, Card, Button } from "@mantine/core";
@@ -33,6 +34,8 @@ interface DivisionCardProps extends DivisionItem {
 }
 
 function DivisionCard({ title, description, route, bgClass, isMobile }: DivisionCardProps) {
+	const { t } = useTranslation();
+
 	return (
 		<Card p="xl" className="division-card" w="100%" pos="relative" shadow="xs" radius="xl">
 			<div className={`division-bg ${bgClass}`} />
@@ -46,7 +49,7 @@ function DivisionCard({ title, description, route, bgClass, isMobile }: Division
 			</Text>
 
 			<Button component={RouterNavLink} to={route} variant="light" color="gray" radius="xl" mt={24}>
-				Learn More
+				{t("learnMore")}
 			</Button>
 		</Card>
 	);

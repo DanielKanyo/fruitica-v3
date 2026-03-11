@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { NavLink as RouterNavLink } from "react-router-dom";
 
 import { Box, Flex, Stack, List, Text, Button } from "@mantine/core";
@@ -12,6 +13,8 @@ interface AboutSectionProps {
 }
 
 function AboutSection({ isMobile }: AboutSectionProps) {
+	const { t } = useTranslation();
+
 	return (
 		<Box
 			c="white"
@@ -26,7 +29,7 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 					What is <b>Fruitica</b>?
 				</Text>
 				<Button component={RouterNavLink} to={RoutePaths.AboutUs} variant="filled" color="red.7" radius="xl">
-					Learn More
+					{t("learnMore")}
 				</Button>
 			</Stack>
 
