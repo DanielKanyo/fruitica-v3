@@ -33,8 +33,8 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 				</Button>
 			</Stack>
 
-			<Flex gap={isMobile ? "1rem" : 140} justify="space-between" align="flex-start" direction={{ base: "column", md: "row" }}>
-				<Stack w={isMobile ? "100%" : 600}>
+			<Flex gap={isMobile ? "xl" : 140} justify="space-between" align="flex-start" direction={{ base: "column", md: "row" }}>
+				<Stack gap="xl" w={isMobile ? "100%" : 600}>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						{t("aboutSection_description1")}
 					</Text>
@@ -47,7 +47,7 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 					</List>
 				</Stack>
 
-				<Stack w={isMobile ? "100%" : 600}>
+				<Stack gap="xl" w={isMobile ? "100%" : 600}>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
 						{t("aboutSection_description2")}
 					</Text>
