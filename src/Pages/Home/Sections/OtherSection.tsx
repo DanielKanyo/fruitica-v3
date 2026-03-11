@@ -22,7 +22,8 @@ function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
 
 	return (
 		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
-			<div className="coffee-beans2-bg"></div>
+			<div className="other-coffee-beans-bg"></div>
+			<div className="other-coffee-beans2-bg"></div>
 			<Box className="card-header">
 				<Text fz={22}>
 					Our Competitive <br /> <b>Advantage</b>
@@ -108,6 +109,7 @@ function ExportAndDistributionCard({ isMobile }: { isMobile: boolean }) {
 	return (
 		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 			<div className="fruits-bg"></div>
+			<div className="fruits2-bg"></div>
 			<Box className="card-header">
 				<Text fz={22}>
 					Export & <br /> <b>Distribution</b>
@@ -143,6 +145,7 @@ function QualityAndCertificationsCard({ isMobile }: { isMobile: boolean }) {
 	return (
 		<Card className="other-card" w="100%" h="100%" pos="relative" shadow="xs" radius="xl" pt={0}>
 			<div className="vegetables-bg"></div>
+			<div className="vegetables2-bg"></div>
 			<Box className="card-header">
 				<Text fz={22}>
 					Quality & <br /> <b>Certifications</b>

@@ -13,14 +13,24 @@
 	background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(194, 194, 194, 1) 100%);
 }
 
-.coffee-beans2-bg {
+.other-coffee-beans-bg {
 	position: absolute;
 	top: -5px;
-	right: 0;
+	right: -150px;
 	width: 380px;
-	height: calc(100% + 10px);
+	height: 800px;
 	background-image: url("../../../Assets/Images/coffee-beans2.png");
-	background-size: cover;
+	background-size: contain;
+}
+
+.other-coffee-beans2-bg {
+	position: absolute;
+	bottom: -150px;
+	left: -240px;
+	width: 380px;
+	height: 600px;
+	background-image: url("../../../Assets/Images/coffee-beans2.png");
+	background-size: contain;
 }
 
 .cadies2-bg {
@@ -43,6 +53,17 @@
 	background-size: cover;
 }
 
+.fruits2-bg {
+	position: absolute;
+	bottom: -300px;
+	left: -20px;
+	width: 320px;
+	height: 700px;
+	background-image: url("../../../Assets/Images/fruits.png");
+	background-size: cover;
+	background-position: right;
+}
+
 .vegetables-bg {
 	position: absolute;
 	top: -180px;
@@ -51,6 +72,17 @@
 	height: calc(100% + 60px);
 	background-image: url("../../../Assets/Images/vegetables.png");
 	background-size: cover;
+}
+
+.vegetables2-bg {
+	position: absolute;
+	bottom: -280px;
+	left: 0;
+	width: 320px;
+	height: 600px;
+	background-image: url("../../../Assets/Images/vegetables.png");
+	background-size: cover;
+	background-position: right;
 }
 
 .lime-slices-bg {
