@@ -49,7 +49,10 @@ function AboutSection({ isMobile }: AboutSectionProps) {
 
 				<Stack w={isMobile ? "100%" : 600}>
 					<Text c="gray.4" fz={isMobile ? 17 : 18}>
-						<Trans i18nKey="aboutSection_description2" />
+						{t("aboutSection_description2")}
+					</Text>
+					<Text c="gray.4" fz={isMobile ? 17 : 18}>
+						{t("aboutSection_description3")}
 					</Text>
 				</Stack>
 			</Flex>
