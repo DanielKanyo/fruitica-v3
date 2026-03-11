@@ -183,5 +183,10 @@
 	"aboutSection_description1": "Fruitica d.o.o. je srpska prehrambena kompanija koja posluje kroz dve snažne i komplementarne poslovne jedinice:",
 	"aboutSection_listItem_manufacturing": "Proizvodnja instant napitaka u prahu",
 	"aboutSection_listItem_trading": "Uvoz i distribucija prehrambenih sirovina",
-	"aboutSection_description2": "Osnovani 1996. godine, objedinjujemo gotovo tri decenije iskustva u nabavci sa savremenim proizvodnim kapacitetima u našoj fabrici u Čantaviru, Srbija.<br /><br />Saradjujemo sa maloprodajnim lancima, distributerima i proizvođačima hrane na regionalnim i međunarodnim tržištima."
+	"aboutSection_description2": "Osnovani 1996. godine, objedinjujemo gotovo tri decenije iskustva u nabavci sa savremenim proizvodnim kapacitetima u našoj fabrici u Čantaviru, Srbija.<br /><br />Saradjujemo sa maloprodajnim lancima, distributerima i proizvođačima hrane na regionalnim i međunarodnim tržištima.",
+	"divisionsSection_heading": "<bold>Dva</bold> Poslovna Stuba <br /> —<br /><bold>Jedinstvena</bold> Ekspertiza",
+	"division_manufacturing_title": "Proizvodna Divizija",
+	"division_manufacturing_desc": "Specijalizovana za instant kafe mikseve, matcha latte i funkcionalne napitke u prahu.",
+	"division_trading_title": "Trgovinska Divizija Prehrambenih Sirovina",
+	"division_trading_desc": "Uvoz i distribucija visokokvalitetnih prehrambenih sirovina za industriju hrane."
 }
