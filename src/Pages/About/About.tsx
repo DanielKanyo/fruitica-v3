@@ -48,41 +48,41 @@ function About() {
 				}}
 			>
 				<Stack gap="xl">
-					<MotionDiv delay={0.1}>
+					<MotionDiv>
 						<Text style={textTitleStyle}>
 							<Trans i18nKey="aboutUs" components={{ bold: <b /> }} />
 						</Text>
 					</MotionDiv>
 
-					<MotionDiv delay={0.2}>
+					<MotionDiv>
 						<Text style={textSubTitleStyle}>
 							<Trans i18nKey="ourStory" components={{ bold: <b /> }} />
 						</Text>
 					</MotionDiv>
 
-					<MotionDiv delay={0.3}>
+					<MotionDiv>
 						<Text style={textStyle}>
 							<Trans i18nKey="storyText" components={{ br: <br /> }} />
 						</Text>
 					</MotionDiv>
 
-					<MotionDiv delay={0.4}>
+					<MotionDiv>
 						<Text style={textSubTitleStyle}>
 							<Trans i18nKey="ourMission" components={{ bold: <b /> }} />
 						</Text>
 					</MotionDiv>
 
-					<MotionDiv delay={0.5}>
+					<MotionDiv>
 						<Text style={textStyle}>{t("missionText")}</Text>
 					</MotionDiv>
 
-					<MotionDiv delay={0.6}>
+					<MotionDiv>
 						<Text style={textSubTitleStyle}>
 							<Trans i18nKey="ourVision" components={{ bold: <b /> }} />
 						</Text>
 					</MotionDiv>
 
-					<MotionDiv delay={0.7}>
+					<MotionDiv>
 						<Text style={textStyle}>{t("visionText")}</Text>
 					</MotionDiv>
 				</Stack>

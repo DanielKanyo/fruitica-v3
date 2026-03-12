@@ -49,14 +49,14 @@ function BeverageSolutionsPlatform() {
 				}}
 			>
 				<Stack gap="xl">
-					<MotionDiv delay={0.1}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textTitleStyle}>
 								<Trans i18nKey="beverageSolutionsPlatform" components={{ bold: <b /> }} />
 							</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.2}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="bsp_turnkey_title" components={{ bold: <b /> }} />
@@ -84,7 +84,7 @@ function BeverageSolutionsPlatform() {
 							<Text style={textStyle}>{t("bsp_turnkey_benefits")}</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.3}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="bsp_flavors_title" components={{ bold: <b /> }} />
@@ -111,7 +111,7 @@ function BeverageSolutionsPlatform() {
 							</List>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.4}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="bsp_citrus_title" components={{ bold: <b /> }} />
@@ -135,7 +135,7 @@ function BeverageSolutionsPlatform() {
 							<Text style={textStyle}>{t("bsp_citrus_ideal")}</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.5}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="bsp_mint_title" components={{ bold: <b /> }} />
@@ -154,7 +154,7 @@ function BeverageSolutionsPlatform() {
 							</List>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.6}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="bsp_fruit_juice_title" components={{ bold: <b /> }} />
@@ -174,7 +174,7 @@ function BeverageSolutionsPlatform() {
 							</List>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.7}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="bsp_natural_colors_title" components={{ bold: <b /> }} />
@@ -196,7 +196,7 @@ function BeverageSolutionsPlatform() {
 							<Text style={textStyle}>{t("bsp_natural_colors_note")}</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.8}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="bsp_sweetening_title" components={{ bold: <b /> }} />
@@ -217,7 +217,7 @@ function BeverageSolutionsPlatform() {
 							<Text style={textStyle}>{t("bsp_sweetening_support")}</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.9}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="bsp_specialty_title" components={{ bold: <b /> }} />
@@ -233,7 +233,7 @@ function BeverageSolutionsPlatform() {
 							<Text style={textStyle}>{t("bsp_specialty_tailored")}</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={1}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="bsp_fermentation_title" components={{ bold: <b /> }} />

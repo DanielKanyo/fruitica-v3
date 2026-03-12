@@ -118,24 +118,24 @@ function ManufacturingDivision() {
 					}}
 				>
 					<Stack gap="xl">
-						<MotionDiv delay={0.1}>
+						<MotionDiv>
 							<Text style={textTitleStyle}>
 								<Trans i18nKey="manufacturingDivision" components={{ bold: <b /> }} />
 							</Text>
 						</MotionDiv>
 
-						<MotionDiv delay={0.2}>
+						<MotionDiv>
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="manufacturingDivision_subtitle" components={{ bold: <b /> }} />
 							</Text>
 						</MotionDiv>
-						<MotionDiv delay={0.3}>
+						<MotionDiv>
 							<Text style={textStyle}>{t("manufacturingDivision_description")}</Text>
 						</MotionDiv>
 					</Stack>
 				</Box>
 
-				<MotionDiv delay={0.4}>
+				<MotionDiv>
 					<Flex
 						gap="xl"
 						style={{ padding: isMobile ? "3rem 0 3rem 0" : "4rem 6rem 4rem 6rem" }}
@@ -155,12 +155,12 @@ function ManufacturingDivision() {
 					}}
 				>
 					<Stack gap="xl">
-						<MotionDiv delay={0.5}>
+						<MotionDiv>
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="manufacturingDivision_productionCapabilities" components={{ bold: <b /> }} />
 							</Text>
 						</MotionDiv>
-						<MotionDiv delay={0.6}>
+						<MotionDiv>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>{t("manufacturingDivision_capability_mixing")}</List.Item>
 								<List.Item style={textStyle}>{t("manufacturingDivision_capability_sachet")}</List.Item>
@@ -169,12 +169,12 @@ function ManufacturingDivision() {
 								<List.Item style={textStyle}>{t("manufacturingDivision_capability_batch")}</List.Item>
 							</List>
 						</MotionDiv>
-						<MotionDiv delay={0.7}>
+						<MotionDiv>
 							<Text style={textSubTitleStyle}>
 								<Trans i18nKey="manufacturingDivision_qualitySafety" components={{ bold: <b /> }} />
 							</Text>
 						</MotionDiv>
-						<MotionDiv delay={0.8}>
+						<MotionDiv>
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>{t("manufacturingDivision_quality_iso")}</List.Item>
 								<List.Item style={textStyle}>{t("manufacturingDivision_quality_haccp")}</List.Item>
@@ -182,7 +182,7 @@ function ManufacturingDivision() {
 								<List.Item style={textStyle}>{t("manufacturingDivision_quality_supplier")}</List.Item>
 							</List>
 						</MotionDiv>
-						<MotionDiv delay={0.9}>
+						<MotionDiv>
 							<Text style={textStyle}>{t("manufacturingDivision_quality_note")}</Text>
 						</MotionDiv>
 					</Stack>

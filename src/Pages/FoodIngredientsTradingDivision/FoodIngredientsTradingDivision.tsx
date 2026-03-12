@@ -49,23 +49,23 @@ function FoodIngredientsTradingDivision() {
 				}}
 			>
 				<Stack gap="xl">
-					<MotionDiv delay={0.1}>
+					<MotionDiv>
 						<Text style={textTitleStyle}>
 							<Trans i18nKey="foodIngredientsTradingDivision" components={{ bold: <b /> }} />
 						</Text>
 					</MotionDiv>
-					<MotionDiv delay={0.2}>
+					<MotionDiv>
 						<Text style={textSubTitleStyle}>
 							<Trans i18nKey="fitd_subtitle" components={{ bold: <b /> }} />
 						</Text>
 					</MotionDiv>
-					<MotionDiv delay={0.3}>
+					<MotionDiv>
 						<Text style={textStyle}>{t("fitd_text1")}</Text>
 					</MotionDiv>
-					<MotionDiv delay={0.4}>
+					<MotionDiv>
 						<Text style={textStyle}>{t("fitd_text2")}</Text>
 					</MotionDiv>
-					<MotionDiv delay={0.5}>
+					<MotionDiv>
 						<Text style={textStyle}>{t("fitd_text3")}</Text>
 					</MotionDiv>
 				</Stack>

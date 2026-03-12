@@ -3,6 +3,7 @@ import { NavLink as RouterNavLink } from "react-router-dom";
 
 import { Text, Flex, Card, Button } from "@mantine/core";
 
+import MotionDiv from "../../../Components/MotionDiv";
 import { useScrollSections } from "../../../Context/ScrollProvider";
 import { RoutePaths } from "../../../Routes/routes";
 import "./DivisionsSection.css";
@@ -76,17 +77,23 @@ function DivisionsSection({ isMobile }: DivisionsSectionProps) {
 				borderRadius: "var(--mantine-radius-xl)",
 			}}
 		>
-			<Flex gap="xl" style={{ padding: isMobile ? "6rem 1rem 12rem" : "6rem 6rem 12rem" }} direction={{ base: "column", lg: "row" }}>
-				<Flex w="100%" justify={isMobile ? "center" : "flex-start"} align="center">
-					<Text fz={42} lh={1.4} style={{ textAlign: isMobile ? "center" : "left" }}>
-						<Trans i18nKey="divisionsSection_heading" components={{ bold: <b />, br: <br /> }} />
-					</Text>
-				</Flex>
+			<MotionDiv>
+				<Flex
+					gap="xl"
+					style={{ padding: isMobile ? "6rem 1rem 12rem" : "6rem 6rem 12rem" }}
+					direction={{ base: "column", lg: "row" }}
+				>
+					<Flex w="100%" justify={isMobile ? "center" : "flex-start"} align="center">
+						<Text fz={42} lh={1.4} style={{ textAlign: isMobile ? "center" : "left" }}>
+							<Trans i18nKey="divisionsSection_heading" components={{ bold: <b />, br: <br /> }} />
+						</Text>
+					</Flex>
 
-				{DIVISIONS.map((division, index) => (
-					<DivisionCard key={index} {...division} isMobile={isMobile} />
-				))}
-			</Flex>
+					{DIVISIONS.map((division, index) => (
+						<DivisionCard key={index} {...division} isMobile={isMobile} />
+					))}
+				</Flex>
+			</MotionDiv>
 		</div>
 	);
 }

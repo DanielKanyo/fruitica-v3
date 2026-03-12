@@ -41,29 +41,29 @@ function QualityAndProductSafetyPolicy() {
 				}}
 			>
 				<Stack gap="xl">
-					<MotionDiv delay={0.1}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textTitleStyle}>
 								<Trans i18nKey="qualityAndProductSafetyPolicy" components={{ bold: <b /> }} />
 							</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.2}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textStyle}>{t("quality_policy_para1")}</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.3}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textStyle}>{t("quality_policy_para2")}</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.4}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textStyle}>{t("quality_policy_para3")}</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.5}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<List spacing="sm" px={isMobile ? "md" : "xl"} fw={400} icon={<ListIcon color="teal.8" />}>
 								<List.Item style={textStyle}>{t("quality_policy_list_item1")}</List.Item>
@@ -79,17 +79,17 @@ function QualityAndProductSafetyPolicy() {
 							</List>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.6}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textStyle}>{t("quality_policy_availability")}</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.7}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textStyle}>{t("quality_policy_compliance")}</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.8}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textStyle}>{t("quality_policy_location")}</Text>
 							<Text style={textStyle}>

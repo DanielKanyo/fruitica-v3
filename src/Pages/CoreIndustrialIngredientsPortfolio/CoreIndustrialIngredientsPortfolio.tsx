@@ -42,14 +42,14 @@ function CoreIndustrialIngredientsPortfolio() {
 				}}
 			>
 				<Stack gap="xl">
-					<MotionDiv delay={0.1}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textTitleStyle}>
 								<Trans i18nKey="coreIndustrialIngredientsPortfolio" components={{ bold: <b /> }} />
 							</Text>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.2}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textStyle}>{t("ciip_intro")}</Text>
 							<Text style={textStyle}>
@@ -90,7 +90,7 @@ function CoreIndustrialIngredientsPortfolio() {
 							</List>
 						</Stack>
 					</MotionDiv>
-					<MotionDiv delay={0.3}>
+					<MotionDiv>
 						<Stack gap="xl">
 							<Text style={textStyle}>
 								<Trans i18nKey="ciip_nut_title" components={{ bold: <b /> }} />
