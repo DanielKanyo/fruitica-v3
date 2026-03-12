@@ -296,6 +296,7 @@ function OtherSection({ isTablet }: { isTablet: boolean }) {
 	return (
 		<Carousel
 			withIndicators
+			withControls
 			bg="transparent"
 			styles={{
 				controls: {
@@ -308,6 +309,8 @@ function OtherSection({ isTablet }: { isTablet: boolean }) {
 			style={{ zIndex: 10, marginTop: -160 }}
 			emblaOptions={{ align: "start", dragFree: false }}
 			plugins={[autoplay.current]}
+			classNames={{ indicator: "carousel-indicator" }}
+			controlSize={30}
 			mb="xl"
 		>
 			<Carousel.Slide>
