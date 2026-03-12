@@ -10,7 +10,7 @@ import ListIcon from "../../../Components/ListIcon";
 import { useScrollSections } from "../../../Context/ScrollProvider";
 import "./OtherSection.css";
 
-function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
+function OurCompetitiveAdvantagesCard({ isTablet }: { isTablet: boolean }) {
 	const { t } = useTranslation();
 	const listItems = useMemo(
 		() => [
@@ -33,18 +33,18 @@ function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
 			</Box>
 
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="dark.4" fz={isMobile ? 17 : 18}>
+				<Stack gap="xl" p={isTablet ? "lg" : "xl"}>
+					<Text c="dark.4" fz={isTablet ? 17 : 18}>
 						{t("otherSection_competitiveAdv_intro")}
 					</Text>
-					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="#663f33" />}>
+					<List px={isTablet ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="#663f33" />}>
 						{listItems.map((key) => (
-							<List.Item key={key} fz={isMobile ? 17 : 18} c="dark.4">
+							<List.Item key={key} fz={isTablet ? 17 : 18} c="dark.4">
 								{t(key)}
 							</List.Item>
 						))}
 					</List>
-					<Text c="dark.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isTablet ? 17 : 18}>
 						{t("otherSection_competitiveAdv_closing")}
 					</Text>
 				</Stack>
@@ -53,7 +53,7 @@ function OurCompetitiveAdvantagesCard({ isMobile }: { isMobile: boolean }) {
 	);
 }
 
-function PrivateLabelAndIndustrialSolutionsCard({ isMobile }: { isMobile: boolean }) {
+function PrivateLabelAndIndustrialSolutionsCard({ isTablet }: { isTablet: boolean }) {
 	const { t } = useTranslation();
 	const listItems = useMemo(
 		() => [
@@ -78,13 +78,13 @@ function PrivateLabelAndIndustrialSolutionsCard({ isMobile }: { isMobile: boolea
 			</Box>
 
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="dark.4" fz={isMobile ? 17 : 18}>
+				<Stack gap="xl" p={isTablet ? "lg" : "xl"}>
+					<Text c="dark.4" fz={isTablet ? 17 : 18}>
 						<Trans i18nKey="otherSection_privateLab_intro" />
 					</Text>
-					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="pink" />}>
+					<List px={isTablet ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="pink" />}>
 						{listItems.map((key) => (
-							<List.Item key={key} fz={isMobile ? 17 : 18} c="dark.4">
+							<List.Item key={key} fz={isTablet ? 17 : 18} c="dark.4">
 								{t(key)}
 							</List.Item>
 						))}
@@ -95,7 +95,7 @@ function PrivateLabelAndIndustrialSolutionsCard({ isMobile }: { isMobile: boolea
 	);
 }
 
-function ExportAndDistributionCard({ isMobile }: { isMobile: boolean }) {
+function ExportAndDistributionCard({ isTablet }: { isTablet: boolean }) {
 	const { t } = useTranslation();
 	const listItems = useMemo(
 		() => [
@@ -118,18 +118,18 @@ function ExportAndDistributionCard({ isMobile }: { isMobile: boolean }) {
 				</Text>
 			</Box>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="dark.4" fz={isMobile ? 17 : 18}>
+				<Stack gap="xl" p={isTablet ? "lg" : "xl"}>
+					<Text c="dark.4" fz={isTablet ? 17 : 18}>
 						{t("otherSection_export_intro")}
 					</Text>
-					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="orange" />}>
+					<List px={isTablet ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="orange" />}>
 						{listItems.map((key) => (
-							<List.Item key={key} fz={isMobile ? 17 : 18} c="dark.4">
+							<List.Item key={key} fz={isTablet ? 17 : 18} c="dark.4">
 								{t(key)}
 							</List.Item>
 						))}
 					</List>
-					<Text c="dark.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isTablet ? 17 : 18}>
 						{t("otherSection_export_closing")}
 					</Text>
 				</Stack>
@@ -138,7 +138,7 @@ function ExportAndDistributionCard({ isMobile }: { isMobile: boolean }) {
 	);
 }
 
-function QualityAndCertificationsCard({ isMobile }: { isMobile: boolean }) {
+function QualityAndCertificationsCard({ isTablet }: { isTablet: boolean }) {
 	const { t } = useTranslation();
 	const listItems = useMemo(
 		() => [
@@ -161,18 +161,18 @@ function QualityAndCertificationsCard({ isMobile }: { isMobile: boolean }) {
 				</Text>
 			</Box>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="dark.4" fz={isMobile ? 17 : 18}>
+				<Stack gap="xl" p={isTablet ? "lg" : "xl"}>
+					<Text c="dark.4" fz={isTablet ? 17 : 18}>
 						{t("otherSection_quality_intro")}
 					</Text>
-					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="red.7" />}>
+					<List px={isTablet ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="red.7" />}>
 						{listItems.map((key) => (
-							<List.Item key={key} fz={isMobile ? 17 : 18} c="dark.4">
+							<List.Item key={key} fz={isTablet ? 17 : 18} c="dark.4">
 								{t(key)}
 							</List.Item>
 						))}
 					</List>
-					<Text c="dark.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isTablet ? 17 : 18}>
 						{t("otherSection_quality_closing")}
 					</Text>
 				</Stack>
@@ -181,7 +181,7 @@ function QualityAndCertificationsCard({ isMobile }: { isMobile: boolean }) {
 	);
 }
 
-function CareersCard({ isMobile }: { isMobile: boolean }) {
+function CareersCard({ isTablet }: { isTablet: boolean }) {
 	const { t } = useTranslation();
 	const listItems = useMemo(
 		() => ["otherSection_careers_item1", "otherSection_careers_item2", "otherSection_careers_item3", "otherSection_careers_item4"],
@@ -198,18 +198,18 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 				</Text>
 			</Flex>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="dark.4" fz={isMobile ? 17 : 18}>
+				<Stack gap="xl" p={isTablet ? "lg" : "xl"}>
+					<Text c="dark.4" fz={isTablet ? 17 : 18}>
 						<Trans i18nKey="otherSection_careers_intro" />
 					</Text>
-					<List px={isMobile ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="green" />}>
+					<List px={isTablet ? "md" : "xl"} spacing="md" fw={400} icon={<ListIcon color="green" />}>
 						{listItems.map((key) => (
-							<List.Item key={key} fz={isMobile ? 17 : 18} c="dark.4">
+							<List.Item key={key} fz={isTablet ? 17 : 18} c="dark.4">
 								{t(key)}
 							</List.Item>
 						))}
 					</List>
-					<Text c="dark.4" fz={isMobile ? 17 : 18}>
+					<Text c="dark.4" fz={isTablet ? 17 : 18}>
 						{t("otherSection_careers_closing")}
 					</Text>
 					<Button radius="xl" color="green" w="fit-content" onClick={() => scrollTo("contact")}>
@@ -221,7 +221,7 @@ function CareersCard({ isMobile }: { isMobile: boolean }) {
 	);
 }
 
-function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
+function NewsAndEventsCard({ isTablet }: { isTablet: boolean }) {
 	const { t } = useTranslation();
 
 	return (
@@ -234,8 +234,8 @@ function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 				</Text>
 			</Box>
 			<Card radius="xl" h="100%" className="card-body" p={0} shadow="xs">
-				<Stack gap="xl" p={isMobile ? "lg" : "xl"}>
-					<Text c="dark.4" fz={isMobile ? 17 : 18}>
+				<Stack gap="xl" p={isTablet ? "lg" : "xl"}>
+					<Text c="dark.4" fz={isTablet ? 17 : 18}>
 						{t("otherSection_news_text")}
 					</Text>
 				</Stack>
@@ -244,10 +244,10 @@ function NewsAndEventsCard({ isMobile }: { isMobile: boolean }) {
 	);
 }
 
-function OtherSection({ isMobile, isTablet }: { isMobile: boolean; isTablet: boolean }) {
+function OtherSection({ isTablet }: { isTablet: boolean }) {
 	const autoplay = useRef(Autoplay({ delay: 15000 }));
 
-	if (isMobile) {
+	if (isTablet) {
 		return (
 			<Carousel
 				withIndicators
@@ -261,32 +261,32 @@ function OtherSection({ isMobile, isTablet }: { isMobile: boolean; isTablet: boo
 			>
 				<Carousel.Slide>
 					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
-						<OurCompetitiveAdvantagesCard isMobile={true} />
+						<OurCompetitiveAdvantagesCard isTablet={true} />
 					</Flex>
 				</Carousel.Slide>
 				<Carousel.Slide>
 					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
-						<PrivateLabelAndIndustrialSolutionsCard isMobile={true} />
+						<PrivateLabelAndIndustrialSolutionsCard isTablet={true} />
 					</Flex>
 				</Carousel.Slide>
 				<Carousel.Slide>
 					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
-						<ExportAndDistributionCard isMobile={true} />
+						<ExportAndDistributionCard isTablet={true} />
 					</Flex>
 				</Carousel.Slide>
 				<Carousel.Slide>
 					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
-						<QualityAndCertificationsCard isMobile={true} />
+						<QualityAndCertificationsCard isTablet={true} />
 					</Flex>
 				</Carousel.Slide>
 				<Carousel.Slide>
 					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
-						<CareersCard isMobile={true} />
+						<CareersCard isTablet={true} />
 					</Flex>
 				</Carousel.Slide>
 				<Carousel.Slide>
 					<Flex gap="xl" h="100%" style={{ padding: "4rem 1rem" }} direction={{ base: "column", lg: "row" }}>
-						<NewsAndEventsCard isMobile={true} />
+						<NewsAndEventsCard isTablet={true} />
 					</Flex>
 				</Carousel.Slide>
 			</Carousel>
@@ -297,25 +297,31 @@ function OtherSection({ isMobile, isTablet }: { isMobile: boolean; isTablet: boo
 		<Carousel
 			withIndicators
 			bg="transparent"
+			styles={{
+				controls: {
+					padding: "0 2rem",
+				},
+				control: {
+					background: "white",
+				},
+			}}
 			style={{ zIndex: 10, marginTop: -160 }}
-			withControls={false}
 			emblaOptions={{ align: "start", dragFree: false }}
 			plugins={[autoplay.current]}
-			classNames={{ indicator: "carousel-indicator" }}
 			mb="xl"
 		>
 			<Carousel.Slide>
-				<Flex gap="xl" h="100%" style={{ padding: isTablet ? "4rem 2rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
-					<OurCompetitiveAdvantagesCard isMobile={false} />
-					<PrivateLabelAndIndustrialSolutionsCard isMobile={false} />
-					<ExportAndDistributionCard isMobile={false} />
+				<Flex gap="xl" h="100%" style={{ padding: isTablet ? "4rem 2rem" : "4rem 6rem" }} direction={{ base: "column", md: "row" }}>
+					<OurCompetitiveAdvantagesCard isTablet={false} />
+					<PrivateLabelAndIndustrialSolutionsCard isTablet={false} />
+					<ExportAndDistributionCard isTablet={false} />
 				</Flex>
 			</Carousel.Slide>
 			<Carousel.Slide>
-				<Flex gap="xl" h="100%" style={{ padding: isTablet ? "4rem 2rem" : "4rem 6rem" }} direction={{ base: "column", lg: "row" }}>
-					<QualityAndCertificationsCard isMobile={false} />
-					<CareersCard isMobile={false} />
-					<NewsAndEventsCard isMobile={false} />
+				<Flex gap="xl" h="100%" style={{ padding: isTablet ? "4rem 2rem" : "4rem 6rem" }} direction={{ base: "column", md: "row" }}>
+					<QualityAndCertificationsCard isTablet={false} />
+					<CareersCard isTablet={false} />
+					<NewsAndEventsCard isTablet={false} />
 				</Flex>
 			</Carousel.Slide>
 		</Carousel>

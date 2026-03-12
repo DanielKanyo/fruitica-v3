@@ -15,7 +15,7 @@ function Home() {
 			<HeroSection isMobile={isMobile} />
 			<AboutSection isMobile={isMobile} />
 			<DivisionsSection isMobile={isMobile} />
-			<OtherSection isMobile={isMobile} isTablet={isTablet} />
+			<OtherSection isTablet={isTablet} />
 		</>
 	);
 }
