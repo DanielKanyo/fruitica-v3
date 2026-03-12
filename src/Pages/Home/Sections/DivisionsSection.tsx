@@ -83,8 +83,8 @@ function DivisionsSection({ isMobile }: DivisionsSectionProps) {
 					style={{ padding: isMobile ? "6rem 1rem 12rem" : "6rem 6rem 12rem" }}
 					direction={{ base: "column", lg: "row" }}
 				>
-					<Flex w="100%" justify={isMobile ? "center" : "flex-start"} align="center">
-						<Text fz={42} lh={1.4} style={{ textAlign: isMobile ? "center" : "left" }}>
+					<Flex w="100%" align="center" direction={{ base: "column", lg: "row" }}>
+						<Text fz={42} lh={1.4} ta={{ base: "center", lg: "left" }}>
 							<Trans i18nKey="divisionsSection_heading" components={{ bold: <b />, br: <br /> }} />
 						</Text>
 					</Flex>
