@@ -4,7 +4,7 @@
 	right: -210px;
 	width: 600px;
 	height: 600px;
-	background-image: url("../../../Assets/Images/broccoli.png");
+	background-image: url("../../../Assets/Images/oranges.png");
 	background-size: 100%;
 	transform: rotate(-30deg);
 }
@@ -23,8 +23,8 @@
 @media (max-width: 992px) {
 	.bg-item1 {
 		position: absolute;
-		bottom: -150px;
-		right: -185px;
+		bottom: -130px;
+		right: -215px;
 		width: 400px;
 		height: 400px;
 	}

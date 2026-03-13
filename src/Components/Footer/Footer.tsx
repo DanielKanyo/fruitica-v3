@@ -43,7 +43,6 @@ function Footer() {
 						<Badge color="teal.8">{t("key_fact4")}</Badge>
 						<Badge color="teal.8">{t("key_fact5")}</Badge>
 						<Badge color="teal.8">{t("key_fact6")}</Badge>
-						<Badge color="teal.8">{t("key_fact7")}</Badge>
 					</Group>
 				</Stack>
 				<Stack w={isMobile ? "100%" : 600} ref={setTargetRef("contact")} gap="xl">
